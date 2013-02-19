@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2AF91C16D17511005E837D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2AF91B16D17511005E837D /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		2C2AF91E16D177C8005E837D /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF91D16D177C8005E837D /* Correct.wav */; };
+		2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92016D17B5D005E837D /* Wrong.wav */; };
+		2C2AF92316D185EB005E837D /* Backspace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92216D185EB005E837D /* Backspace.wav */; };
+		2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CA16BF17F200588266 /* LevelSelectorView.m */; };
+		2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CD16BF563C00588266 /* SummaryViewController.m */; };
+		2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52D3CE16BF563C00588266 /* SummaryViewController.xib */; };
+		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
+		2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */; };
+		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
+		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
+		2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC525C16D0369400DB070B /* StartMenuViewController.m */; };
+		2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */; };
+		2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */; };
+		2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */; };
+		39A9D7F816A83D68003A8B7B /* GameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9D7F716A83D68003A8B7B /* GameEngine.m */; };
+		39A9D7FB16A87AF9003A8B7B /* GameEngineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9D7FA16A87AF9003A8B7B /* GameEngineTest.m */; };
 		39C7C1EA169EFBE900A6DABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1E9169EFBE900A6DABA /* UIKit.framework */; };
 		39C7C1EC169EFBE900A6DABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1EB169EFBE900A6DABA /* Foundation.framework */; };
 		39C7C1EE169EFBE900A6DABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1ED169EFBE900A6DABA /* CoreGraphics.framework */; };
@@ -18,7 +35,6 @@
 		39C7C200169EFBEA00A6DABA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39C7C1FF169EFBEA00A6DABA /* Default-568h@2x.png */; };
 		39C7C203169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C7C201169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard */; };
 		39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39C7C204169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard */; };
-		39C7C209169EFBEA00A6DABA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C7C208169EFBEA00A6DABA /* ViewController.m */; };
 		39C7C211169EFBEA00A6DABA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C210169EFBEA00A6DABA /* SenTestingKit.framework */; };
 		39C7C212169EFBEA00A6DABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1E9169EFBE900A6DABA /* UIKit.framework */; };
 		39C7C213169EFBEA00A6DABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1EB169EFBE900A6DABA /* Foundation.framework */; };
@@ -37,6 +53,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C2AF91B16D17511005E837D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2C2AF91D16D177C8005E837D /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = ../Sounds/Correct.wav; sourceTree = "<group>"; };
+		2C2AF92016D17B5D005E837D /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
+		2C2AF92216D185EB005E837D /* Backspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backspace.wav; sourceTree = "<group>"; };
+		2C52D3C916BF17F200588266 /* LevelSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectorView.h; sourceTree = "<group>"; };
+		2C52D3CA16BF17F200588266 /* LevelSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectorView.m; sourceTree = "<group>"; };
+		2C52D3CC16BF563C00588266 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewController.h; path = ../SummaryViewController.h; sourceTree = "<group>"; };
+		2C52D3CD16BF563C00588266 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryViewController.m; path = ../SummaryViewController.m; sourceTree = "<group>"; };
+		2C52D3CE16BF563C00588266 /* SummaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SummaryViewController.xib; path = ../SummaryViewController.xib; sourceTree = "<group>"; };
+		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeSelectorViewController.h; sourceTree = "<group>"; };
+		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeSelectorViewController.m; sourceTree = "<group>"; };
+		2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeSelectorViewController.xib; sourceTree = "<group>"; };
+		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		2C97440716D0A686001A2E1B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuViewController.h; sourceTree = "<group>"; };
+		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuViewController.m; sourceTree = "<group>"; };
+		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectorViewController.h; sourceTree = "<group>"; };
+		2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectorViewController.m; sourceTree = "<group>"; };
+		2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAgreementViewController.h; sourceTree = "<group>"; };
+		2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAgreementViewController.m; sourceTree = "<group>"; };
+		2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAgreementViewController.xib; sourceTree = "<group>"; };
+		39A9D7F616A83D68003A8B7B /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
+		39A9D7F716A83D68003A8B7B /* GameEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEngine.m; sourceTree = "<group>"; };
+		39A9D7F916A87AF9003A8B7B /* GameEngineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngineTest.h; sourceTree = "<group>"; };
+		39A9D7FA16A87AF9003A8B7B /* GameEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEngineTest.m; sourceTree = "<group>"; };
 		39C7C1E5169EFBE900A6DABA /* TapInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C7C1E9169EFBE900A6DABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39C7C1EB169EFBE900A6DABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,8 +94,6 @@
 		39C7C1FF169EFBEA00A6DABA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		39C7C202169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		39C7C205169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		39C7C207169EFBEA00A6DABA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39C7C208169EFBEA00A6DABA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39C7C20F169EFBEA00A6DABA /* TapInputTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapInputTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C7C210169EFBEA00A6DABA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		39C7C218169EFBEA00A6DABA /* TapInputTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TapInputTests-Info.plist"; sourceTree = "<group>"; };
@@ -67,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2AF91C16D17511005E837D /* AudioToolbox.framework in Frameworks */,
 				39C7C1EA169EFBE900A6DABA /* UIKit.framework in Frameworks */,
 				39C7C1EC169EFBE900A6DABA /* Foundation.framework in Frameworks */,
 				39C7C1EE169EFBE900A6DABA /* CoreGraphics.framework in Frameworks */,
@@ -86,9 +127,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2AF91F16D177CD005E837D /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				2C2AF91D16D177C8005E837D /* Correct.wav */,
+				2C2AF92016D17B5D005E837D /* Wrong.wav */,
+				2C2AF92216D185EB005E837D /* Backspace.wav */,
+			);
+			name = Sound;
+			path = TapInput;
+			sourceTree = "<group>";
+		};
 		39C7C1DA169EFBE900A6DABA = {
 			isa = PBXGroup;
 			children = (
+				2C2AF91F16D177CD005E837D /* Sound */,
 				39C7C1EF169EFBE900A6DABA /* TapInput */,
 				39C7C216169EFBEA00A6DABA /* TapInputTests */,
 				39C7C1E8169EFBE900A6DABA /* Frameworks */,
@@ -108,6 +161,7 @@
 		39C7C1E8169EFBE900A6DABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C2AF91B16D17511005E837D /* AudioToolbox.framework */,
 				39C7C1E9169EFBE900A6DABA /* UIKit.framework */,
 				39C7C1EB169EFBE900A6DABA /* Foundation.framework */,
 				39C7C1ED169EFBE900A6DABA /* CoreGraphics.framework */,
@@ -119,12 +173,30 @@
 		39C7C1EF169EFBE900A6DABA /* TapInput */ = {
 			isa = PBXGroup;
 			children = (
+				2C52D3CC16BF563C00588266 /* SummaryViewController.h */,
+				2C52D3CD16BF563C00588266 /* SummaryViewController.m */,
+				2C52D3CE16BF563C00588266 /* SummaryViewController.xib */,
 				39C7C1F8169EFBE900A6DABA /* AppDelegate.h */,
 				39C7C1F9169EFBE900A6DABA /* AppDelegate.m */,
 				39C7C201169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard */,
 				39C7C204169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard */,
-				39C7C207169EFBEA00A6DABA /* ViewController.h */,
-				39C7C208169EFBEA00A6DABA /* ViewController.m */,
+				2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */,
+				2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */,
+				2CAC525B16D0369400DB070B /* StartMenuViewController.h */,
+				2CAC525C16D0369400DB070B /* StartMenuViewController.m */,
+				2C97440516D0A686001A2E1B /* GameViewController.h */,
+				2C97440616D0A686001A2E1B /* GameViewController.m */,
+				2C97440716D0A686001A2E1B /* GameViewController.xib */,
+				2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */,
+				2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */,
+				2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */,
+				2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */,
+				39A9D7F616A83D68003A8B7B /* GameEngine.h */,
+				39A9D7F716A83D68003A8B7B /* GameEngine.m */,
+				2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */,
+				2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */,
+				2C52D3C916BF17F200588266 /* LevelSelectorView.h */,
+				2C52D3CA16BF17F200588266 /* LevelSelectorView.m */,
 				39C7C1F0169EFBE900A6DABA /* Supporting Files */,
 			);
 			path = TapInput;
@@ -150,6 +222,8 @@
 				39C7C21C169EFBEA00A6DABA /* TapInputTests.h */,
 				39C7C21D169EFBEA00A6DABA /* TapInputTests.m */,
 				39C7C217169EFBEA00A6DABA /* Supporting Files */,
+				39A9D7F916A87AF9003A8B7B /* GameEngineTest.h */,
+				39A9D7FA16A87AF9003A8B7B /* GameEngineTest.m */,
 			);
 			path = TapInputTests;
 			sourceTree = "<group>";
@@ -240,6 +314,13 @@
 				39C7C200169EFBEA00A6DABA /* Default-568h@2x.png in Resources */,
 				39C7C203169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard in Resources */,
 				39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */,
+				2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */,
+				2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */,
+				2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */,
+				2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */,
+				2C2AF91E16D177C8005E837D /* Correct.wav in Resources */,
+				2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */,
+				2C2AF92316D185EB005E837D /* Backspace.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +357,14 @@
 			files = (
 				39C7C1F6169EFBE900A6DABA /* main.m in Sources */,
 				39C7C1FA169EFBE900A6DABA /* AppDelegate.m in Sources */,
-				39C7C209169EFBEA00A6DABA /* ViewController.m in Sources */,
+				39A9D7F816A83D68003A8B7B /* GameEngine.m in Sources */,
+				2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */,
+				2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */,
+				2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */,
+				2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */,
+				2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */,
+				2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */,
+				2C97440816D0A686001A2E1B /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39C7C21E169EFBEA00A6DABA /* TapInputTests.m in Sources */,
+				39A9D7FB16A87AF9003A8B7B /* GameEngineTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +432,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -358,6 +448,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,7 +463,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -380,6 +472,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -461,6 +555,7 @@
 				39C7C223169EFBEA00A6DABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39C7C224169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "TapInputTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +564,7 @@
 				39C7C226169EFBEA00A6DABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
