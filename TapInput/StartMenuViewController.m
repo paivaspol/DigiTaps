@@ -71,7 +71,7 @@
 {
   NSLog(@"Start Level");
   [self.navigationController pushViewController:modeSelectorViewController animated:YES];
-  [gameViewController setStartingLevel:level - 1];
+  [gameViewController setStartingLevel:level];
 }
 
 #pragma mark ModeSelectorProtocol
@@ -81,7 +81,6 @@
   [gameViewController setIsNatural:isNatural];
   [gameViewController resetGameViewController];
   [self.navigationController pushViewController:gameViewController animated:YES];
-  [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end

@@ -24,6 +24,8 @@
 @property (strong, nonatomic) id <SummaryViewControllerProtocol> delegate;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *quitBut;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *nextBut;
+@property (strong, nonatomic) IBOutlet UILabel *numbersCorrect;
+@property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
 
 - (IBAction)quitButton:(id)sender;
 - (IBAction)nextLevelButton:(id)sender;

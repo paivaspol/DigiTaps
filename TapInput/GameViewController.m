@@ -25,6 +25,7 @@
     [gameEngine resetGame];
     [self setupNotificationReceivers];
     [self setupSoundPlayers];
+    [self setTitle:@"Game"];
   }
   return self;
 }
@@ -37,6 +38,10 @@
   AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(soundURL), &wrongSound);
   soundURL = [[NSBundle mainBundle] URLForResource:@"Backspace" withExtension:@"wav"];
   AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(soundURL), &backspaceSound);
+  soundURL = [[NSBundle mainBundle] URLForResource:@"Click" withExtension:@"wav"];
+  AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(soundURL), &clickSound);
+  soundURL = [[NSBundle mainBundle] URLForResource:@"DoubleClick" withExtension:@"wav"];
+  AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(soundURL), &doubleClickSound);
 }
 
 #pragma view controller related
@@ -46,7 +51,14 @@
   UILongPressGestureRecognizer *longPressRec = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
   [longPressRec setNumberOfTouchesRequired:1];
   [longPressRec setMinimumPressDuration: MENU_WAIT_TIME];
-  [self.view addGestureRecognizer:longPressRec];
+  [self.view addGestureRecognizer:longPressRec];  
+  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:@"Quit"
+                                                                 style:UIBarButtonItemStyleBordered
+                                                                target:self
+                                                                action:@selector(backButtonPressed)];
+  self.navigationItem.rightBarButtonItem = quitButton;
+  [gameEngine setStartingLevel:startingLevel];
+  [gameEngine generateForLevel:[gameEngine currentLevel]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,15 +66,16 @@
   [self.view setIsAccessibilityElement:YES];
   [self.view setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
   [self.view becomeFirstResponder];
+  [self.navigationItem setHidesBackButton:NO animated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-  [gameEngine nextLevel];
   [self updateCurrentNumber];
-  NSString *message = [NSString stringWithFormat:@"Game Started"];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
   [self voiceOverAnnouceCurrentGameState];
+  NSString *message = [NSString stringWithFormat:@"Game Started"];
+  UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, message);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +86,7 @@
 #pragma setters
 - (void)setStartingLevel:(int)level
 {
-  [gameEngine setStartingLevel:level];
+  startingLevel = level;
 }
 
 - (void)setIsNatural:(BOOL)natural
@@ -84,25 +97,47 @@
 - (void)resetGameViewController
 {
   [gameEngine resetGame];
+  [self updateCurrentNumber];
+  [self updateLevelDisplay];
 }
 
 #pragma mark touch handlers
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+  NSLog(@"started with %d", [[event allTouches] count]);
+  startTouch = [[event allTouches] count];
   UITouch *touch = [touches anyObject];
   startTouchPosition = [touch locationInView:self.view];
   hasStarted = true;
+  hasMoved = NO;
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  NSLog(@"moved with %d", [[event allTouches] count]);
+  NSUInteger tempTaps = [[event allTouches] count];
+  if (startTouch < tempTaps) {
+    hasMoved = YES;
+    startTouch = tempTaps;
+  }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+  // A touch is done
   if ([gameEngine state] != ACTIVE) {
     return;
   }
   
+  hasMoved = NO;
+  
   UITouch *touch = [touches anyObject];
   CGPoint currentTouchPosition = [touch locationInView:self.view];
-  startTouch = [[event allTouches] count];
+  
+  NSUInteger tempTaps = [[event allTouches] count];
+  if (startTouch < tempTaps) {
+    startTouch = tempTaps;
+  }
   
   // Backspace detection
   if (fabsf(startTouchPosition.x - currentTouchPosition.x) >= HORZ_SWIPE
@@ -118,7 +153,7 @@
     }
     AudioServicesPlaySystemSound(backspaceSound);
   }
-
+  
   int val = -1;
   if (isMoreNatural) {
     if ((fabsf(currentTouchPosition.y - startTouchPosition.y) >= VERT_SWIPE_DRAG_MAX)
@@ -126,58 +161,78 @@
       [curInput appendFormat:@"%d", currentSum];
       val = currentSum;
       currentSum = 0;
+      isWaitingForInput = NO;
     } else if (fabs(currentTouchPosition.x - startTouchPosition.x) <= TAP_THRESHOLD) {
       // a tap
-      val = [self inputDigit];
+      val = [self naturalGestureHandler];
     }
   } else {
-    if (fabsf(currentTouchPosition.y - startTouchPosition.y) >= VERT_SWIPE_DRAG_MAX && (startTouch == 1)) {
-      // a flick, put it in a waiting state
-      if (isWaitingForInput) {
-        isWaitingForInput = NO;
-        NSLog(@"got: %d", currentSum);
-        [curInput appendFormat:@"%d", currentSum];
-        val = currentSum;
-      } else {
-        isWaitingForInput = YES;
-        currentSum = 0;
-      }
-    } else if (fabs(currentTouchPosition.x - startTouchPosition.x) <= TAP_THRESHOLD) {
-      if (isWaitingForInput) {
-        if (currentSum == 0) {
-          val = 10 - startTouch;
-        } else {
-          val = currentSum + startTouch;
-          currentSum = 0;
-        }
-        NSLog(@"got: %d", val);
-        [curInput appendFormat:@"%d", val];
-        isWaitingForInput = NO;
-        
-      } else if (startTouch == 3) {
-        currentSum += startTouch;
-        isWaitingForInput = YES;
-      } else {
-        isWaitingForInput = NO;
-        val = currentSum + startTouch;
-        currentSum = 0;
-        NSLog(@"got: %d", val);
-        [curInput appendFormat:@"%d", val];
-      }
-    }
+    [self lessNaturalGestureHandler:&val currentTouchPosition:currentTouchPosition];
   }
+  
+  if (isWaitingForInput && currentSum == 6) {
+
+  } else if (isWaitingForInput) {
+    AudioServicesPlaySystemSound(clickSound);
+  }
+  
   if (val != -1) {
     UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [NSString stringWithFormat:@"%d", val]);
   }
   hasStarted = false;
+  startTouch = -1;
   NSLog(@"val: %d", val);
   [self.inputNumber setText:curInput];
+  [self.navigationItem setHidesBackButton:YES animated:YES];
+}
+
+# pragma gesture detection handlers
+
+- (void)lessNaturalGestureHandler:(int *)val_p currentTouchPosition:(CGPoint)currentTouchPosition
+{
+  if (fabsf(currentTouchPosition.y - startTouchPosition.y) >= VERT_SWIPE_DRAG_MAX && (startTouch == 1)) {
+    // a flick, put it in a waiting state
+    if (isWaitingForInput) {
+      isWaitingForInput = NO;
+      NSLog(@"got: %d", currentSum);
+      [curInput appendFormat:@"%d", currentSum];
+      *val_p = currentSum;
+    } else {
+      isWaitingForInput = YES;
+      currentSum = 0;
+      AudioServicesPlaySystemSound(doubleClickSound);
+    }
+  } else if (fabs(currentTouchPosition.x - startTouchPosition.x) <= TAP_THRESHOLD) {
+    if (isWaitingForInput) {
+      if (currentSum == 0) {
+        *val_p = 10 - startTouch;
+      } else {
+        *val_p = currentSum + startTouch;
+        currentSum = 0;
+      }
+      NSLog(@"got: %d", *val_p);
+      [curInput appendFormat:@"%d", *val_p];
+      isWaitingForInput = NO;
+      
+    } else if (startTouch == 3) {
+      currentSum += startTouch;
+      isWaitingForInput = YES;
+      AudioServicesPlaySystemSound(clickSound);
+    } else {
+      isWaitingForInput = NO;
+      *val_p = currentSum + startTouch;
+      currentSum = 0;
+      NSLog(@"got: %d", *val_p);
+      [curInput appendFormat:@"%d", *val_p];
+    }
+  }
 }
 
 #pragma SummaryViewControllerProtocol
 - (void)nextLevel
 {
   [gameEngine nextLevel];
+  [gameEngine generateForLevel:[gameEngine currentLevel]];
 }
 
 - (void)quitGame
@@ -199,7 +254,7 @@
 }
 
 // Logic for getting the number, return the number inputted
-- (int)inputDigit
+- (int)naturalGestureHandler
 {
   int val = -1;
   if (isMoreNatural) {
@@ -207,6 +262,11 @@
     if (startTouch == TAPS && currentSum < 6) {
       isWaitingForInput = true;
       currentSum += TAPS;
+      if (currentSum == 3) {
+        AudioServicesPlaySystemSound(clickSound);
+      } else {
+        AudioServicesPlaySystemSound(doubleClickSound);
+      }
     } else {
       val = currentSum + startTouch;
       NSLog(@"got: %d", val);
@@ -236,7 +296,7 @@
   // brings up a summary view
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(levelCompleted:) name:@"levelCompleted" object:gameEngine];
   // continues the game
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(levelChanged:) name:@"levelChanged" object:gameEngine];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(levelChanged:) name:@"levelGenerated" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wrongNumber:) name:@"wrongTrail" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(correctNumber:) name:@"correctTrail" object:gameEngine];
 }
@@ -249,12 +309,12 @@
 - (void)wrongNumber:(NSNotification *)notification
 {
   // PLAY WRONG SOUND
+  NSLog(@"wrong!");
   AudioServicesPlaySystemSound(wrongSound);
 }
 
 - (void)gameStarted:(NSNotification *)notification
 {
-
   NSLog(@"game started VC");
 }
 
@@ -281,10 +341,10 @@
 
 - (void)voiceOverAnnouceCurrentGameState
 {
-    NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
-    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
-    message = [NSString stringWithFormat:@"Current number is %d", [gameEngine currentNumber]];
-    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+  NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
+  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+  message = [NSString stringWithFormat:@"Current number is %d", [gameEngine currentNumber]];
+  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
 - (void)levelChanged:(NSNotification *)notification
@@ -300,9 +360,11 @@
 {
   switch (recognizer.state) {
     case UIGestureRecognizerStateBegan: {
-      if ([gameEngine state] == ACTIVE) {
+      if ([gameEngine state] == ACTIVE && !hasMoved) {
         [gameEngine inputNumber:[curInput intValue]];
-        [self.inputNumber setText:@""];
+        [curInput setString:@""];
+        [self.inputNumber setText:curInput];
+        [self.navigationItem setHidesBackButton:YES animated:YES];
       }
       break;
     }
@@ -311,8 +373,7 @@
   }
 }
 
-#pragma IBAction
-- (IBAction)backButtonPressed:(id)sender
+- (void)backButtonPressed
 {
   [self.navigationController popToRootViewControllerAnimated:YES];
 }

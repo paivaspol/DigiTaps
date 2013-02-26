@@ -22,7 +22,8 @@ typedef enum GameState {
 @interface GameEngine : NSObject
 {
   @private
-  int missCounter;
+  int miss;
+  int correct;
   int curNumberIndex;
   int curLevel;
   GameState state;
@@ -52,5 +53,9 @@ typedef enum GameState {
 - (void)generateForLevel:(int)level;
 // returns the maximum level
 - (int)getMaxLevel;
+// returns number of correct trails
+- (int)correct;
+// returns number of miss trails
+- (int)miss;
 
 @end

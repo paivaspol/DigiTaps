@@ -22,17 +22,9 @@
   return self;
 }
 
-//+ (GameEngine *)getInstance
-//{
-//  if (instance == nil) {
-//    instance = [[GameEngine alloc] init];
-//  }
-//  return instance;
-//}
-
 - (void)initializeGame
 {
-  missCounter = 0;
+  miss = 0;
   curNumberIndex = 0;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"gamestarted" object:self];
@@ -40,7 +32,7 @@
 
 - (void)wrongTrial
 {
-  missCounter++;
+  miss++;
   // TODO: implement wrong digit counter.
   [[NSNotificationCenter defaultCenter] postNotificationName:@"wrongTrail" object:self];
 }
@@ -58,6 +50,11 @@
 
 - (void)generateForLevel:(int)level
 {
+  curNumberIndex = 0;
+  miss = 0;
+  state = ACTIVE;
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
+  
   numberContainer = nil;
   numberContainer = [[NSMutableArray alloc] init];
   for (int j = 0; j < NUMBERS_PER_LEVEL; j++) {
@@ -92,7 +89,7 @@
 
 - (int)numWrongTrials
 {
-  return missCounter;
+  return miss;
 }
 
 // Generates a random number with the specified digits
@@ -118,11 +115,6 @@
 {
   NSLog(@"next level");
   curLevel++;
-  curNumberIndex = 0;
-  missCounter = 0;
-  [self generateForLevel:curLevel];
-  state = ACTIVE;
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"levelChanged" object:self];
 }
 
 - (int)currentLevel
@@ -133,6 +125,17 @@
 - (int)getMaxLevel
 {
   return NUM_LEVEL;
+}
+
+// returns number of correct trails
+- (int)correct
+{
+  return correct;
+}
+// returns number of miss trails
+- (int)miss
+{
+  return miss;
 }
 
 @end

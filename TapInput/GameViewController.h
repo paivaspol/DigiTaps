@@ -26,24 +26,24 @@
   BOOL                        isWaitingForInput;
   BOOL                        hasStarted;
   BOOL                        didShowUserAgreement;
+  BOOL                        hasMoved;
   CGPoint                     startTouchPosition;
   NSUInteger                  startTouch;
   int                         currentSum;
-  int                         curLevel;
+  int                         startingLevel;
   NSUInteger                  tapped;
   SummaryViewController       *summaryViewController;
   NSMutableString             *curInput;
   SystemSoundID               correctSound;
   SystemSoundID               wrongSound;
   SystemSoundID               backspaceSound;
+  SystemSoundID               clickSound;
+  SystemSoundID               doubleClickSound;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *currentNumber;
 @property (strong, nonatomic) IBOutlet UILabel *inputNumber;
-@property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
-
-- (IBAction)backButtonPressed:(id)sender;
 
 - (void)setStartingLevel:(int)level;
 - (void)setIsNatural:(BOOL)natural;
