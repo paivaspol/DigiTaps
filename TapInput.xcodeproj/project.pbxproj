@@ -16,9 +16,12 @@
 		2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52D3CE16BF563C00588266 /* SummaryViewController.xib */; };
 		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
 		2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */; };
+		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
 		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
 		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
 		2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC525C16D0369400DB070B /* StartMenuViewController.m */; };
+		2CD2F86216DB1A4900839C4B /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86116DB1A4900839C4B /* Click.wav */; };
+		2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */; };
 		2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */; };
 		2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */; };
 		2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */; };
@@ -65,11 +68,15 @@
 		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeSelectorViewController.h; sourceTree = "<group>"; };
 		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeSelectorViewController.m; sourceTree = "<group>"; };
 		2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeSelectorViewController.xib; sourceTree = "<group>"; };
+		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; };
+		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; };
 		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2C97440716D0A686001A2E1B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuViewController.h; sourceTree = "<group>"; };
 		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuViewController.m; sourceTree = "<group>"; };
+		2CD2F86116DB1A4900839C4B /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
+		2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DoubleClick.wav; sourceTree = "<group>"; };
 		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectorViewController.h; sourceTree = "<group>"; };
 		2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectorViewController.m; sourceTree = "<group>"; };
 		2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAgreementViewController.h; sourceTree = "<group>"; };
@@ -133,9 +140,29 @@
 				2C2AF91D16D177C8005E837D /* Correct.wav */,
 				2C2AF92016D17B5D005E837D /* Wrong.wav */,
 				2C2AF92216D185EB005E837D /* Backspace.wav */,
+				2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */,
+				2CD2F86116DB1A4900839C4B /* Click.wav */,
 			);
 			name = Sound;
 			path = TapInput;
+			sourceTree = "<group>";
+		};
+		2C74AED416E3F9750095143A /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				2C74AED516E3F9E20095143A /* Logger.h */,
+				2C74AED616E3F9E20095143A /* Logger.m */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		2C74AED816E40FE90095143A /* GameModel */ = {
+			isa = PBXGroup;
+			children = (
+				39A9D7F616A83D68003A8B7B /* GameEngine.h */,
+				39A9D7F716A83D68003A8B7B /* GameEngine.m */,
+			);
+			name = GameModel;
 			sourceTree = "<group>";
 		};
 		39C7C1DA169EFBE900A6DABA = {
@@ -173,6 +200,8 @@
 		39C7C1EF169EFBE900A6DABA /* TapInput */ = {
 			isa = PBXGroup;
 			children = (
+				2C74AED816E40FE90095143A /* GameModel */,
+				2C74AED416E3F9750095143A /* Logging */,
 				2C52D3CC16BF563C00588266 /* SummaryViewController.h */,
 				2C52D3CD16BF563C00588266 /* SummaryViewController.m */,
 				2C52D3CE16BF563C00588266 /* SummaryViewController.xib */,
@@ -182,17 +211,15 @@
 				39C7C204169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard */,
 				2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */,
 				2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */,
+				2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */,
 				2CAC525B16D0369400DB070B /* StartMenuViewController.h */,
 				2CAC525C16D0369400DB070B /* StartMenuViewController.m */,
 				2C97440516D0A686001A2E1B /* GameViewController.h */,
 				2C97440616D0A686001A2E1B /* GameViewController.m */,
 				2C97440716D0A686001A2E1B /* GameViewController.xib */,
-				2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */,
 				2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */,
 				2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */,
 				2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */,
-				39A9D7F616A83D68003A8B7B /* GameEngine.h */,
-				39A9D7F716A83D68003A8B7B /* GameEngine.m */,
 				2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */,
 				2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */,
 				2C52D3C916BF17F200588266 /* LevelSelectorView.h */,
@@ -321,6 +348,8 @@
 				2C2AF91E16D177C8005E837D /* Correct.wav in Resources */,
 				2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */,
 				2C2AF92316D185EB005E837D /* Backspace.wav in Resources */,
+				2CD2F86216DB1A4900839C4B /* Click.wav in Resources */,
+				2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +394,7 @@
 				2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */,
 				2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */,
 				2C97440816D0A686001A2E1B /* GameViewController.m in Sources */,
+				2C74AED716E3F9E20095143A /* Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

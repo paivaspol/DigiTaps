@@ -14,6 +14,8 @@
 #import "GameEngine.h"  // Game engine
 #import "GameViewController.h"  // Game view controller
 
+static CFStringRef showAgreementKey = CFSTR("didAgree");
+
 enum mode {
   TUTORIAL,
   REGULAR
@@ -29,6 +31,9 @@ enum mode {
   LevelSelectorViewController   *levelSelectorViewController;
   GameViewController            *gameViewController;
   GameEngine                    *gameEngine;
+  
+  CFBooleanRef didAcceptAgreement;
+  Boolean didAccept;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *startGame;

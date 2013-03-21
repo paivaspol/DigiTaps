@@ -13,6 +13,8 @@
 #define NUMBERS_PER_LEVEL 3
 #define NUM_LEVEL         5
 
+static CFStringRef gameIdKey = CFSTR("gameId");
+
 typedef enum GameState {
   ACTIVE,
   IN_BETWEEN,
@@ -26,12 +28,17 @@ typedef enum GameState {
   int correct;
   int curNumberIndex;
   int curLevel;
+  
+  int gameId;
+  CFNumberRef tempId;
+  
   GameState state;
   NSMutableArray *numberContainer;
   int currentDivider;
 }
 
-
+// Singleton method
++ (id)getInstance;
 
 - (void)initializeGame;
 - (GameState)state;
@@ -57,5 +64,7 @@ typedef enum GameState {
 - (int)correct;
 // returns number of miss trails
 - (int)miss;
+- (int)numbersPerLevel;
+- (int)gameId;
 
 @end

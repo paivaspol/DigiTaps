@@ -28,14 +28,14 @@
   [super viewDidLoad];
   [self.navigationController setNavigationBarHidden:YES];
   [self initializeViewControllers];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Tap input game");
-  // Do any additional setup after loading the view from its nib.
+  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Tap input game"); 
 }
 
 - (void)initializeViewControllers
 {
-  gameEngine = [[GameEngine alloc] init];
+  gameEngine = [GameEngine getInstance];
   userAgreementViewController = [[UserAgreementViewController alloc] init];
+  [userAgreementViewController setDelegate:self];
   modeSelectorViewController = [[ModeSelectorViewController alloc] init];
   [modeSelectorViewController setDelegate:self];
   levelSelectorViewController = [[LevelSelectorViewController alloc] initWithNumLevels:[gameEngine getMaxLevel]];
@@ -45,8 +45,18 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  //[self presentViewController:userAgreementViewController animated:YES completion:nil];
+//  [self presentViewController:userAgreementViewController animated:YES completion:nil];
   [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  if (!CFPreferencesGetAppBooleanValue(showAgreementKey, kCFPreferencesCurrentApplication, &didAccept)) {
+    didAccept = false;
+  }
+  if (!didAccept) {
+    [self presentViewController:userAgreementViewController animated:YES completion:nil];
+  }  
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,31 +66,34 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-  [self.navigationController pushViewController:levelSelectorViewController animated:YES];
+  [self.navigationController pushViewController:modeSelectorViewController animated:YES];
   [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark UserAgreementVCProtocol
 - (void)agreed
 {
-
+  NSLog(@"exec");
+  didAccept = true;
+  dispatch_queue_t updatePreferenceQueue = dispatch_queue_create("updatePref", NULL);
+  dispatch_async(updatePreferenceQueue, ^{
+    CFPreferencesSetAppValue(showAgreementKey, kCFBooleanTrue, kCFPreferencesCurrentApplication);
+  });
 }
 
 #pragma mark LevelSelectorViewControllerProtocol
 - (void)startLevel:(int)level
 {
-  NSLog(@"Start Level");
-  [self.navigationController pushViewController:modeSelectorViewController animated:YES];
-  [gameViewController setStartingLevel:level];
+  [gameEngine setStartingLevel:level];
+  [gameViewController resetGameViewController];
+  [self.navigationController pushViewController:gameViewController animated:YES];
 }
 
 #pragma mark ModeSelectorProtocol
 - (void)startGameWithNaturalMode:(BOOL)isNatural
 {
-  NSLog(@"starting game");
   [gameViewController setIsNatural:isNatural];
-  [gameViewController resetGameViewController];
-  [self.navigationController pushViewController:gameViewController animated:YES];
+  [self.navigationController pushViewController:levelSelectorViewController animated:YES];
 }
 
 @end

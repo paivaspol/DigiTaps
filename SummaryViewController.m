@@ -18,7 +18,7 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    // Custom initialization
+    gameEngine = [GameEngine getInstance];
   }
   return self;
 }
@@ -42,11 +42,21 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   [self.nextBut setEnabled:shouldDisplayNextButton];
+  [self.numbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
+  [self.numbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
   [self becomeFirstResponder];
+  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(voiceOverAnnouceCurrentGameState) userInfo:nil repeats:NO];
+}
+
+- (void)voiceOverAnnouceCurrentGameState
+{
+  NSString *summaryText = [NSString stringWithFormat:@"%d correct, %d wrong", [gameEngine correct], [gameEngine miss]];
+  NSString *message = [NSString stringWithFormat:@"Level %d completed. %@", [gameEngine currentLevel], summaryText];
+  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,16 +66,24 @@
 }
 
 - (IBAction)quitButton:(id)sender {
-  if ([self.delegate respondsToSelector:@selector(quitGame)]) {
-    [self.delegate quitGame];
-    [self dismissViewControllerAnimated:YES completion:nil];
-  }
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quit Game Confirmation" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+  [alertView show];
 }
 
 - (IBAction)nextLevelButton:(id)sender {
   if ([self.delegate respondsToSelector:@selector(nextLevel)]) {
     [self.delegate nextLevel];
     [self dismissViewControllerAnimated:YES completion:nil];
+  }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  if (buttonIndex == 1) {
+    if ([self.delegate respondsToSelector:@selector(quitGame)]) {
+      [self.delegate quitGame];
+      [self dismissViewControllerAnimated:YES completion:nil];
+    }
   }
 }
 

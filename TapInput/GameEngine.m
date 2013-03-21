@@ -14,16 +14,39 @@
 
 @implementation GameEngine
 
++ (id)getInstance
+{
+  static GameEngine *instance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    instance = [[GameEngine alloc] init];
+  });
+  return instance;
+}
+
 - (GameEngine *)init
 {
   if ([super init] != nil) {
     state = ENDED;
+    
+    tempId = (CFNumberRef)CFPreferencesCopyAppValue(gameIdKey, kCFPreferencesCurrentApplication);
+    if (tempId) {
+      if (!CFNumberGetValue(tempId, kCFNumberIntType, &gameId)) {
+        gameId = 0;
+      }
+    } else {
+      gameId = 0;
+    }
   }
   return self;
 }
 
 - (void)initializeGame
 {
+  // before incrementing, update the current gameId
+  tempId = CFNumberCreate(NULL, kCFNumberIntType, &gameId);
+  CFPreferencesSetAppValue(gameIdKey, tempId, kCFPreferencesCurrentApplication);
+  gameId++;
   miss = 0;
   curNumberIndex = 0;
   state = ACTIVE;
@@ -43,6 +66,7 @@
   if (curNumber != number) {
     [self wrongTrial];
   } else {
+    correct++;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"correctTrail" object:self];
   }
   [self nextNumber];
@@ -73,7 +97,9 @@
 
 - (int)currentNumber
 {
+  NSLog(@"in current number");
   NSNumber *retval = (NSNumber *) [numberContainer objectAtIndex:curNumberIndex];
+  NSLog(@"fine!");
   return [retval intValue];
 }
 
@@ -136,6 +162,16 @@
 - (int)miss
 {
   return miss;
+}
+
+- (int)numbersPerLevel
+{
+  return NUMBERS_PER_LEVEL;
+}
+
+- (int)gameId
+{
+  return gameId;
 }
 
 @end

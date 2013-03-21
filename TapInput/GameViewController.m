@@ -18,14 +18,15 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    gameEngine = [[GameEngine alloc] init];
+    gameEngine = [GameEngine getInstance];
     curInput = [[NSMutableString alloc] init];
     summaryViewController = [[SummaryViewController alloc] initWithNibName:@"SummaryViewController" bundle:[NSBundle mainBundle]];
+    voiceOverQueue = [[NSMutableArray alloc] init];
     [summaryViewController setDelegate:self];
     [gameEngine resetGame];
     [self setupNotificationReceivers];
     [self setupSoundPlayers];
-    [self setTitle:@"Game"];
+    didDisplaySummary = NO;
   }
   return self;
 }
@@ -44,6 +45,19 @@
   AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(soundURL), &doubleClickSound);
 }
 
+#pragma voiceover readback helper methods
+- (void)respondAfterVoiceOverDidFinishReading:(NSNotification *)notification
+{
+  NSLog(@"GameVC: respond after voiceover is done");
+  NSLog(@"GameVC: %@", voiceOverQueue);
+  // read the next token out
+  if ([voiceOverQueue count] > 0) {
+    NSString *string = [voiceOverQueue lastObject];
+    [voiceOverQueue removeLastObject];
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, string);
+  }
+}
+
 #pragma view controller related
 - (void)viewDidLoad
 {
@@ -51,14 +65,12 @@
   UILongPressGestureRecognizer *longPressRec = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
   [longPressRec setNumberOfTouchesRequired:1];
   [longPressRec setMinimumPressDuration: MENU_WAIT_TIME];
-  [self.view addGestureRecognizer:longPressRec];  
+  [self.view addGestureRecognizer:longPressRec];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:@"Quit"
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
-                                                                action:@selector(backButtonPressed)];
+                                                                action:@selector(quitGameResponder)];
   self.navigationItem.rightBarButtonItem = quitButton;
-  [gameEngine setStartingLevel:startingLevel];
-  [gameEngine generateForLevel:[gameEngine currentLevel]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -66,16 +78,20 @@
   [self.view setIsAccessibilityElement:YES];
   [self.view setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
   [self.view becomeFirstResponder];
-  [self.navigationItem setHidesBackButton:NO animated:NO];
+  if (didDisplaySummary) {
+    [self.navigationItem setHidesBackButton:NO animated:NO];
+  }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+  [voiceOverQueue removeAllObjects];
+  UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.view);
+  [gameEngine generateForLevel:[gameEngine currentLevel]];
+  [self setTitle:[NSString stringWithFormat:@"Level %d, %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]]];
+  NSLog(@"gameid: %d", [gameEngine gameId]);
   [self updateCurrentNumber];
-  [self voiceOverAnnouceCurrentGameState];
-  NSString *message = [NSString stringWithFormat:@"Game Started"];
-  UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, message);
-
+  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(voiceOverAnnouceCurrentGameState) userInfo:nil repeats:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,10 +117,21 @@
   [self updateLevelDisplay];
 }
 
+- (void)resetAllVariables
+{
+  isWaitingForInput = NO;
+  hasStarted = NO;
+  hasMoved = NO;
+  startTouch = -1;
+  currentSum = 0;
+  tapped = -1;
+  [curInput setString:@""];
+  [self.inputNumber setText:curInput];
+}
+
 #pragma mark touch handlers
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  NSLog(@"started with %d", [[event allTouches] count]);
   startTouch = [[event allTouches] count];
   UITouch *touch = [touches anyObject];
   startTouchPosition = [touch locationInView:self.view];
@@ -114,7 +141,6 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  NSLog(@"moved with %d", [[event allTouches] count]);
   NSUInteger tempTaps = [[event allTouches] count];
   if (startTouch < tempTaps) {
     hasMoved = YES;
@@ -171,7 +197,7 @@
   }
   
   if (isWaitingForInput && currentSum == 6) {
-
+    
   } else if (isWaitingForInput) {
     AudioServicesPlaySystemSound(clickSound);
   }
@@ -181,7 +207,6 @@
   }
   hasStarted = false;
   startTouch = -1;
-  NSLog(@"val: %d", val);
   [self.inputNumber setText:curInput];
   [self.navigationItem setHidesBackButton:YES animated:YES];
 }
@@ -194,7 +219,6 @@
     // a flick, put it in a waiting state
     if (isWaitingForInput) {
       isWaitingForInput = NO;
-      NSLog(@"got: %d", currentSum);
       [curInput appendFormat:@"%d", currentSum];
       *val_p = currentSum;
     } else {
@@ -210,7 +234,6 @@
         *val_p = currentSum + startTouch;
         currentSum = 0;
       }
-      NSLog(@"got: %d", *val_p);
       [curInput appendFormat:@"%d", *val_p];
       isWaitingForInput = NO;
       
@@ -222,7 +245,6 @@
       isWaitingForInput = NO;
       *val_p = currentSum + startTouch;
       currentSum = 0;
-      NSLog(@"got: %d", *val_p);
       [curInput appendFormat:@"%d", *val_p];
     }
   }
@@ -232,24 +254,41 @@
 - (void)nextLevel
 {
   [gameEngine nextLevel];
-  [gameEngine generateForLevel:[gameEngine currentLevel]];
 }
 
 - (void)quitGame
 {
   [self.navigationController popToRootViewControllerAnimated:YES];
+  didDisplaySummary = NO;
+}
+
+#pragma AlertView
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  if (buttonIndex == 1) {
+    [self quitGame];
+  }
+  [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
 }
 
 #pragma mark helper methods
+- (void)quitGameResponder
+{
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quit Game Confirmation" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+  [alertView show];
+}
+
 // backspace
 - (void)backspace
 {
   if ([curInput length] != 0) {
+    NSString *deletedString = [NSString stringWithFormat:@"%c", [curInput characterAtIndex:[curInput length] - 1]];
     if ([curInput length] == 1) {
       [curInput setString:@""];
     } else {
       [curInput setString:[[curInput substringToIndex:[curInput length] - 1] copy]];
     }
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, deletedString);
   }
 }
 
@@ -280,6 +319,11 @@
 
 - (void)updateCurrentNumber
 {
+  if (UIAccessibilityIsVoiceOverRunning()) {
+    [voiceOverQueue removeAllObjects];
+    NSLog(@"GameVC: %d", [gameEngine currentNumber]);
+    [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
+  }
   [self.currentNumber setText:[NSString stringWithFormat:@"%d", [gameEngine currentNumber]]];
 }
 
@@ -299,6 +343,7 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(levelChanged:) name:@"levelGenerated" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wrongNumber:) name:@"wrongTrail" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(correctNumber:) name:@"correctTrail" object:gameEngine];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondAfterVoiceOverDidFinishReading:) name:UIAccessibilityAnnouncementDidFinishNotification object:nil];
 }
 
 - (void)correctNumber:(NSNotification *)notification
@@ -315,7 +360,6 @@
 
 - (void)gameStarted:(NSNotification *)notification
 {
-  NSLog(@"game started VC");
 }
 
 - (void)levelCompleted:(NSNotification *)notification
@@ -326,8 +370,6 @@
   [summaryViewController setDisplayNextLevel:([gameEngine currentLevel] < [gameEngine getMaxLevel])];
   [self presentViewController:summaryViewController animated:YES completion:nil];
   UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, summaryViewController.view);
-  NSString *message = [NSString stringWithFormat:@"Level %d completed", [gameEngine currentLevel]];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
 - (void)numberChanged:(NSNotification *)notification
@@ -335,15 +377,22 @@
   [curInput setString:@""];
   NSLog(@"number Changed");
   [self updateCurrentNumber];
-  NSString *message = [NSString stringWithFormat:@"Current number is %d", [gameEngine currentNumber]];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+  [self respondAfterVoiceOverDidFinishReading:nil];
+}
+
+- (void)addDigitsToVoiceOverQueue:(int)number
+{
+  while (number > 0) {
+    int digit = number % 10;
+    number /= 10;
+    [voiceOverQueue addObject:[NSString stringWithFormat:@"%d", digit]];
+  }
 }
 
 - (void)voiceOverAnnouceCurrentGameState
 {
-  NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
-  message = [NSString stringWithFormat:@"Current number is %d", [gameEngine currentNumber]];
+  NSLog(@"GameVC: VoiceOver announceGameState");
+  NSString *message = [NSString stringWithFormat:@"Level %d, with %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]];
   UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
@@ -352,7 +401,6 @@
   NSLog(@"levelChanged");
   [self updateCurrentNumber];
   [self updateLevelDisplay];
-  [self voiceOverAnnouceCurrentGameState];
 }
 
 #pragma longPress handler
@@ -362,8 +410,7 @@
     case UIGestureRecognizerStateBegan: {
       if ([gameEngine state] == ACTIVE && !hasMoved) {
         [gameEngine inputNumber:[curInput intValue]];
-        [curInput setString:@""];
-        [self.inputNumber setText:curInput];
+        [self resetAllVariables];
         [self.navigationItem setHidesBackButton:YES animated:YES];
       }
       break;
@@ -371,11 +418,6 @@
     default:
       break;
   }
-}
-
-- (void)backButtonPressed
-{
-  [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

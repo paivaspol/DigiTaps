@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GameEngine.h"
+
 @protocol SummaryViewControllerProtocol <NSObject>
 
 - (void)quitGame;
@@ -15,10 +17,11 @@
 
 @end
 
-@interface SummaryViewController : UIViewController
+@interface SummaryViewController : UIViewController<UIAlertViewDelegate>
 {
   @private
   BOOL shouldDisplayNextButton;
+  GameEngine *gameEngine;
 }
 
 @property (strong, nonatomic) id <SummaryViewControllerProtocol> delegate;

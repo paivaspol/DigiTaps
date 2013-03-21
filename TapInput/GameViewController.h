@@ -18,7 +18,7 @@
 #define TAPS                3
 #define MENU_WAIT_TIME      0.35
 
-@interface GameViewController : UIViewController<SummaryViewControllerProtocol>
+@interface GameViewController : UIViewController<SummaryViewControllerProtocol, UIAlertViewDelegate>
 {
   @private
   GameEngine                  *gameEngine;
@@ -27,6 +27,7 @@
   BOOL                        hasStarted;
   BOOL                        didShowUserAgreement;
   BOOL                        hasMoved;
+  BOOL                        didDisplaySummary;
   CGPoint                     startTouchPosition;
   NSUInteger                  startTouch;
   int                         currentSum;
@@ -34,6 +35,7 @@
   NSUInteger                  tapped;
   SummaryViewController       *summaryViewController;
   NSMutableString             *curInput;
+  NSMutableArray              *voiceOverQueue;
   SystemSoundID               correctSound;
   SystemSoundID               wrongSound;
   SystemSoundID               backspaceSound;
