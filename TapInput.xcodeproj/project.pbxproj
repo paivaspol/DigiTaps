@@ -20,6 +20,7 @@
 		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
 		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
 		2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC525C16D0369400DB070B /* StartMenuViewController.m */; };
+		2CCC5F0316FBF82800165373 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCC5F0216FBF82800165373 /* CoreData.framework */; };
 		2CD2F86216DB1A4900839C4B /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86116DB1A4900839C4B /* Click.wav */; };
 		2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */; };
 		2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */; };
@@ -75,6 +76,7 @@
 		2C97440716D0A686001A2E1B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuViewController.h; sourceTree = "<group>"; };
 		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuViewController.m; sourceTree = "<group>"; };
+		2CCC5F0216FBF82800165373 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2CD2F86116DB1A4900839C4B /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
 		2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DoubleClick.wav; sourceTree = "<group>"; };
 		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectorViewController.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCC5F0316FBF82800165373 /* CoreData.framework in Frameworks */,
 				2C2AF91C16D17511005E837D /* AudioToolbox.framework in Frameworks */,
 				39C7C1EA169EFBE900A6DABA /* UIKit.framework in Frameworks */,
 				39C7C1EC169EFBE900A6DABA /* Foundation.framework in Frameworks */,
@@ -188,6 +191,7 @@
 		39C7C1E8169EFBE900A6DABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CCC5F0216FBF82800165373 /* CoreData.framework */,
 				2C2AF91B16D17511005E837D /* AudioToolbox.framework */,
 				39C7C1E9169EFBE900A6DABA /* UIKit.framework */,
 				39C7C1EB169EFBE900A6DABA /* Foundation.framework */,
