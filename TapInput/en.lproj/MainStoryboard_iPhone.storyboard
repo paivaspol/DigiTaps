@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pR7-5E-SSp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pR7-5E-SSp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -43,7 +43,7 @@
                                     <action selector="buttonPressed:" destination="7lv-oC-uON" eventType="touchUpInside" id="gc4-H9-Aqj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nl-9F-xlt">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nl-9F-xlt">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="G5p-hf-DRw"/>
                                 </constraints>
@@ -68,26 +68,62 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1Y-7d-HPO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Dump Logs">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dumpLogs:" destination="7lv-oC-uON" eventType="touchUpInside" id="O2R-SH-aZL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijr-BT-lOE">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear Data">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearLogs:" destination="7lv-oC-uON" eventType="touchUpInside" id="qOw-Jr-fUq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59092457389999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Zy8-e0-hwC" firstAttribute="top" secondItem="XWC-Ql-Jqh" secondAttribute="top" constant="185" id="A7H-Uf-5Ky"/>
+                            <constraint firstItem="Sii-7J-WeA" firstAttribute="top" secondItem="XWC-Ql-Jqh" secondAttribute="top" constant="44" id="7Oe-Qv-jZ8"/>
+                            <constraint firstItem="ijr-BT-lOE" firstAttribute="leading" secondItem="XWC-Ql-Jqh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cfw-F7-eof"/>
                             <constraint firstAttribute="trailing" secondItem="Zy8-e0-hwC" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="Shs-PX-few"/>
+                            <constraint firstItem="Zy8-e0-hwC" firstAttribute="top" secondItem="XWC-Ql-Jqh" secondAttribute="top" constant="106" type="user" id="TSc-cd-S1L"/>
+                            <constraint firstItem="y1Y-7d-HPO" firstAttribute="leading" secondItem="XWC-Ql-Jqh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Up3-gJ-8TZ"/>
                             <constraint firstItem="Sii-7J-WeA" firstAttribute="centerX" secondItem="Zy8-e0-hwC" secondAttribute="centerX" type="default" id="WPz-Cq-bfL"/>
-                            <constraint firstItem="0Nl-9F-xlt" firstAttribute="top" secondItem="XWC-Ql-Jqh" secondAttribute="top" constant="248" id="Xeu-nT-vGn"/>
-                            <constraint firstItem="Sii-7J-WeA" firstAttribute="top" secondItem="XWC-Ql-Jqh" secondAttribute="top" constant="91" id="YAu-tQ-qd0"/>
+                            <constraint firstAttribute="trailing" secondItem="y1Y-7d-HPO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="b98-em-UeP"/>
                             <constraint firstItem="0Nl-9F-xlt" firstAttribute="leading" secondItem="XWC-Ql-Jqh" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="eUZ-uy-11u"/>
+                            <constraint firstItem="0Nl-9F-xlt" firstAttribute="top" secondItem="Zy8-e0-hwC" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="j58-e8-nfT"/>
+                            <constraint firstAttribute="trailing" secondItem="ijr-BT-lOE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kIh-BN-xkM"/>
                             <constraint firstAttribute="trailing" secondItem="0Nl-9F-xlt" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="rVQ-xz-3hx"/>
+                            <constraint firstItem="y1Y-7d-HPO" firstAttribute="top" secondItem="0Nl-9F-xlt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tzG-G1-Hrz"/>
+                            <constraint firstItem="ijr-BT-lOE" firstAttribute="top" secondItem="y1Y-7d-HPO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uZp-ca-19C"/>
                             <constraint firstItem="Zy8-e0-hwC" firstAttribute="leading" secondItem="XWC-Ql-Jqh" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="xiD-12-bzE"/>
                         </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                         <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y5r-nR-c03"/>
+                    <connections>
+                        <outlet property="clearLogs" destination="ijr-BT-lOE" id="tiK-UQ-2Lc"/>
+                        <outlet property="dumpLogBut" destination="y1Y-7d-HPO" id="huD-7C-WG4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0q4-Mn-brO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="83"/>
+            <point key="canvasLocation" x="484" y="83"/>
         </scene>
     </scenes>
     <classes>
@@ -98,6 +134,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StartMenuViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="action" name="clearLogs:"/>
+                <relationship kind="action" name="dumpLogs:"/>
+                <relationship kind="outlet" name="clearLogs" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dumpLogBut" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="startGame" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tutorial" candidateClass="UIButton"/>
             </relationships>

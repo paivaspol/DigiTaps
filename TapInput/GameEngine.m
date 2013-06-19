@@ -12,6 +12,9 @@
 
 @end
 
+static int const kBasePoint = 2;
+static int const kMidPoint = 10;
+
 @implementation GameEngine
 
 + (id)getInstance
@@ -26,9 +29,8 @@
 
 - (GameEngine *)init
 {
-  if ([super init] != nil) {
+  if ((self = [super init]) != nil) {
     state = ENDED;
-    
     tempId = (CFNumberRef)CFPreferencesCopyAppValue(gameIdKey, kCFPreferencesCurrentApplication);
     if (tempId) {
       if (!CFNumberGetValue(tempId, kCFNumberIntType, &gameId)) {
@@ -49,22 +51,32 @@
   gameId++;
   miss = 0;
   curNumberIndex = 0;
+  digitMiss = 0;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"gamestarted" object:self];
 }
 
-- (void)wrongTrial
+- (void)wrongTrial:(int)number
 {
   miss++;
   // TODO: implement wrong digit counter.
   [[NSNotificationCenter defaultCenter] postNotificationName:@"wrongTrail" object:self];
 }
 
-- (void)inputNumber:(int)number
+- (int)numDigitWrong:(int)number
+{
+  return -1;
+}
+
+- (void)inputNumber:(int)number withTime:(NSTimeInterval)timeUsed
 {
   int curNumber = [[numberContainer objectAtIndex:curNumberIndex] intValue];
+  int numDigit = [self numDigits:curNumber];
+  double rate = numDigit / timeUsed;
+  int point = [self computePointFrom:rate withNumDigit:numDigit andIsWrong:(curNumber != number)];
+  [points addObject:[NSNumber numberWithInt:point]];
   if (curNumber != number) {
-    [self wrongTrial];
+    [self wrongTrial:number];
   } else {
     correct++;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"correctTrail" object:self];
@@ -72,10 +84,21 @@
   [self nextNumber];
 }
 
+- (int)numDigits:(int)number
+{
+  int retval = 0;
+  while (number > 0) {
+    ++retval;
+    number /= 10;
+  }
+  return retval;
+}
+
 - (void)generateForLevel:(int)level
 {
   curNumberIndex = 0;
   miss = 0;
+  digitMiss = 0;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
   
@@ -128,6 +151,8 @@
 
 - (void)nextNumber
 {
+  // compute the error of this number
+  digitMiss = 0;
   curNumberIndex++;
   if (curNumberIndex < NUMBERS_PER_LEVEL) {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"numberChanged" object:self];
@@ -137,9 +162,14 @@
   }
 }
 
+- (void)computeCurNumberError
+{
+  
+}
+
 - (void)nextLevel
 {
-  NSLog(@"next level");
+  points = [[NSMutableArray alloc] init];
   curLevel++;
 }
 
@@ -172,6 +202,33 @@
 - (int)gameId
 {
   return gameId;
+}
+
+- (int)taskId
+{
+  return curNumberIndex;
+}
+
+- (NSArray *)getPoints
+{
+  return [points copy];
+}
+
+/**
+ * returns the point
+ */
+- (int)computePointFrom:(double)entryRate withNumDigit:(int)numDigit andIsWrong:(BOOL)isWrong
+{
+  if (isWrong) {
+    return 0;
+  }
+  double expectedRate = [self baselineExpectedRate:numDigit];
+  return round((entryRate / expectedRate) * kMidPoint);
+}
+
+- (double)baselineExpectedRate:(int)numDigit
+{
+  return numDigit * kBasePoint;
 }
 
 @end

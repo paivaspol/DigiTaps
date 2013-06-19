@@ -5,21 +5,26 @@
 //  Created by Vaspol Ruamviboonsuk on 3/3/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
-
+#import <CoreData/CoreData.h>
 #import <Foundation/Foundation.h>
 
-typedef enum Event {
-  GAME_START,
-  GAME_END,
-  GESTURE_TAP,
-  GESTURE_SWIPE,
-  NUMBER_PRESENTED
-} Event;
+#import "Event.h"
+#import "EventType.h"
+#import "CoreDataModelWrapper.h"
 
 @interface Logger : NSObject
+{
+  @private
+  NSManagedObjectContext *manageContext;
+  NSOperationQueue *operationQueue;
+}
 
 + (id)getInstance;
 
-- (void)logWithEvent:(Event)event andParams:(NSDictionary *)params andUID:(NSUInteger)uid andGameId:(NSUInteger)gid andTaskId:(NSUInteger)tid andTime:(long)time andIsVoiceOverOn:(BOOL)isVoiceOverOn;
+// log an event to CoreData
+- (void)logWithEvent:(Type)event andParams:(NSString *)params andUID:(NSUInteger)uid andGameId:(NSUInteger)gid andTaskId:(NSUInteger)tid andTime:(long)time andIsVoiceOverOn:(BOOL)isVoiceOverOn;
+
+// sends all the logs to the server
+- (void)sendLogsToServer;
 
 @end

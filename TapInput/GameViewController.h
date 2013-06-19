@@ -10,30 +10,23 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 #import "GameEngine.h"
+#import "GameInformationManager.h"
+#import "GestureDetectorManager.h"
+#import "Logger.h"
 #import "SummaryViewController.h"
 
-#define VERT_SWIPE_DRAG_MAX 85
-#define HORZ_SWIPE          70
-#define TAP_THRESHOLD       15
-#define TAPS                3
-#define MENU_WAIT_TIME      0.35
-
-@interface GameViewController : UIViewController<SummaryViewControllerProtocol, UIAlertViewDelegate>
+@interface GameViewController : UIViewController<GestureDetectorManagerProtocol, SummaryViewControllerProtocol, UIAlertViewDelegate>
 {
   @private
   GameEngine                  *gameEngine;
-  BOOL                        isMoreNatural;
-  BOOL                        isWaitingForInput;
-  BOOL                        hasStarted;
-  BOOL                        didShowUserAgreement;
-  BOOL                        hasMoved;
-  BOOL                        didDisplaySummary;
-  CGPoint                     startTouchPosition;
-  NSUInteger                  startTouch;
-  int                         currentSum;
-  int                         startingLevel;
-  NSUInteger                  tapped;
+  GameInformationManager      *gameInfoManager;
+  GestureDetectorManager      *gestureDetectorManager;
   SummaryViewController       *summaryViewController;
+  Logger                      *logger;
+  BOOL                        didDisplaySummary;
+  int                         startingLevel;
+  NSUInteger                  playerId;
+  NSUInteger                  tapped;
   NSMutableString             *curInput;
   NSMutableArray              *voiceOverQueue;
   SystemSoundID               correctSound;
@@ -41,6 +34,10 @@
   SystemSoundID               backspaceSound;
   SystemSoundID               clickSound;
   SystemSoundID               doubleClickSound;
+  NSDate                      *startTime;
+  NSDate                      *numberStartTime;
+  NSInteger                   startTouch;
+  BOOL                        hasMoved;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *currentNumber;
@@ -48,7 +45,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
 
 - (void)setStartingLevel:(int)level;
-- (void)setIsNatural:(BOOL)natural;
 - (void)resetGameViewController;
+- (void)setGestureDetectorManager:(GestureDetectorManager *)manager;
 
 @end

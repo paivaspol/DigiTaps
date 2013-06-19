@@ -1,13 +1,13 @@
 //
-//  PlistReader.h
+//  SharedGestureState.h
 //  TapInput
 //
-//  Created by Vaspol Ruamviboonsuk on 1/24/13.
+//  Created by Vaspol Ruamviboonsuk on 5/31/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface PlistReader : NSObject
+@interface SharedGestureState : NSObject
 
 @end

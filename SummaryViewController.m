@@ -19,6 +19,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     gameEngine = [GameEngine getInstance];
+    logger = [Logger getInstance];
   }
   return self;
 }
@@ -44,11 +45,19 @@
   [self.nextBut setEnabled:shouldDisplayNextButton];
   [self.numbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
   [self.numbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
+  NSArray *points = [gameEngine getPoints];
+  NSMutableString *str = [[NSMutableString alloc] init];
+  for (int i = 0; i < [points count]; i++) {
+    NSInteger pt = [[points objectAtIndex:i] intValue];
+    [str appendFormat:@"%d: %d\n", i, pt];
+  }
+  [self.display setText:[str description]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
   [self becomeFirstResponder];
+  [logger sendLogsToServer];
   [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(voiceOverAnnouceCurrentGameState) userInfo:nil repeats:NO];
 }
 
@@ -75,6 +84,10 @@
     [self.delegate nextLevel];
     [self dismissViewControllerAnimated:YES completion:nil];
   }
+}
+
+- (IBAction)postData:(id)sender {
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

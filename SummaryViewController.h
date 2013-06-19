@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Logger.h"
+#import "SVProgressHUD.h"
 #import "GameEngine.h"
 
 @protocol SummaryViewControllerProtocol <NSObject>
@@ -22,6 +24,7 @@
   @private
   BOOL shouldDisplayNextButton;
   GameEngine *gameEngine;
+  Logger *logger;
 }
 
 @property (strong, nonatomic) id <SummaryViewControllerProtocol> delegate;
@@ -29,9 +32,12 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *nextBut;
 @property (strong, nonatomic) IBOutlet UILabel *numbersCorrect;
 @property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
+@property (strong, nonatomic) IBOutlet UIButton *postData;
+@property (strong, nonatomic) IBOutlet UITextView *display;
 
 - (IBAction)quitButton:(id)sender;
 - (IBAction)nextLevelButton:(id)sender;
+- (IBAction)postData:(id)sender;
 
 - (void)setDisplayNextLevel:(BOOL)shouldDisplay;
 
