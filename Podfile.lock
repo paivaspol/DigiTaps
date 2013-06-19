@@ -1,0 +1,26 @@
+PODS:
+  - ASIHTTPRequest (1.8.1):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/S3
+    - Reachability
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/CloudFiles (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.1):
+    - Reachability
+  - Reachability (3.1.0)
+  - SVProgressHUD (0.9)
+
+DEPENDENCIES:
+  - ASIHTTPRequest (~> 1.8.1)
+  - Reachability (~> 3.1.0)
+  - SVProgressHUD (~> 0.9)
+
+SPEC CHECKSUMS:
+  ASIHTTPRequest: a79e32b54f92471bff8979f3b82182f0e9b6992c
+  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+
+COCOAPODS: 0.17.2
