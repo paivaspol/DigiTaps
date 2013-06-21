@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
+#import "Utility.h"
+
 #import "NaturalGestureDetector.h"
 
 @implementation NaturalGestureDetector
@@ -22,8 +24,9 @@
 - (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
-  if ((fabsf(currentTouchPosition.y - startTouchPosition.y) >= VERT_SWIPE_DRAG_MAX)
-      && (startTouch == 1)) {
+  NSLog(@"dist: %.3f", [Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition]);
+  if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] >= VERT_SWIPE_DRAG_MAX
+      && startTouch == 1) {
     // it's a swipe! return 0 + currentSum, and reset all the variables
     [self gestureDetectedWithValue:currentSum];
     currentSum = 0;
