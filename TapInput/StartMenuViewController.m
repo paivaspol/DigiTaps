@@ -39,6 +39,7 @@
   [super viewDidLoad];
   [self initializeViewControllers];
   [self.navigationController setNavigationBarHidden:YES];
+  self.navigationController.navigationBar.tintColor = [UIColor grayColor];
   UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Tap input game"); 
 }
 

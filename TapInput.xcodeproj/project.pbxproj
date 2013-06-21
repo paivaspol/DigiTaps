@@ -29,6 +29,7 @@
 		2CA62DF317307CC9001B7A97 /* NaturalGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA62DF217307CC9001B7A97 /* NaturalGestureDetector.m */; };
 		2CA62DF617307FC4001B7A97 /* LessNaturalGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA62DF517307FC4001B7A97 /* LessNaturalGestureDetector.m */; };
 		2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC525C16D0369400DB070B /* StartMenuViewController.m */; };
+		2CB406191773F6EB00F45637 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB406181773F6EB00F45637 /* Utility.m */; };
 		2CB5BACB171B587E0042AF27 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB5BACA171B587E0042AF27 /* GameKit.framework */; };
 		2CB5BACF171B5F520042AF27 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5BACE171B5F520042AF27 /* GameCenterManager.m */; };
 		2CB9741B174982870086D6D9 /* Overview.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9741A174982870086D6D9 /* Overview.txt */; };
@@ -124,6 +125,8 @@
 		2CA62DF517307FC4001B7A97 /* LessNaturalGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LessNaturalGestureDetector.m; path = GestureDetection/LessNaturalGestureDetector.m; sourceTree = "<group>"; };
 		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuViewController.h; sourceTree = "<group>"; };
 		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuViewController.m; sourceTree = "<group>"; };
+		2CB406171773F6EB00F45637 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Utilities/Utility.h; sourceTree = "<group>"; };
+		2CB406181773F6EB00F45637 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = Utilities/Utility.m; sourceTree = "<group>"; };
 		2CB5BACA171B587E0042AF27 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		2CB5BACD171B5F520042AF27 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = GameCenter/GameCenterManager.h; sourceTree = "<group>"; };
 		2CB5BACE171B5F520042AF27 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = GameCenter/GameCenterManager.m; sourceTree = "<group>"; };
@@ -270,6 +273,15 @@
 				2CA3CD51170FB6A300E06E30 /* GameInformationManager.m */,
 			);
 			name = GameModel;
+			sourceTree = "<group>";
+		};
+		2CB406161773F6C300F45637 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2CB406171773F6EB00F45637 /* Utility.h */,
+				2CB406181773F6EB00F45637 /* Utility.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2CB5BAC9171B56D40042AF27 /* GestureDetection */ = {
@@ -424,6 +436,7 @@
 		39C7C1EF169EFBE900A6DABA /* TapInput */ = {
 			isa = PBXGroup;
 			children = (
+				2CB406161773F6C300F45637 /* Utils */,
 				2CB97419174982300086D6D9 /* TutorialText */,
 				2CE3FE761747029400C2632C /* Constants */,
 				2CB5BACC171B5F340042AF27 /* GameCenter */,
@@ -647,6 +660,7 @@
 				2CB974251749C86E0086D6D9 /* LessNaturalTutorialViewController.m in Sources */,
 				2CB9742A1749C8A70086D6D9 /* TutorialViewController.m in Sources */,
 				2C72546017598A6900DD17A2 /* SharedGestureState.m in Sources */,
+				2CB406191773F6EB00F45637 /* Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
