@@ -36,5 +36,6 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view;
 
 - (void)setDidDetectGesture:(BOOL)didDetect;
+- (void)reset;
 
 @end

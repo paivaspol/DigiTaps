@@ -75,7 +75,7 @@
 }
 
 - (IBAction)quitButton:(id)sender {
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quit Game Confirmation" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Are you sure you want to quit?" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
   [alertView show];
 }
 

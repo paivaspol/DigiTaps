@@ -10,6 +10,10 @@
 
 #import "GameInformationManager.h"
 
+static NSString * const kQuitGame = @"Are you sure you want to quit?";
+static NSString * const kCancel = @"Cancel";
+static NSString * const kYes = @"Yes";
+
 @interface GameViewController ()
 
 @end
@@ -177,7 +181,6 @@
 {
   [gestureDetectorManager setDidDetectGesture:YES];
   NSInteger val = arg;
-  NSLog(@"GameViewController: val: %d, type: %d", val, type);
   if (type == BACKSPACE) {
     if ([curInput isEqualToString:@""]) {
       [voiceOverQueue removeAllObjects];
@@ -196,7 +199,6 @@
       // it's a digit, append it to the current number
       UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [NSString stringWithFormat:@"%d", val]);
       [curInput appendFormat:@"%d", val];
-      NSLog(@"curInput: %@", curInput);
       [self.inputNumber setText:curInput];
     }
   } else if (type == LESS_NATURAL) {
@@ -260,7 +262,7 @@
 // delegate method for quit
 - (void)quitGameResponder
 {
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quit Game Confirmation" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:kQuitGame message:@"" delegate:self cancelButtonTitle:kCancel otherButtonTitles:kYes , nil];
   [alertView show];
 }
 
@@ -314,7 +316,6 @@
 - (void)updatePlayerId:(NSNotification *)notification
 {
   playerId = [gameInfoManager getPlayerId];
-  NSLog(@"updated playerId with %d", playerId);
 }
 
 // backspace
@@ -369,6 +370,7 @@
 // responder when the number changes
 - (void)numberChanged:(NSNotification *)notification
 {
+  [gestureDetectorManager reset];
   [curInput setString:@""];
   [self updateCurrentNumber];
   [self voiceOverReadEachDigit:nil];

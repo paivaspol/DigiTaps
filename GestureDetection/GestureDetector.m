@@ -14,12 +14,7 @@
 {
   self = [super init];
   if (self) {
-    isWaitingForInput = NO;
-    hasMoved = NO;
-    hasStarted = NO;
-    currentSum = 0;
-    startTouch = -1;
-    isValid = YES;
+    [self reset];
   }
   return self;
 }
@@ -64,6 +59,16 @@
 - (BOOL)isValid
 {
   return isValid;
+}
+
+- (void)reset
+{
+  isWaitingForInput = NO;
+  hasMoved = NO;
+  hasStarted = NO;
+  currentSum = 0;
+  startTouch = -1;
+  isValid = YES;
 }
 
 @end

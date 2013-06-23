@@ -31,7 +31,7 @@
   int initialRowOffset = 30, initialColOffset = 12;
   for (int i = 0; i < numLevels; i++) {
     int col = i % 3, row = i / 3;
-    UIButton *but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *but = [UIButton buttonWithType:UIButtonTypeCustom];
     [but setFrame:CGRectMake(0, 0, 70, 70)];
     [but setCenter:CGPointMake(initialColOffset + (col * 100) + 50, initialRowOffset + (row * 100) + 50)];
     [but setTag:i + 1];

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12E55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.39</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -57,8 +57,10 @@
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="86848533">
-							<int key="type">1</int>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="431556462">
+							<string key="name">Helvetica-Light</string>
+							<string key="family">Helvetica</string>
+							<int key="traits">0</int>
 							<double key="pointSize">22</double>
 						</object>
 						<object class="NSFont" key="IBUIFont" id="129208310">
@@ -85,8 +87,10 @@
 						<reference key="IBUITextColor" ref="870357151"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="242571912">
-							<int key="type">1</int>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="48191296">
+							<string key="name">Helvetica-Light</string>
+							<string key="family">Helvetica</string>
+							<int key="traits">0</int>
 							<double key="pointSize">24</double>
 						</object>
 						<object class="NSFont" key="IBUIFont" id="311080873">
@@ -103,7 +107,6 @@
 						<string key="NSFrame">{{20, 299}, {280, 108}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -113,7 +116,7 @@
 						<reference key="IBUITextColor" ref="870357151"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<reference key="IBUIFontDescription" ref="86848533"/>
+						<reference key="IBUIFontDescription" ref="431556462"/>
 						<reference key="IBUIFont" ref="129208310"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
@@ -134,7 +137,7 @@
 						<reference key="IBUITextColor" ref="870357151"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<reference key="IBUIFontDescription" ref="242571912"/>
+						<reference key="IBUIFontDescription" ref="48191296"/>
 						<reference key="IBUIFont" ref="311080873"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
@@ -155,8 +158,10 @@
 						<reference key="IBUITextColor" ref="870357151"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="827163926">
-							<int key="type">1</int>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="976337863">
+							<string key="name">Helvetica-Light</string>
+							<string key="family">Helvetica</string>
+							<int key="traits">0</int>
 							<double key="pointSize">19</double>
 						</object>
 						<object class="NSFont" key="IBUIFont" id="336355309">
@@ -183,7 +188,7 @@
 						<reference key="IBUITextColor" ref="870357151"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
-						<reference key="IBUIFontDescription" ref="827163926"/>
+						<reference key="IBUIFontDescription" ref="976337863"/>
 						<reference key="IBUIFont" ref="336355309"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
@@ -922,17 +927,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">GameViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">backButtonPressed:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">backButtonPressed:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">backButtonPressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="currentNumber">UILabel</string>
 						<string key="inputNumber">UILabel</string>

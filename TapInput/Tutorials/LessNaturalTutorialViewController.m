@@ -14,7 +14,7 @@
 
 @end
 
-static NSString* const kTutorialStr = @"Tutorial";
+static NSString* const kTutorialStr = @"Practice";
 static NSString* const kTitle = @"Less Natural";
 
 @implementation LessNaturalTutorialViewController

@@ -42,5 +42,6 @@
 /** sets the validity of this gesture recognizer */
 - (void)setValid:(BOOL) isVaild;
 - (BOOL)isValid;
+- (void)reset;
 
 @end

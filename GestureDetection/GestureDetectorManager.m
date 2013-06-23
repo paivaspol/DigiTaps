@@ -73,4 +73,11 @@
   didDetectGesture = didDetect;
 }
 
+- (void)reset
+{
+  for (GestureDetector *gd in gestureDetectors) {
+    [gd reset];
+  }
+}
+
 @end
