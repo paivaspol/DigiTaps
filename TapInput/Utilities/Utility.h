@@ -12,5 +12,7 @@
 
 // returns the distance between the two given points.
 + (double)computeDistanceFrom:(CGPoint)pointOne to:(CGPoint)pointTwo;
+// announce voiceover string, and checks if voiceover is running or not
++ (void)announceVoiceOverWithString:(NSString *)string andValue:(int)val;
 
 @end

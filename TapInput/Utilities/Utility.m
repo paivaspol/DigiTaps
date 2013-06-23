@@ -17,4 +17,22 @@
   return sqrt(deltaX * deltaX + deltaY * deltaY);
 }
 
++ (void)announceVoiceOverWithString:(NSString *)string andValue:(int)val
+{
+  if (UIAccessibilityIsVoiceOverRunning()) {
+    if (val >= 0 && val < 9) {
+      UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [NSString stringWithFormat:string, val]);
+    } else if (val == -1 || val == -2 || val == 9) {
+      UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, string);
+    }
+  }
+}
+
++ (void)announceVoiceOverWithString:(NSString *)string
+{
+  if (UIAccessibilityIsVoiceOverRunning()) {
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, string);
+  }
+}
+
 @end

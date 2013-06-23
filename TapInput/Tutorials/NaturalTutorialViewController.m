@@ -8,11 +8,13 @@
 
 #import "NaturalTutorialViewController.h"
 
+#import "NaturalGestureDetector.h"
+
 @interface NaturalTutorialViewController ()
 
 @end
 
-static NSString * const kMenuStr = @"Menu";
+static NSString * const kTutorialStr = @"Tutorial";
 static NSString * const kTitle = @"Natural";
 
 
@@ -30,10 +32,14 @@ static NSString * const kTitle = @"Natural";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kMenuStr
+  npvc = [[NaturalPracticeViewController alloc] init];
+  GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
+  [manager addGestureDetector:[[NaturalGestureDetector alloc] init]];
+  [npvc setGestureDetectorManager:manager];
+  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
-                                                                action:@selector(quitGameResponder)];
+                                                                action:@selector(handlePracticeButton)];
   self.navigationItem.rightBarButtonItem = quitButton;
   [self setTitle:kTitle];
   CGRect infoViewSize = [self.infoView bounds];
@@ -47,9 +53,9 @@ static NSString * const kTitle = @"Natural";
   // Dispose of any resources that can be recreated.
 }
 
--(void)quitGameResponder
+-(void)handlePracticeButton
 {
-  [self.navigationController popToRootViewControllerAnimated:YES];
+  [self.navigationController pushViewController:npvc animated:YES];
 }
 
 @end

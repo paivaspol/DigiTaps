@@ -8,11 +8,13 @@
 
 #import "LessNaturalTutorialViewController.h"
 
+#import "LessNaturalGestureDetector.h"
+
 @interface LessNaturalTutorialViewController ()
 
 @end
 
-static NSString* const kMenuStr = @"Menu";
+static NSString* const kTutorialStr = @"Tutorial";
 static NSString* const kTitle = @"Less Natural";
 
 @implementation LessNaturalTutorialViewController
@@ -21,18 +23,21 @@ static NSString* const kTitle = @"Less Natural";
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    // Custom initialization
   }
   return self;
 }
 
 - (void)viewDidLoad
 {
+  lnpvc = [[LessNaturalPracticeViewController alloc] init];
+  GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
+  [manager addGestureDetector:[[LessNaturalGestureDetector alloc] init]];
+  [lnpvc setGestureDetectorManager:manager];
   [super viewDidLoad];
-  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kMenuStr
+  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
-                                                                action:@selector(quitGameResponder)];
+                                                                action:@selector(tutorialButtonHandler)];
   self.navigationItem.rightBarButtonItem = quitButton;
   [self setTitle:kTitle];
   CGRect infoViewSize = [self.infoView bounds];
@@ -43,12 +48,11 @@ static NSString* const kTitle = @"Less Natural";
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
--(void)quitGameResponder
+-(void)tutorialButtonHandler
 {
-  [self.navigationController popToRootViewControllerAnimated:YES];
+  [self.navigationController pushViewController:lnpvc animated:YES];
 }
 
 

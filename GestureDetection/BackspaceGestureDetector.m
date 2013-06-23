@@ -8,14 +8,16 @@
 
 #import "BackspaceGestureDetector.h"
 
+#import "Utility.h"
+
 @implementation BackspaceGestureDetector
 
 -(void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
   // Backspace detection
-  if (fabsf(startTouchPosition.x - currentTouchPosition.x) >= HORZ_SWIPE
-      && (startTouch == 2) && fabs(currentTouchPosition.x - startTouchPosition.x) > TAP_THRESHOLD) {
+  if ([Utility computeDistanceFrom:startTouchPosition to:currentTouchPosition] >= HORZ_SWIPE
+      && (startTouch == 2) && [Utility computeDistanceFrom:startTouchPosition to:currentTouchPosition] > TAP_THRESHOLD) {
     // doesn't matter which way the user swiped
     if (currentSum == 0) {
       if ([self.delegate respondsToSelector:@selector(gestureDetectedAs:withArgument:)]) {

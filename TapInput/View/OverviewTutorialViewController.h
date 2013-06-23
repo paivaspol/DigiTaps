@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "OverviewPracticeViewController.h"
+
 @interface OverviewTutorialViewController : UIViewController
+{
+  OverviewPracticeViewController *opvc;
+}
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *infoView;

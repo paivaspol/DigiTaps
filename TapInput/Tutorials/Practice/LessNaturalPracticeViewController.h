@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LessNaturalPracticeViewController : UIViewController
+#import "GestureDetectorManager.h"
+#import "Utility.h"
+
+@interface LessNaturalPracticeViewController : UIViewController <GestureDetectorManagerProtocol>
+{
+  GestureDetectorManager *gestureDetectorManager;
+}
+
+@property (strong, nonatomic) IBOutlet UILabel *description;
+
+- (void)setGestureDetectorManager:(GestureDetectorManager *)manager;
 
 @end

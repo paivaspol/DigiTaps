@@ -19,7 +19,6 @@
 - (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
-  NSLog(@"dist: %.3f", [Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition]);
   if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] >= VERT_SWIPE_DRAG_MAX) {
     // a flick, put it in a waiting state
     if (isWaitingForInput) {
@@ -27,6 +26,7 @@
       [self gestureDetectedWithValue:currentSum];
     } else {
       isWaitingForInput = YES;
+      [self gestureDetectedWithValue:-2];
     }
     currentSum = 0;
   } else if (fabs(currentTouchPosition.x - startTouchPosition.x) <= TAP_THRESHOLD) {

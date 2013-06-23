@@ -14,6 +14,12 @@
 		2C2AF91E16D177C8005E837D /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF91D16D177C8005E837D /* Correct.wav */; };
 		2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92016D17B5D005E837D /* Wrong.wav */; };
 		2C2AF92316D185EB005E837D /* Backspace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92216D185EB005E837D /* Backspace.wav */; };
+		2C5074881775D29400CC87E9 /* NaturalPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5074861775D29400CC87E9 /* NaturalPracticeViewController.m */; };
+		2C5074891775D29400CC87E9 /* NaturalPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5074871775D29400CC87E9 /* NaturalPracticeViewController.xib */; };
+		2C50748D1776081800CC87E9 /* LessNaturalPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C50748B1776081800CC87E9 /* LessNaturalPracticeViewController.m */; };
+		2C50748E1776081800CC87E9 /* LessNaturalPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C50748C1776081800CC87E9 /* LessNaturalPracticeViewController.xib */; };
+		2C507492177614DA00CC87E9 /* OverviewPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C507490177614D900CC87E9 /* OverviewPracticeViewController.m */; };
+		2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */; };
 		2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CA16BF17F200588266 /* LevelSelectorView.m */; };
 		2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CD16BF563C00588266 /* SummaryViewController.m */; };
 		2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52D3CE16BF563C00588266 /* SummaryViewController.xib */; };
@@ -99,6 +105,15 @@
 		2C2AF91D16D177C8005E837D /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = ../Sounds/Correct.wav; sourceTree = "<group>"; };
 		2C2AF92016D17B5D005E837D /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
 		2C2AF92216D185EB005E837D /* Backspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backspace.wav; sourceTree = "<group>"; };
+		2C5074851775D29400CC87E9 /* NaturalPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NaturalPracticeViewController.h; path = Tutorials/Practice/NaturalPracticeViewController.h; sourceTree = "<group>"; };
+		2C5074861775D29400CC87E9 /* NaturalPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NaturalPracticeViewController.m; path = Tutorials/Practice/NaturalPracticeViewController.m; sourceTree = "<group>"; };
+		2C5074871775D29400CC87E9 /* NaturalPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NaturalPracticeViewController.xib; path = Tutorials/Practice/NaturalPracticeViewController.xib; sourceTree = "<group>"; };
+		2C50748A1776081800CC87E9 /* LessNaturalPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LessNaturalPracticeViewController.h; path = Tutorials/Practice/LessNaturalPracticeViewController.h; sourceTree = "<group>"; };
+		2C50748B1776081800CC87E9 /* LessNaturalPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LessNaturalPracticeViewController.m; path = Tutorials/Practice/LessNaturalPracticeViewController.m; sourceTree = "<group>"; };
+		2C50748C1776081800CC87E9 /* LessNaturalPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LessNaturalPracticeViewController.xib; path = Tutorials/Practice/LessNaturalPracticeViewController.xib; sourceTree = "<group>"; };
+		2C50748F177614D800CC87E9 /* OverviewPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverviewPracticeViewController.h; path = Tutorials/Practice/OverviewPracticeViewController.h; sourceTree = "<group>"; };
+		2C507490177614D900CC87E9 /* OverviewPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverviewPracticeViewController.m; path = Tutorials/Practice/OverviewPracticeViewController.m; sourceTree = "<group>"; };
+		2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewPracticeViewController.xib; path = Tutorials/Practice/OverviewPracticeViewController.xib; sourceTree = "<group>"; };
 		2C52D3C916BF17F200588266 /* LevelSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectorView.h; sourceTree = "<group>"; };
 		2C52D3CA16BF17F200588266 /* LevelSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectorView.m; sourceTree = "<group>"; };
 		2C52D3CC16BF563C00588266 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewController.h; path = ../SummaryViewController.h; sourceTree = "<group>"; };
@@ -246,6 +261,22 @@
 			path = TapInput;
 			sourceTree = "<group>";
 		};
+		2C507494177614E600CC87E9 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				2C50748A1776081800CC87E9 /* LessNaturalPracticeViewController.h */,
+				2C50748B1776081800CC87E9 /* LessNaturalPracticeViewController.m */,
+				2C50748C1776081800CC87E9 /* LessNaturalPracticeViewController.xib */,
+				2C5074851775D29400CC87E9 /* NaturalPracticeViewController.h */,
+				2C5074861775D29400CC87E9 /* NaturalPracticeViewController.m */,
+				2C5074871775D29400CC87E9 /* NaturalPracticeViewController.xib */,
+				2C50748F177614D800CC87E9 /* OverviewPracticeViewController.h */,
+				2C507490177614D900CC87E9 /* OverviewPracticeViewController.m */,
+				2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */,
+			);
+			name = Practice;
+			sourceTree = "<group>";
+		};
 		2C74AED416E3F9750095143A /* Logging */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +360,7 @@
 		2CB9741C1749C10E0086D6D9 /* Tutorials */ = {
 			isa = PBXGroup;
 			children = (
+				2C507494177614E600CC87E9 /* Practice */,
 				2CE3FE7F1747E28900C2632C /* OverviewTutorialViewController.h */,
 				2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */,
 				2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */,
@@ -580,6 +612,9 @@
 				2CB974211749C15E0086D6D9 /* NaturalTutorialViewController.xib in Resources */,
 				2CB974261749C86E0086D6D9 /* LessNaturalTutorialViewController.xib in Resources */,
 				2CB9742B1749C8A70086D6D9 /* TutorialViewController.xib in Resources */,
+				2C5074891775D29400CC87E9 /* NaturalPracticeViewController.xib in Resources */,
+				2C50748E1776081800CC87E9 /* LessNaturalPracticeViewController.xib in Resources */,
+				2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +696,9 @@
 				2CB9742A1749C8A70086D6D9 /* TutorialViewController.m in Sources */,
 				2C72546017598A6900DD17A2 /* SharedGestureState.m in Sources */,
 				2CB406191773F6EB00F45637 /* Utility.m in Sources */,
+				2C5074881775D29400CC87E9 /* NaturalPracticeViewController.m in Sources */,
+				2C50748D1776081800CC87E9 /* LessNaturalPracticeViewController.m in Sources */,
+				2C507492177614DA00CC87E9 /* OverviewPracticeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +824,7 @@
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -798,6 +837,7 @@
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

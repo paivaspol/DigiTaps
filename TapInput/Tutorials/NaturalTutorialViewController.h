@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GestureDetectorManager.h"
+#import "NaturalPracticeViewController.h"
+
 @interface NaturalTutorialViewController : UIViewController
+{
+  NaturalPracticeViewController *npvc;
+}
+
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *infoView;
 

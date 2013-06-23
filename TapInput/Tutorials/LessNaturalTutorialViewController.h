@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LessNaturalPracticeViewController.h"
+
 @interface LessNaturalTutorialViewController : UIViewController
 {
+  LessNaturalPracticeViewController *lnpvc;
 }
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *infoView;

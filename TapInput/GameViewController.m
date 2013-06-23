@@ -74,7 +74,7 @@
 }
 
 #pragma voiceover readback helper methods
-- (void)respondAfterVoiceOverDidFinishReading:(NSNotification *)notification
+- (void)voiceOverReadEachDigit:(NSNotification *)notification
 {
   NSLog(@"GameVC: respond after voiceover is done");
   NSLog(@"GameVC: %@", voiceOverQueue);
@@ -179,7 +179,13 @@
   NSInteger val = arg;
   NSLog(@"GameViewController: val: %d, type: %d", val, type);
   if (type == BACKSPACE) {
-    [self backspace];
+    if ([curInput isEqualToString:@""]) {
+      [voiceOverQueue removeAllObjects];
+      [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
+      [self voiceOverReadEachDigit:nil];
+    } else {
+      [self backspace];
+    }
   } else if (type == NATURAL) {
     if (val == -1) {
       // play a click sound, we are still waiting for something
@@ -251,12 +257,14 @@
 }
 
 #pragma mark helper methods
+// delegate method for quit
 - (void)quitGameResponder
 {
   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Quit Game Confirmation" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
   [alertView show];
 }
 
+// updates the current number display
 - (void)updateCurrentNumber
 {
   if (UIAccessibilityIsVoiceOverRunning()) {
@@ -267,6 +275,7 @@
   [self logEvent:NUMBER_PRESENTED andParams:[NSString stringWithFormat:@"%d", [gameEngine currentNumber]]];
 }
 
+// updates the level display
 - (void)updateLevelDisplay
 {
   [self.levelLabel setText:[NSString stringWithFormat:@"%d", [gameEngine currentLevel]]];
@@ -283,7 +292,7 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(levelChanged:) name:@"levelGenerated" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wrongNumber:) name:@"wrongTrail" object:gameEngine];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(correctNumber:) name:@"correctTrail" object:gameEngine];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondAfterVoiceOverDidFinishReading:) name:UIAccessibilityAnnouncementDidFinishNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(voiceOverReadEachDigit:) name:UIAccessibilityAnnouncementDidFinishNotification object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayerId:) name:@"UserRegistered" object:gameInfoManager];
 }
 
@@ -337,6 +346,7 @@
   [self logEvent:GESTURE_TAP andParams:params];
 }
 
+// log an event
 - (void)logEvent:(Type)eventType andParams:(NSString *)params
 {
     NSDate *curDate = [NSDate date];
@@ -344,6 +354,7 @@
     [logger logWithEvent:eventType andParams:params andUID:playerId andGameId:[gameEngine gameId] andTaskId:[gameEngine taskId] andTime:diff andIsVoiceOverOn:UIAccessibilityIsVoiceOverRunning()];
 }
 
+// responder when the level is completed
 - (void)levelCompleted:(NSNotification *)notification
 {
   // Display another view that shows the summary of the round
@@ -355,14 +366,15 @@
   [self logEvent:LEVEL_END andParams:@""];
 }
 
+// responder when the number changes
 - (void)numberChanged:(NSNotification *)notification
 {
   [curInput setString:@""];
-  NSLog(@"number Changed");
   [self updateCurrentNumber];
-  [self respondAfterVoiceOverDidFinishReading:nil];
+  [self voiceOverReadEachDigit:nil];
 }
 
+// adds each digit to the voice over queue
 - (void)addDigitsToVoiceOverQueue:(int)number
 {
   while (number > 0) {
@@ -372,12 +384,14 @@
   }
 }
 
+// announces the current game state
 - (void)voiceOverAnnouceCurrentGameState
 {
   NSString *message = [NSString stringWithFormat:@"Level %d, with %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]];
   UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 
+// responder when the level changes
 - (void)levelChanged:(NSNotification *)notification
 {
   [self updateCurrentNumber];

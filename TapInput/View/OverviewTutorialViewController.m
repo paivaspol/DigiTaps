@@ -8,11 +8,13 @@
 
 #import "OverviewTutorialViewController.h"
 
+#import "NaturalGestureDetector.h"
+
 @interface OverviewTutorialViewController ()
 
 @end
 
-static NSString* const kMenuStr = @"Menu";
+static NSString* const kTutorialStr = @"Tutorial";
 static NSString* const kTitle = @"Overview";
 
 @implementation OverviewTutorialViewController
@@ -28,11 +30,15 @@ static NSString* const kTitle = @"Overview";
 
 - (void)viewDidLoad
 {
+  opvc = [[OverviewPracticeViewController alloc] init];
+  GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
+  [manager addGestureDetector:[[NaturalGestureDetector alloc] init]];
+  [opvc setGestureDetectorManager:manager];
   [super viewDidLoad];
-  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kMenuStr
+  UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
-                                                                action:@selector(quitGameResponder)];
+                                                                action:@selector(handleTutorialButton)];
   self.navigationItem.rightBarButtonItem = quitButton;
   [self setTitle:kTitle];
   CGRect infoViewSize = [self.infoView bounds];
@@ -46,9 +52,9 @@ static NSString* const kTitle = @"Overview";
   // Dispose of any resources that can be recreated.
 }
 
--(void)quitGameResponder
+-(void)handleTutorialButton
 {
-  [self.navigationController popToRootViewControllerAnimated:YES];
+  [self.navigationController pushViewController:opvc animated:YES];
 }
 
 
