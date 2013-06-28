@@ -27,6 +27,9 @@
 		2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */; };
 		2C72546017598A6900DD17A2 /* SharedGestureState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C72545F17598A6900DD17A2 /* SharedGestureState.m */; };
 		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
+		2C830D0D177D511C00D3B889 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0C177D511C00D3B889 /* logo.png */; };
+		2C830D0F177D512000D3B889 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0E177D512000D3B889 /* logo@2x.png */; };
+		2C830D12177D533600D3B889 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D11177D533600D3B889 /* Default.png */; };
 		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
 		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
 		2C9802F11702759500A8D5C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9802F01702759500A8D5C3 /* SystemConfiguration.framework */; };
@@ -38,7 +41,6 @@
 		2CB406191773F6EB00F45637 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB406181773F6EB00F45637 /* Utility.m */; };
 		2CB5BACB171B587E0042AF27 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB5BACA171B587E0042AF27 /* GameKit.framework */; };
 		2CB5BACF171B5F520042AF27 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5BACE171B5F520042AF27 /* GameCenterManager.m */; };
-		2CB9741B174982870086D6D9 /* Overview.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9741A174982870086D6D9 /* Overview.txt */; };
 		2CB974201749C15E0086D6D9 /* NaturalTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9741E1749C15E0086D6D9 /* NaturalTutorialViewController.m */; };
 		2CB974211749C15E0086D6D9 /* NaturalTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9741F1749C15E0086D6D9 /* NaturalTutorialViewController.xib */; };
 		2CB974251749C86E0086D6D9 /* LessNaturalTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB974231749C86E0086D6D9 /* LessNaturalTutorialViewController.m */; };
@@ -126,6 +128,9 @@
 		2C72545F17598A6900DD17A2 /* SharedGestureState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedGestureState.m; path = GestureDetection/SharedGestureState.m; sourceTree = "<group>"; };
 		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; };
 		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; };
+		2C830D0C177D511C00D3B889 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		2C830D0E177D512000D3B889 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		2C830D11177D533600D3B889 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2C97440716D0A686001A2E1B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
@@ -145,7 +150,6 @@
 		2CB5BACA171B587E0042AF27 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		2CB5BACD171B5F520042AF27 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = GameCenter/GameCenterManager.h; sourceTree = "<group>"; };
 		2CB5BACE171B5F520042AF27 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = GameCenter/GameCenterManager.m; sourceTree = "<group>"; };
-		2CB9741A174982870086D6D9 /* Overview.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Overview.txt; path = TextSource/Overview.txt; sourceTree = "<group>"; };
 		2CB9741D1749C15E0086D6D9 /* NaturalTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NaturalTutorialViewController.h; path = Tutorials/NaturalTutorialViewController.h; sourceTree = "<group>"; };
 		2CB9741E1749C15E0086D6D9 /* NaturalTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NaturalTutorialViewController.m; path = Tutorials/NaturalTutorialViewController.m; sourceTree = "<group>"; };
 		2CB9741F1749C15E0086D6D9 /* NaturalTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NaturalTutorialViewController.xib; path = Tutorials/NaturalTutorialViewController.xib; sourceTree = "<group>"; };
@@ -306,6 +310,16 @@
 			name = GameModel;
 			sourceTree = "<group>";
 		};
+		2C830D10177D512900D3B889 /* DefaultImages */ = {
+			isa = PBXGroup;
+			children = (
+				2C830D11177D533600D3B889 /* Default.png */,
+				2C830D0E177D512000D3B889 /* logo@2x.png */,
+				2C830D0C177D511C00D3B889 /* logo.png */,
+			);
+			name = DefaultImages;
+			sourceTree = "<group>";
+		};
 		2CB406161773F6C300F45637 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,14 +361,6 @@
 			);
 			name = GameCenter;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		2CB97419174982300086D6D9 /* TutorialText */ = {
-			isa = PBXGroup;
-			children = (
-				2CB9741A174982870086D6D9 /* Overview.txt */,
-			);
-			name = TutorialText;
 			sourceTree = "<group>";
 		};
 		2CB9741C1749C10E0086D6D9 /* Tutorials */ = {
@@ -428,6 +434,7 @@
 		39C7C1DA169EFBE900A6DABA = {
 			isa = PBXGroup;
 			children = (
+				2C830D10177D512900D3B889 /* DefaultImages */,
 				2C2AF91F16D177CD005E837D /* Sound */,
 				39C7C1EF169EFBE900A6DABA /* TapInput */,
 				39C7C216169EFBEA00A6DABA /* TapInputTests */,
@@ -469,7 +476,6 @@
 			isa = PBXGroup;
 			children = (
 				2CB406161773F6C300F45637 /* Utils */,
-				2CB97419174982300086D6D9 /* TutorialText */,
 				2CE3FE761747029400C2632C /* Constants */,
 				2CB5BACC171B5F340042AF27 /* GameCenter */,
 				39C7C1F8169EFBE900A6DABA /* AppDelegate.h */,
@@ -608,13 +614,15 @@
 				2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */,
 				2CD6A49A16FEC6FB0077328E /* DemographicsViewController.xib in Resources */,
 				2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */,
-				2CB9741B174982870086D6D9 /* Overview.txt in Resources */,
 				2CB974211749C15E0086D6D9 /* NaturalTutorialViewController.xib in Resources */,
 				2CB974261749C86E0086D6D9 /* LessNaturalTutorialViewController.xib in Resources */,
 				2CB9742B1749C8A70086D6D9 /* TutorialViewController.xib in Resources */,
 				2C5074891775D29400CC87E9 /* NaturalPracticeViewController.xib in Resources */,
 				2C50748E1776081800CC87E9 /* LessNaturalPracticeViewController.xib in Resources */,
 				2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */,
+				2C830D0D177D511C00D3B889 /* logo.png in Resources */,
+				2C830D0F177D512000D3B889 /* logo@2x.png in Resources */,
+				2C830D12177D533600D3B889 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,21 +51,31 @@ static int const kMidPoint = 10;
   gameId++;
   miss = 0;
   curNumberIndex = 0;
-  digitMiss = 0;
+  digitsMissed = 0;
+  totalDigits = 0;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"gamestarted" object:self];
 }
 
-- (void)wrongTrial:(int)number
+- (void)wrongTrial:(NSString *)number
 {
   miss++;
-  // TODO: implement wrong digit counter.
+  digitsMissed += [self numDigitWrong:number];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"wrongTrail" object:self];
 }
 
-- (int)numDigitWrong:(int)number
+- (int)numDigitWrong:(NSString *)numberStr
 {
-  return -1;
+  int index = 0;
+  int counter = 0;
+  NSString * curNumber = [self currentNumber];
+  while (index < [numberStr length] && index < [curNumber length]) {
+    if ([numberStr characterAtIndex:index] != [curNumber characterAtIndex:index]) {
+      counter++;
+    }
+    index++;
+  }
+  return counter;
 }
 
 - (void)inputNumber:(int)number withTime:(NSTimeInterval)timeUsed
@@ -75,8 +85,10 @@ static int const kMidPoint = 10;
   double rate = numDigit / timeUsed;
   int point = [self computePointFrom:rate withNumDigit:numDigit andIsWrong:(curNumber != number)];
   [points addObject:[NSNumber numberWithInt:point]];
+  NSString *numberStr = [NSString stringWithFormat:@"%d", number];
+  totalDigits += [numberStr length];
   if (curNumber != number) {
-    [self wrongTrial:number];
+    [self wrongTrial:numberStr];
   } else {
     correct++;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"correctTrail" object:self];
@@ -98,17 +110,16 @@ static int const kMidPoint = 10;
 {
   curNumberIndex = 0;
   miss = 0;
-  digitMiss = 0;
+  digitsMissed = 0;
+  totalDigits = 0;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
-  
   numberContainer = nil;
   numberContainer = [[NSMutableArray alloc] init];
   for (int j = 0; j < NUMBERS_PER_LEVEL; j++) {
     int sig = INITIAL_SIG * pow(10, level);
-    NSLog(@"sig: %d", sig);
     NSUInteger num = [self randomNumber:sig];
-    [numberContainer addObject:[NSNumber numberWithInt:num]];
+    [numberContainer addObject:[NSString stringWithFormat:@"%d", num]];
   }
   NSLog(@"%@", numberContainer);
 }
@@ -118,12 +129,10 @@ static int const kMidPoint = 10;
   curLevel = level;
 }
 
-- (int)currentNumber
+- (NSString *)currentNumber
 {
-  NSLog(@"in current number");
-  NSNumber *retval = (NSNumber *) [numberContainer objectAtIndex:curNumberIndex];
-  NSLog(@"fine!");
-  return [retval intValue];
+  NSString *retval = [numberContainer objectAtIndex:curNumberIndex];
+  return retval;
 }
 
 - (GameState)state
@@ -152,7 +161,6 @@ static int const kMidPoint = 10;
 - (void)nextNumber
 {
   // compute the error of this number
-  digitMiss = 0;
   curNumberIndex++;
   if (curNumberIndex < NUMBERS_PER_LEVEL) {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"numberChanged" object:self];
@@ -162,9 +170,10 @@ static int const kMidPoint = 10;
   }
 }
 
-- (void)computeCurNumberError
+- (NSString *)getAccurancyRate
 {
-  
+  double percentAccuracy = 100.0 * (totalDigits - digitsMissed) / totalDigits;
+  return [NSString stringWithFormat:@"%.3f%%", percentAccuracy];
 }
 
 - (void)nextLevel

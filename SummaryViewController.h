@@ -34,6 +34,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
 @property (strong, nonatomic) IBOutlet UIButton *postData;
 @property (strong, nonatomic) IBOutlet UITextView *display;
+@property (strong, nonatomic) IBOutlet UILabel *accuracy;
 
 - (IBAction)quitButton:(id)sender;
 - (IBAction)nextLevelButton:(id)sender;

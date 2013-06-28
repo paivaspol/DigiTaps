@@ -273,8 +273,8 @@ static NSString * const kYes = @"Yes";
     [voiceOverQueue removeAllObjects];
     [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
   }
-  [self.currentNumber setText:[NSString stringWithFormat:@"%d", [gameEngine currentNumber]]];
-  [self logEvent:NUMBER_PRESENTED andParams:[NSString stringWithFormat:@"%d", [gameEngine currentNumber]]];
+  [self.currentNumber setText:[gameEngine currentNumber]];
+  [self logEvent:NUMBER_PRESENTED andParams:[gameEngine currentNumber]];
 }
 
 // updates the level display

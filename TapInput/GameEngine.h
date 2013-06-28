@@ -31,8 +31,9 @@ typedef enum GameState {
   int gameId;
   CFNumberRef tempId;
 
-  int digitMiss;
-  
+  int totalDigits;
+  int digitsMissed;
+
   GameState state;
   NSMutableArray *numberContainer;
   NSMutableArray *points;
@@ -48,7 +49,7 @@ typedef enum GameState {
 
 - (void)setStartingLevel:(int)level;
 // Returns the current number to be input
-- (int)currentNumber;
+- (NSString *)currentNumber;
 // inputs the number for checking, with the time used
 - (void)inputNumber:(int)number withTime:(NSTimeInterval)timeUsed;
 // move the cursor to the next number
@@ -66,7 +67,8 @@ typedef enum GameState {
 // returns number of miss trails
 - (int)miss;
 - (int)numbersPerLevel;
-
+// returns the accuracy rate of the level
+- (NSString *)getAccurancyRate;
 // Returns an array of error rates
 - (NSArray *)getPoints;
 

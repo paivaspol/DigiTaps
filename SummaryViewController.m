@@ -45,6 +45,7 @@
   [self.nextBut setEnabled:shouldDisplayNextButton];
   [self.numbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
   [self.numbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
+  [self.accuracy setText:[gameEngine getAccurancyRate]];
   NSArray *points = [gameEngine getPoints];
   NSMutableString *str = [[NSMutableString alloc] init];
   for (int i = 0; i < [points count]; i++) {
