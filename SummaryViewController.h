@@ -36,8 +36,6 @@
 @property (strong, nonatomic) IBOutlet UITextView *display;
 @property (strong, nonatomic) IBOutlet UILabel *accuracy;
 
-- (IBAction)quitButton:(id)sender;
-- (IBAction)nextLevelButton:(id)sender;
 - (IBAction)postData:(id)sender;
 
 - (void)setDisplayNextLevel:(BOOL)shouldDisplay;

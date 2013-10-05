@@ -15,4 +15,8 @@
 // announce voiceover string, and checks if voiceover is running or not
 + (void)announceVoiceOverWithString:(NSString *)string andValue:(int)val;
 
+// in iOS 7, presenting view controller modally is a pain because of the constraints.
+// By wrapping the view controller inside a UINavigationController will help us with
+// the constrait issue.
+// + (UINavigationController *)addNavController:(UIViewController *) vc;
 @end

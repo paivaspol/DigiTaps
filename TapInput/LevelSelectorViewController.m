@@ -46,6 +46,10 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 	// Do any additional setup after loading the view.
 }
 

@@ -99,6 +99,10 @@ static NSString * const kYes = @"Yes";
                                                                 target:self
                                                                 action:@selector(quitGameResponder)];
   self.navigationItem.rightBarButtonItem = quitButton;
+  
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -362,7 +366,8 @@ static NSString * const kYes = @"Yes";
   [self.view setAccessibilityTraits:UIAccessibilityTraitNone];
   [self.view resignFirstResponder];
   [summaryViewController setDisplayNextLevel:([gameEngine currentLevel] < [gameEngine getMaxLevel])];
-  [self presentViewController:summaryViewController animated:YES completion:nil];
+  UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:summaryViewController];
+  [self presentViewController:navController animated:YES completion:nil];
   UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, summaryViewController.view);
   [self logEvent:LEVEL_END andParams:@""];
 }

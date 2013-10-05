@@ -31,7 +31,24 @@
   [self.nextBut setAccessibilityTraits:UIAccessibilityTraitButton];
   [self.nextBut setAccessibilityLabel:@"Next Level"];
   [self.nextBut setAccessibilityHint:@"Next Level"];
-
+  
+  UIBarButtonItem *quit = [[UIBarButtonItem alloc]
+                                 initWithTitle:@"Menu"
+                                 style:UIBarButtonItemStyleBordered target:self action:@selector(quitButton:)];
+  
+  UIBarButtonItem *next = [[UIBarButtonItem alloc]
+                                 initWithTitle:@"Next"
+                                 style:UIBarButtonItemStyleBordered target:self action:@selector(nextLevelButton:)];
+  
+  self.navigationItem.leftBarButtonItem = quit;
+  self.navigationItem.rightBarButtonItem = next;
+  
+  self.title = @"Summary";
+  
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
   // Do any additional setup after loading the view from its nib.
 }
 
@@ -75,12 +92,12 @@
   // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)quitButton:(id)sender {
+- (void)quitButton:(id)sender {
   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Are you sure you want to quit?" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
   [alertView show];
 }
 
-- (IBAction)nextLevelButton:(id)sender {
+- (void)nextLevelButton:(id)sender {
   if ([self.delegate respondsToSelector:@selector(nextLevel)]) {
     [self.delegate nextLevel];
     [self dismissViewControllerAnimated:YES completion:nil];
