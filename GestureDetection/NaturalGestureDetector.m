@@ -24,7 +24,6 @@
 - (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
-  NSLog(@"dist: %.3f", [Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition]);
   if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] >= VERT_SWIPE_DRAG_MAX
       && startTouch == 1) {
     // it's a swipe! return 0 + currentSum, and reset all the variables
@@ -43,7 +42,6 @@
         [self gestureDetectedWithValue:-2];
       }
     } else {
-      NSLog(@"current sum: %d, start touch: %d", currentSum, startTouch);
       [self gestureDetectedWithValue:currentSum + startTouch];
       isWaitingForInput = false;
       currentSum = 0;
@@ -54,8 +52,6 @@
 - (void)gestureDetectedWithValue:(NSInteger)value
 {
   if ([self.delegate respondsToSelector:@selector(gestureDetectedAs:withArgument:)]) {
-    NSLog(@"NatGD: value=%d", value);
-    NSLog(@"detector delegate: %@", [self delegate]);
     [self.delegate gestureDetectedAs:[self description] withArgument:value];
 
   }

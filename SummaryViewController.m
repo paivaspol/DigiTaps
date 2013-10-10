@@ -72,7 +72,6 @@
     [str appendFormat:@"%d: %d\n", i, pt];
   }
   int64_t score = (int64_t) [gameEngine getLevelPoint];
-  NSLog(@"%lld, %.3f", score, [gameEngine getLevelPoint]);
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
   [self.display setText:[str description]];
 }

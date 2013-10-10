@@ -67,7 +67,6 @@
       [delegate performSelector:selector withObject:err];
     }
   } else {
-    NSLog(@"Missed Method");
   }
 }
 
@@ -102,7 +101,6 @@
     
     NSArray *scores = @[scoreReporter];
     [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
-      NSLog(@"score reported");
     }];
   }
 }

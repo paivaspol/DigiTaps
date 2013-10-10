@@ -56,7 +56,6 @@
     [dummy setValue:@"dummyValue" forKey:@"DummyKey"];
     int playerId = [gameInfoManager registerPlayer:dummy];
     [SVProgressHUD dismiss];
-    NSLog(@"playerId: %d", playerId);
     [self.delegate registerCompletedWithUserId:playerId];
   }
   [self dismissViewControllerAnimated:YES completion:nil];

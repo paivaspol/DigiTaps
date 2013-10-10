@@ -62,7 +62,6 @@ static NSString * const kTitle = @"Tutorial";
 - (void)handleGesture:(GestureType)type withArgument:(NSInteger)arg
 {
   NSInteger val = arg;
-  NSLog(@"%d", val);
   if (type == LESS_NATURAL) {
     switch (val) {
       case -1: {

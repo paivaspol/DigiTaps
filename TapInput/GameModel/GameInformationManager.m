@@ -29,7 +29,6 @@ static CFStringRef playerIdKey = CFSTR("playerId");
     playerId = [self getPlayerId];
     dataSender = [[DataSender alloc] init];
   }
-  NSLog(@"self %@", self);
   return self;
 }
 
@@ -47,10 +46,8 @@ static CFStringRef playerIdKey = CFSTR("playerId");
 - (void)setAgreementPref:(BOOL)didAgree
 {
   if (didAgree) {
-    NSLog(@"agreed");
     CFPreferencesSetAppValue(showAgreementKey, kCFBooleanTrue, kCFPreferencesCurrentApplication);
   } else {
-    NSLog(@"not agreed");
     CFPreferencesSetAppValue(showAgreementKey, kCFBooleanFalse, kCFPreferencesCurrentApplication);
   }
 }
@@ -75,7 +72,6 @@ static CFStringRef playerIdKey = CFSTR("playerId");
   NSString *newId;
   if ([dataSender sendData:playerInformation toURL:[NSURL URLWithString:@"http://students.washington.edu/vaspol/register.php"] andReceived:&newId]) {
     playerId = [newId integerValue];
-    NSLog(@"received: %d", playerId);
   }
   playerIdRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &playerId);
   CFPreferencesSetAppValue(playerIdKey, playerIdRef, kCFPreferencesCurrentApplication);

@@ -110,7 +110,6 @@
 // fire after the user agree to the user agreement
 - (void)agreed
 {
-  NSLog(@"agreed in StartMenu %@", gameInfoManager);
   [gameInfoManager setAgreementPref:YES];
   [registrationNavController pushViewController:demographicsViewController animated:YES];
 }

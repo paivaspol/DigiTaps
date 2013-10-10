@@ -80,8 +80,6 @@ static NSString * const kYes = @"Yes";
 #pragma voiceover readback helper methods
 - (void)voiceOverReadEachDigit:(NSNotification *)notification
 {
-  NSLog(@"GameVC: respond after voiceover is done");
-  NSLog(@"GameVC: %@", voiceOverQueue);
   // read the next token out
   if ([voiceOverQueue count] > 0) {
     NSString *string = [voiceOverQueue lastObject];
@@ -121,7 +119,6 @@ static NSString * const kYes = @"Yes";
   UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.view);
   [gameEngine generateForLevel:[gameEngine currentLevel]];
   [self setTitle:[NSString stringWithFormat:@"Level %d, %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]]];
-  NSLog(@"gameid: %d", [gameEngine gameId]);
   [self updateCurrentNumber];
   [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(voiceOverAnnouceCurrentGameState) userInfo:nil repeats:NO];
   startTime = [[NSDate alloc] init];
@@ -226,7 +223,6 @@ static NSString * const kYes = @"Yes";
   switch (recognizer.state) {
     case UIGestureRecognizerStateBegan: {
       if ([gameEngine state] == ACTIVE && !hasMoved) {
-        NSLog(@"%@", numberStartTime);
         NSTimeInterval interval = [numberStartTime timeIntervalSinceNow];
         [gameEngine inputNumber:[curInput intValue] withTime:interval];
         [self resetAllVariables];

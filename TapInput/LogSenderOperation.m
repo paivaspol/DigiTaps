@@ -37,7 +37,6 @@
 
   // Send all the events to the server
   for (Event *event in result) {
-    NSLog(@"%@", event.eventType);
     NSArray *keys = [[[event entity] attributesByName] allKeys];
     NSDictionary *logToSend = [event dictionaryWithValuesForKeys:keys];
     if ([dataSender sendData:logToSend toURL:[NSURL URLWithString:@"http://students.washington.edu/vaspol/event.php"] andReceived:nil]) {

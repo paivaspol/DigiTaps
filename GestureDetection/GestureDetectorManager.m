@@ -31,7 +31,6 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
-  NSLog(@"Touch began");
   didDetectGesture = NO;
   for (GestureDetector *gd in gestureDetectors) {
     [gd touchBegan:touches withEvent:event inView:view];
@@ -40,7 +39,6 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  NSLog(@"Touch moved");
   for (GestureDetector *gd in gestureDetectors) {
     [gd touchMoved:touches withEvent:event];
   }
@@ -48,7 +46,6 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
-    NSLog(@"Touch ended");
   for (GestureDetector *gd in gestureDetectors) {
     [gd touchEnded:touches withEvent:event inView:view];
     if (didDetectGesture) {
@@ -63,7 +60,6 @@
 - (void)gestureDetectedAs:(NSString *)gesture withArgument:(NSInteger)arg
 {
   if ([self.delegate respondsToSelector:@selector(handleGesture:withArgument:)]) {
-    NSLog(@"Manager: arg = %d", arg);
     [self.delegate handleGesture:[GestureTypeUtility stringToGestureType:gesture] withArgument:arg];
   }
 }

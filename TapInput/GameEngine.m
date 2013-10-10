@@ -233,7 +233,6 @@ static int digitSize = 10;
   for (int i = 0; i < [points count]; i++) {
     sum += [[points objectAtIndex:i] intValue];
   }
-  NSLog(@"sum = %d and num_objs = %d", sum, [points count]);
   return 1.0 * sum / [points count];
 }
 
