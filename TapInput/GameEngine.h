@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #define MISS_THRESHOLD    3
-#define INITIAL_SIG       100
 #define NUMBERS_PER_LEVEL 3
 #define NUM_LEVEL         5
 
@@ -71,6 +70,9 @@ typedef enum GameState {
 - (NSString *)getAccurancyRate;
 // Returns an array of error rates
 - (NSArray *)getPoints;
+// returns the point of the level, by averaging the point of each
+// number the user input.
+- (double)getLevelPoint;
 
 - (int)gameId;
 - (int)taskId;

@@ -8,6 +8,8 @@
 
 #import "SummaryViewController.h"
 
+#import "GameCenterManager.h"
+
 @interface SummaryViewController ()
 
 @end
@@ -69,6 +71,9 @@
     NSInteger pt = [[points objectAtIndex:i] intValue];
     [str appendFormat:@"%d: %d\n", i, pt];
   }
+  int64_t score = (int64_t) [gameEngine getLevelPoint];
+  NSLog(@"%lld, %.3f", score, [gameEngine getLevelPoint]);
+  [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
   [self.display setText:[str description]];
 }
 
@@ -102,10 +107,6 @@
     [self.delegate nextLevel];
     [self dismissViewControllerAnimated:YES completion:nil];
   }
-}
-
-- (IBAction)postData:(id)sender {
-
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

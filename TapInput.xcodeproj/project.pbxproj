@@ -573,6 +573,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = MobileAccessibility;
+				TargetAttributes = {
+					39C7C1E4169EFBE900A6DABA = {
+						DevelopmentTeam = 6F3U4HX6V7;
+					};
+				};
 			};
 			buildConfigurationList = 39C7C1DF169EFBE900A6DABA /* Build configuration list for PBXProject "TapInput" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -791,7 +796,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D2C7B811-2AB2-41CB-B09C-ED3A87304CD1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -816,7 +821,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8CB71A1A-44E4-4008-9308-C68F543B7D97";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -828,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E9EB8158EE74B37B54EBF0B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";
@@ -842,6 +848,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E9EB8158EE74B37B54EBF0B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";

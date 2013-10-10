@@ -5,6 +5,7 @@
 //  Created by Vaspol Ruamviboonsuk on 2/16/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
+#import <GameKit/GameKit.h>
 
 #import "StartMenuViewController.h"
 
@@ -92,11 +93,17 @@
 - (IBAction)buttonPressed:(id)sender {
   UIButton *but = (UIButton *)sender;
   if ([but tag] == 0) {
+    // show the tutorial
     [self.navigationController pushViewController:tutorialViewController animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
   } else if ([but tag] == 1) {
+    // start the game! select the mode
     [self.navigationController pushViewController:modeSelectorViewController animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+  } else if ([but tag] == 2) {
+    // leaderboard button, display the leaderboard
+    [self displayLeaderboard:nil];
   }
-  [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark UserAgreementVCProtocol
@@ -114,6 +121,22 @@
   [gameEngine setStartingLevel:level];
   [gameViewController resetGameViewController];
   [self.navigationController pushViewController:gameViewController animated:YES];
+}
+
+#pragma mark Leaderboard display
+- (void)displayLeaderboard: (NSString *)leaderboardID
+{
+  GKGameCenterViewController *gameCenterViewController = [[GKGameCenterViewController alloc] init];
+  if (gameCenterViewController != nil) {
+    gameCenterViewController.gameCenterDelegate = self;
+    gameCenterViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+    [self presentViewController:gameCenterViewController animated:YES completion:nil];
+  }
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark ModeSelectorProtocol

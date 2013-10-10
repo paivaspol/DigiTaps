@@ -80,4 +80,31 @@
   });
 }
 
+#pragma mark score reporting
++ (void)reportScore:(int64_t)score forCategory:(NSString *)category
+{
+  double systemVersion = [[[UIDevice currentDevice] systemVersion] doubleValue];
+  double eps = 10e-6;
+  if ((fabs(systemVersion - 6.0) < eps || systemVersion > 6.0) && systemVersion < 7.0) {
+    // this is version between 6.x
+      GKScore *scoreReporter = [[GKScore alloc] initWithCategory:category];
+      scoreReporter.value = score;
+      scoreReporter.context = 0;
+      
+      [scoreReporter reportScoreWithCompletionHandler:^(NSError *error) {
+        // Do something interesting here.
+      }];
+  } else if (fabs(systemVersion - 7.0) < eps || systemVersion > 7.0) {
+    // version greater than 7.0
+    GKScore *scoreReporter = [[GKScore alloc] initWithLeaderboardIdentifier:category];
+    scoreReporter.value = score;
+    scoreReporter.context = 0;
+    
+    NSArray *scores = @[scoreReporter];
+    [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
+      NSLog(@"score reported");
+    }];
+  }
+}
+
 @end

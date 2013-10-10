@@ -8,16 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class GKLeaderboard, GKAchievement, GKPlayer;
-
 @protocol GameCenterManagerProtocol <NSObject>
 @optional
 - (void)processGameCenterAuth:(NSError *)error;
 - (void)scoreReported:(NSError *)error;
-- (void)reloadScoresComplete:(GKLeaderboard *)leaderBoard error:(NSError *)error;
-- (void)achievementSubmitted:(GKAchievement *)ach error:(NSError *)error;
 - (void)achievementResetResult:(NSError *)error;
-- (void)mappedPlayerIDToPlayer:(GKPlayer *)player error:(NSError *)error;
 @end
 
 @interface GameCenterManager : NSObject
@@ -33,7 +28,7 @@
 - (void) authenticateLocalUser;
 
 // score related
-- (void)reportScore:(int64_t)score forCategory:(NSString *)category;
++ (void)reportScore:(int64_t)score forCategory:(NSString *)category;
 - (void)reloadHighScoresForCategory:(NSString *)category;
 
 @end

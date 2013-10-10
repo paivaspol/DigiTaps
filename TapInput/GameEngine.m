@@ -12,8 +12,16 @@
 
 @end
 
+/* the base point */
 static int const kBasePoint = 2;
+/* the mid point */
 static int const kMidPoint = 10;
+/* the number number of digits */
+static int const kNumDigits = 3;
+/* all the possible digit */
+static int digit[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+/* size of the digits available */
+static int digitSize = 10;
 
 @implementation GameEngine
 
@@ -116,10 +124,14 @@ static int const kMidPoint = 10;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
   numberContainer = nil;
   numberContainer = [[NSMutableArray alloc] init];
+  points = [[NSMutableArray alloc] init];
   for (int j = 0; j < NUMBERS_PER_LEVEL; j++) {
-    int sig = INITIAL_SIG * pow(10, level);
-    NSUInteger num = [self randomNumber:sig];
-    [numberContainer addObject:[NSString stringWithFormat:@"%d", num]];
+    NSMutableString *numberString = [[NSMutableString alloc] init];
+    for (int idx = 0; idx < kNumDigits + curLevel - 1; idx++) {
+      int index = arc4random_uniform(digitSize);
+      [numberString appendString:[NSString stringWithFormat:@"%d", digit[index]]];
+    }
+    [numberContainer addObject:[NSString stringWithFormat:@"%@", [numberString description]]];
   }
   NSLog(@"%@", numberContainer);
 }
@@ -148,14 +160,6 @@ static int const kMidPoint = 10;
 - (int)numWrongTrials
 {
   return miss;
-}
-
-// Generates a random number with the specified digits
-- (int)randomNumber:(int)significant
-{
-  uint32_t val = (unsigned) arc4random();
-  val += significant;
-  return val % (significant * 10);
 }
 
 - (void)nextNumber
@@ -221,6 +225,16 @@ static int const kMidPoint = 10;
 - (NSArray *)getPoints
 {
   return [points copy];
+}
+
+- (double)getLevelPoint
+{
+  NSInteger sum = 0.0;
+  for (int i = 0; i < [points count]; i++) {
+    sum += [[points objectAtIndex:i] intValue];
+  }
+  NSLog(@"sum = %d and num_objs = %d", sum, [points count]);
+  return 1.0 * sum / [points count];
 }
 
 /**

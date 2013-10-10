@@ -28,7 +28,8 @@ enum mode {
     ModeSelectorProtocol,
     LevelSelectorProtocol,
     DemographicsViewControllerProtocol,
-    GameCenterManagerProtocol>
+    GameCenterManagerProtocol,
+    GKGameCenterControllerDelegate>
 {
   @private
   UserAgreementViewController   *userAgreementViewController;
