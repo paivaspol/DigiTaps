@@ -10,6 +10,8 @@
 
 @implementation LogSenderOperation
 
+static NSString *kUrl = @"http://digitap.cs.washington.edu/event_postgres.php";
+
 - (id)init
 {
   if ((self = [super init]) != nil) {
@@ -39,7 +41,7 @@
   for (Event *event in result) {
     NSArray *keys = [[[event entity] attributesByName] allKeys];
     NSDictionary *logToSend = [event dictionaryWithValuesForKeys:keys];
-    if ([dataSender sendData:logToSend toURL:[NSURL URLWithString:@"http://students.washington.edu/vaspol/event.php"] andReceived:nil]) {
+    if ([dataSender sendData:logToSend toURL:[NSURL URLWithString:kUrl] andReceived:nil]) {
       // after we send the event to the server successfully, delete it from persistent storage.
       [objContext deleteObject:event];
       NSError *error;

@@ -11,13 +11,15 @@
 
 @implementation DataSender
 
+static NSString *kHostName = @"digitap.cs.washington.edu";
+
 - (id)init
 {
   if ((self = [super init]) != nil) {
     NSPersistentStoreCoordinator *dataStoreCoordinator = [CoreDataModelWrapper getPersistentStoreCoordinator];
     manageContext = [[NSManagedObjectContext alloc] init];
     [manageContext setPersistentStoreCoordinator:dataStoreCoordinator];
-    reachability = [Reachability reachabilityWithHostname:@"students.washington.edu"];
+    reachability = [Reachability reachabilityWithHostname:kHostName];
   }
   return self;
 }

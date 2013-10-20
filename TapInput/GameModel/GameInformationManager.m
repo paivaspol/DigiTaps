@@ -10,6 +10,7 @@
 
 static CFStringRef showAgreementKey = CFSTR("didAgree");
 static CFStringRef playerIdKey = CFSTR("playerId");
+static NSString *kUrl = @"http://digitap.cs.washington.edu/register_postgres.php";
 
 @implementation GameInformationManager
 
@@ -70,7 +71,7 @@ static CFStringRef playerIdKey = CFSTR("playerId");
 - (int)registerPlayer:(NSDictionary *)playerInformation
 {
   NSString *newId;
-  if ([dataSender sendData:playerInformation toURL:[NSURL URLWithString:@"http://students.washington.edu/vaspol/register.php"] andReceived:&newId]) {
+  if ([dataSender sendData:playerInformation toURL:[NSURL URLWithString:kUrl] andReceived:&newId]) {
     playerId = [newId integerValue];
   }
   playerIdRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &playerId);
