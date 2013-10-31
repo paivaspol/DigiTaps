@@ -33,7 +33,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *numbersCorrect;
 @property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
 @property (strong, nonatomic) IBOutlet UIButton *postData;
-@property (strong, nonatomic) IBOutlet UITextView *display;
+@property (strong, nonatomic) IBOutlet UILabel *point;
 @property (strong, nonatomic) IBOutlet UILabel *accuracy;
 
 - (void)setDisplayNextLevel:(BOOL)shouldDisplay;

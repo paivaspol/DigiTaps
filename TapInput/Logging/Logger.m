@@ -41,7 +41,6 @@
 
 - (void)logWithEvent:(Type)event andParams:(NSString *)params andUID:(NSUInteger)uid andGameId:(NSUInteger)gid andTaskId:(NSUInteger)tid andTime:(long)time andIsVoiceOverOn:(BOOL)isVoiceOverOn
 {
-  NSLog(@"logged");
   // write the event to CoreData. Should ensure consistency here, since we are
   // reading from another thread to send the data to the server
   NSEntityDescription *eventEntity = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:manageContext];

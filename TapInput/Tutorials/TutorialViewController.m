@@ -33,6 +33,11 @@ static NSString * const kTitle = @"Tutorial";
 {
   [super viewDidLoad];
   [self setTitle:kTitle];
+  
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated

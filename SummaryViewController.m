@@ -65,15 +65,9 @@
   [self.numbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
   [self.numbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
   [self.accuracy setText:[gameEngine getAccurancyRate]];
-  NSArray *points = [gameEngine getPoints];
-  NSMutableString *str = [[NSMutableString alloc] init];
-  for (int i = 0; i < [points count]; i++) {
-    NSInteger pt = [[points objectAtIndex:i] intValue];
-    [str appendFormat:@"%d: %d\n", i, pt];
-  }
   int64_t score = (int64_t) [gameEngine getLevelPoint];
+  [self.point setText:[NSString stringWithFormat:@"%lld", score]];
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
-  [self.display setText:[str description]];
 }
 
 - (void)viewDidAppear:(BOOL)animated

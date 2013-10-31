@@ -25,11 +25,9 @@
 		2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52D3CE16BF563C00588266 /* SummaryViewController.xib */; };
 		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
 		2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */; };
-		2C72546017598A6900DD17A2 /* SharedGestureState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C72545F17598A6900DD17A2 /* SharedGestureState.m */; };
 		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
 		2C830D0D177D511C00D3B889 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0C177D511C00D3B889 /* logo.png */; };
 		2C830D0F177D512000D3B889 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0E177D512000D3B889 /* logo@2x.png */; };
-		2C830D12177D533600D3B889 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D11177D533600D3B889 /* Default.png */; };
 		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
 		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
 		2C9802F11702759500A8D5C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9802F01702759500A8D5C3 /* SystemConfiguration.framework */; };
@@ -124,8 +122,6 @@
 		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeSelectorViewController.h; sourceTree = "<group>"; };
 		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeSelectorViewController.m; sourceTree = "<group>"; };
 		2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeSelectorViewController.xib; sourceTree = "<group>"; };
-		2C72545E17598A6900DD17A2 /* SharedGestureState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedGestureState.h; path = GestureDetection/SharedGestureState.h; sourceTree = "<group>"; };
-		2C72545F17598A6900DD17A2 /* SharedGestureState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedGestureState.m; path = GestureDetection/SharedGestureState.m; sourceTree = "<group>"; };
 		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; };
 		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; };
 		2C830D0C177D511C00D3B889 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -346,8 +342,6 @@
 				2CF3C3241737680800D9F4E0 /* SubmitGestureDetector.m */,
 				2CE3FE7717471D9C00C2632C /* GestureTypeUtility.h */,
 				2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */,
-				2C72545E17598A6900DD17A2 /* SharedGestureState.h */,
-				2C72545F17598A6900DD17A2 /* SharedGestureState.m */,
 			);
 			name = GestureDetection;
 			path = ..;
@@ -627,7 +621,6 @@
 				2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */,
 				2C830D0D177D511C00D3B889 /* logo.png in Resources */,
 				2C830D0F177D512000D3B889 /* logo@2x.png in Resources */,
-				2C830D12177D533600D3B889 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +700,6 @@
 				2CB974201749C15E0086D6D9 /* NaturalTutorialViewController.m in Sources */,
 				2CB974251749C86E0086D6D9 /* LessNaturalTutorialViewController.m in Sources */,
 				2CB9742A1749C8A70086D6D9 /* TutorialViewController.m in Sources */,
-				2C72546017598A6900DD17A2 /* SharedGestureState.m in Sources */,
 				2CB406191773F6EB00F45637 /* Utility.m in Sources */,
 				2C5074881775D29400CC87E9 /* NaturalPracticeViewController.m in Sources */,
 				2C50748D1776081800CC87E9 /* LessNaturalPracticeViewController.m in Sources */,

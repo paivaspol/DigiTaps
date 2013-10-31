@@ -16,8 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     header("HTTP/1.1 500 Internal Server Error");
     die(pg_last_error() . "failed to establish a connection");
   }
-  
-  $values = array($_POST["eventId"], 
+  $result = pg_query($dbconn, "SELECT count(*) FROM event");
+  if (!$result) {
+    header("HTTP/1.1 500 Internal Server Error");
+    die("Error executing the query!" . pg_last_error($dbconn));
+  }
+  $row = pg_fetch_row($result);
+  $event_id = $row[0] + 1;
+  $values = array($event_id, 
                   $_POST["eventType"], 
                   $_POST["gameId"], 
                   $_POST["params"], 

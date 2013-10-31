@@ -15,7 +15,8 @@ typedef enum Type {
   LEVEL_END = 3,
   GESTURE_TAP = 4,
   GESTURE_SWIPE = 5,
-  NUMBER_PRESENTED = 6
+  NUMBER_PRESENTED = 6,
+  NUMBER_ENTERED = 7
 } Type;
 
 @interface EventType : NSObject

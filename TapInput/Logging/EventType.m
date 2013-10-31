@@ -34,6 +34,9 @@
     case NUMBER_PRESENTED: {
       return @"NUMBER_PRESENTED";
     }
+    case NUMBER_ENTERED: {
+      return @"NUMBER_ENTERED";
+    }
     default: {
       [NSException raise:@"Unsupported event type" format:nil];
     }

@@ -10,7 +10,7 @@
 
 #import "Utility.h"
 
-static NSString * const kThreeFingersTap = @"Three finger tap.";
+static NSString * const kThreeFingersTap = @"Three finger tap";
 static NSString * const kOneTap = @"One finger tap";
 static NSString * const kTwoTap = @"Two fingers tap";
 static NSString * const kSwipe = @"Swipe";

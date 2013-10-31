@@ -223,8 +223,10 @@ static NSString * const kYes = @"Yes";
   switch (recognizer.state) {
     case UIGestureRecognizerStateBegan: {
       if ([gameEngine state] == ACTIVE && !hasMoved) {
-        NSTimeInterval interval = [numberStartTime timeIntervalSinceNow];
-        [gameEngine inputNumber:[curInput intValue] withTime:interval];
+        NSTimeInterval interval = fabs([numberStartTime timeIntervalSinceNow]);
+        NSInteger userInput = [curInput intValue];
+        [self logEvent:NUMBER_ENTERED andParams:curInput];
+        [gameEngine inputNumber:userInput withTime:interval];
         [self resetAllVariables];
         [self.navigationItem setHidesBackButton:YES animated:YES];
         numberStartTime = nil;
@@ -311,6 +313,7 @@ static NSString * const kYes = @"Yes";
 
 - (void)gameStarted:(NSNotification *)notification
 {
+  [self logEvent:GAME_START andParams:@""];
 }
 
 - (void)updatePlayerId:(NSNotification *)notification
@@ -350,9 +353,9 @@ static NSString * const kYes = @"Yes";
 // log an event
 - (void)logEvent:(Type)eventType andParams:(NSString *)params
 {
-    NSDate *curDate = [NSDate date];
-    NSTimeInterval diff = [curDate timeIntervalSinceDate:startTime];
-    [logger logWithEvent:eventType andParams:params andUID:playerId andGameId:[gameEngine gameId] andTaskId:[gameEngine taskId] andTime:diff andIsVoiceOverOn:UIAccessibilityIsVoiceOverRunning()];
+  NSDate *curDate = [NSDate date];
+  NSTimeInterval diff = [curDate timeIntervalSinceDate:startTime];
+  [logger logWithEvent:eventType andParams:params andUID:playerId andGameId:[gameEngine gameId] andTaskId:[gameEngine taskId] andTime:diff andIsVoiceOverOn:UIAccessibilityIsVoiceOverRunning()];
 }
 
 // responder when the level is completed
@@ -397,6 +400,7 @@ static NSString * const kYes = @"Yes";
 // responder when the level changes
 - (void)levelChanged:(NSNotification *)notification
 {
+  [self logEvent:LEVEL_START andParams:@""];
   [self updateCurrentNumber];
   [self updateLevelDisplay];
 }

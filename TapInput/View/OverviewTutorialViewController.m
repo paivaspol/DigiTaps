@@ -8,6 +8,7 @@
 
 #import "OverviewTutorialViewController.h"
 
+#import "BackspaceGestureDetector.h"
 #import "NaturalGestureDetector.h"
 
 @interface OverviewTutorialViewController ()
@@ -33,6 +34,7 @@ static NSString* const kTitle = @"Overview";
   opvc = [[OverviewPracticeViewController alloc] init];
   GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
   [manager addGestureDetector:[[NaturalGestureDetector alloc] init]];
+  [manager addGestureDetector:[[BackspaceGestureDetector alloc] init]];
   [opvc setGestureDetectorManager:manager];
   [super viewDidLoad];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr

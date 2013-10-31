@@ -45,6 +45,11 @@ static NSString * const kTitle = @"Natural";
   CGRect infoViewSize = [self.infoView bounds];
   [self.scrollView setContentSize:CGSizeMake(infoViewSize.size.width, infoViewSize.size.height)];
   [self.scrollView addSubview:self.infoView];
+  
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 }
 
 - (void)didReceiveMemoryWarning

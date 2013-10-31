@@ -15,7 +15,7 @@
 /* the base point */
 static int const kBasePoint = 2;
 /* the mid point */
-static int const kMidPoint = 10;
+static int const kMidPoint = 100;
 /* the number number of digits */
 static int const kNumDigits = 3;
 /* all the possible digit */
@@ -60,7 +60,7 @@ static int digitSize = 10;
   miss = 0;
   curNumberIndex = 0;
   digitsMissed = 0;
-  totalDigits = 0;
+  totalDigits = kNumDigits + curLevel - 1;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"gamestarted" object:self];
 }
@@ -90,6 +90,7 @@ static int digitSize = 10;
 {
   int curNumber = [[numberContainer objectAtIndex:curNumberIndex] intValue];
   int numDigit = [self numDigits:curNumber];
+  NSLog(@"num digit: %d, time used: %.3f", numDigit, timeUsed);
   double rate = numDigit / timeUsed;
   int point = [self computePointFrom:rate withNumDigit:numDigit andIsWrong:(curNumber != number)];
   [points addObject:[NSNumber numberWithInt:point]];
@@ -119,7 +120,7 @@ static int digitSize = 10;
   curNumberIndex = 0;
   miss = 0;
   digitsMissed = 0;
-  totalDigits = 0;
+  totalDigits = kNumDigits + curLevel - 1;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
   numberContainer = nil;
@@ -231,6 +232,7 @@ static int digitSize = 10;
 {
   NSInteger sum = 0.0;
   for (int i = 0; i < [points count]; i++) {
+    NSLog(@"points: %d", [[points objectAtIndex:i] integerValue]);
     sum += [[points objectAtIndex:i] intValue];
   }
   return 1.0 * sum / [points count];
@@ -245,7 +247,8 @@ static int digitSize = 10;
     return 0;
   }
   double expectedRate = [self baselineExpectedRate:numDigit];
-  return round((entryRate / expectedRate) * kMidPoint);
+  NSLog(@"Entry rate: %.3f", entryRate);
+  return round(entryRate * kMidPoint / expectedRate);
 }
 
 - (double)baselineExpectedRate:(int)numDigit

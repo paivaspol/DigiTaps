@@ -32,8 +32,6 @@ static NSString *kHostName = @"digitap.cs.washington.edu";
   }
   [formDataRequest startSynchronous];
   NSError *error = [formDataRequest error];
-  NSLog(@"Code: %d", formDataRequest.responseStatusCode);
-  NSLog(@"Response: %@", formDataRequest.responseString);
   if (formDataRequest.responseStatusCode != 200 || error) {
     return NO;
   }

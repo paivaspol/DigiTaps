@@ -30,7 +30,7 @@
     [self gestureDetectedWithValue:currentSum];
     currentSum = 0;
     isWaitingForInput = NO;
-  } else {  // this is a tap
+  } else if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] < VERT_SWIPE_DRAG_MAX) {  // this is a tap
     if (startTouch == TAPS && currentSum < 6) {
       isWaitingForInput = true;
       currentSum += TAPS;
