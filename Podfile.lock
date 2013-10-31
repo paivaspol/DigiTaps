@@ -10,7 +10,7 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.1):
     - Reachability
-  - Reachability (3.1.0)
+  - Reachability (3.1.1)
   - SVProgressHUD (0.9)
 
 DEPENDENCIES:
@@ -19,8 +19,8 @@ DEPENDENCIES:
   - SVProgressHUD (~> 0.9)
 
 SPEC CHECKSUMS:
-  ASIHTTPRequest: a79e32b54f92471bff8979f3b82182f0e9b6992c
-  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  ASIHTTPRequest: 162783e0cd71bdd3ff1ceed0cd5fa9505e0116a8
+  Reachability: 2be6bc2fd2bd31d97f5db33e75e4b29c79e95883
   SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
 
-COCOAPODS: 0.17.2
+COCOAPODS: 0.27.1

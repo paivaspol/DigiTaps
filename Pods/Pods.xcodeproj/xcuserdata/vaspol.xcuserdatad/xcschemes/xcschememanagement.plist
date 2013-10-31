@@ -4,15 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ASIHTTPRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>34CA2FDD53A045F0A083DD88</key>
+		<key>2D44F3E33BE9481EAD508947</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45C41FDC46C34F74B6C2E330</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D6629BCF3374E0FA649046E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE8AA511495F4D42870E6AD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
