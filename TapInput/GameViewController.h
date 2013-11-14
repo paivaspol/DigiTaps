@@ -38,11 +38,16 @@
   NSDate                      *numberStartTime;
   NSInteger                   startTouch;
   BOOL                        hasMoved;
+  UIView                      *_currentView;
 }
-
-@property (strong, nonatomic) IBOutlet UILabel *currentNumber;
-@property (strong, nonatomic) IBOutlet UILabel *inputNumber;
-@property (strong, nonatomic) IBOutlet UILabel *levelLabel;
+@property (strong, nonatomic) IBOutlet UIView *portraitView;
+@property (strong, nonatomic) IBOutlet UIView *landscapeView;
+@property (strong, nonatomic) IBOutlet UILabel *portraitCurrentNumber;
+@property (strong, nonatomic) IBOutlet UILabel *portraitInputNumber;
+@property (strong, nonatomic) IBOutlet UILabel *portraitLevelLabel;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeCurrentNumber;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeInputNumber;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeLevelLabel;
 
 - (void)setStartingLevel:(int)level;
 - (void)resetGameViewController;

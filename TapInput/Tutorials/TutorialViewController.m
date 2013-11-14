@@ -38,6 +38,9 @@ static NSString * const kTitle = @"Tutorial";
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
     self.edgesForExtendedLayout = UIRectEdgeNone;
   }
+  
+  UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+  [self setUpViewForOrientation:interfaceOrientation];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,6 +64,31 @@ static NSString * const kTitle = @"Tutorial";
   } else {
     LessNaturalTutorialViewController *lntvc = [[LessNaturalTutorialViewController alloc] init];
     [self.navigationController pushViewController:lntvc animated:YES];
+  }
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+  [self setUpViewForOrientation:toInterfaceOrientation];
+}
+
+-(void)setUpViewForOrientation:(UIInterfaceOrientation)orientation
+{
+  [_currentView removeFromSuperview];
+  if (UIInterfaceOrientationIsLandscape(orientation)) {
+    if (![self.view isEqual:_landscapeView]) {
+      [self.view addSubview:_landscapeView];
+      _landscapeView.frame = self.view.bounds;
+      _currentView = _landscapeView;
+      [self.view setNeedsLayout];
+    }
+  } else {
+    if (![self.view isEqual:_portraitView]) {
+      [self.view addSubview:_portraitView];
+      _portraitView.frame = self.view.bounds;
+      _currentView = _portraitView;
+      [self.view setNeedsLayout];
+    }
   }
 }
 @end

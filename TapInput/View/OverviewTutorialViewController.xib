@@ -5,9 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TutorialViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverviewTutorialViewController">
             <connections>
-                <outlet property="infoView" destination="175" id="252"/>
+                <outlet property="landscape35InfoView" destination="qaf-6c-KMi" id="UK3-eh-hxr"/>
+                <outlet property="landscape4InfoView" destination="qwg-lR-mfz" id="HHj-Y2-RgN"/>
+                <outlet property="portraitView" destination="175" id="wou-0Z-fcK"/>
                 <outlet property="scrollView" destination="207" id="251"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -32,7 +34,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <view contentMode="scaleToFill" id="175">
+        <view contentMode="scaleToFill" id="175" userLabel="PortraitTextView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="701"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -144,6 +146,261 @@
                 <constraint firstItem="178" firstAttribute="leading" secondItem="175" secondAttribute="leading" constant="20" symbolic="YES" id="266"/>
                 <constraint firstAttribute="trailing" secondItem="178" secondAttribute="trailing" constant="20" symbolic="YES" id="267"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <view contentMode="scaleToFill" id="qaf-6c-KMi" userLabel="3.5LandscapeTextView">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="471"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="DFv-hV-ezh">
+                    <rect key="frame" x="20" y="20" width="440" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="XPa-Kh-dT3"/>
+                    </constraints>
+                    <string key="text">Welcome to DigiTaps! When you play this game, you will use gestures to enter digits. When you start a level, enter the digits you hear as quickly and as accurately as you can to earn points!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="f5i-9Q-Un3">
+                    <rect key="frame" x="20" y="111" width="440" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="79" id="29h-83-1MK"/>
+                    </constraints>
+                    <string key="text">Here are the gestures you will use to play DigiTaps! The digits 0-9 can be entered by a combination of 4 different gestures,  a 1-Finger Tap, 2-Finger Tap, 3-Finger Tap, and 1-Finger Swipe. Here is a list of all of the gestures!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="CrL-gm-IFy">
+                    <rect key="frame" x="20" y="397" width="440" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">2-Finger Swipe: Swipe left or right with 2 fingers to repeat the last played digit sequence. Note: you can only do this until you enter the first number in the sequence!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1-Finger Tap: Tap the screen with 1 finger." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="QPP-KD-fYE">
+                    <rect key="frame" x="20" y="198" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="3rd-y6-9NI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2-Finger Tap: Tap the screen with 2 fingers." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="cSo-CA-vAT">
+                    <rect key="frame" x="20" y="231" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Nfz-9K-JGK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3-Finger Tap: Tap the screen with 3 fingers." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="jBS-ZY-BMf">
+                    <rect key="frame" x="20" y="264" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="nZK-v5-FC9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="64W-3y-cYA">
+                    <rect key="frame" x="20" y="297" width="440" height="59"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="Rh1-7R-EvK"/>
+                    </constraints>
+                    <string key="text">Long Press: Hold 1 finger on the screen until you hear either a bell or a buzzer. Perform this gesture after entering a digit sequence to see if you entered it correctly!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1-Finger Swipe: Swipe up or down with 1 finger." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="XzG-Fs-Kht">
+                    <rect key="frame" x="20" y="364" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="wGr-ne-Kqi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gestures" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnO-mD-pWM">
+                    <rect key="frame" x="20" y="83" width="69" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+            <constraints>
+                <constraint firstItem="cSo-CA-vAT" firstAttribute="top" secondItem="QPP-KD-fYE" secondAttribute="bottom" constant="8" symbolic="YES" id="0fP-lX-E5q"/>
+                <constraint firstItem="CrL-gm-IFy" firstAttribute="leading" secondItem="XzG-Fs-Kht" secondAttribute="leading" id="38E-f0-ePQ"/>
+                <constraint firstItem="jBS-ZY-BMf" firstAttribute="trailing" secondItem="cSo-CA-vAT" secondAttribute="trailing" id="38w-OK-mac"/>
+                <constraint firstItem="cSo-CA-vAT" firstAttribute="leading" secondItem="QPP-KD-fYE" secondAttribute="leading" id="4Rt-Hd-Law"/>
+                <constraint firstItem="64W-3y-cYA" firstAttribute="leading" secondItem="jBS-ZY-BMf" secondAttribute="leading" id="7sT-So-6kx"/>
+                <constraint firstItem="pnO-mD-pWM" firstAttribute="top" secondItem="DFv-hV-ezh" secondAttribute="bottom" constant="8" symbolic="YES" id="Af0-Df-jot"/>
+                <constraint firstItem="XzG-Fs-Kht" firstAttribute="top" secondItem="64W-3y-cYA" secondAttribute="bottom" constant="8" symbolic="YES" id="Bvg-Yc-YUQ"/>
+                <constraint firstItem="jBS-ZY-BMf" firstAttribute="leading" secondItem="cSo-CA-vAT" secondAttribute="leading" id="Dg2-pV-vYr"/>
+                <constraint firstItem="pnO-mD-pWM" firstAttribute="leading" secondItem="DFv-hV-ezh" secondAttribute="leading" id="DhK-h4-Lik"/>
+                <constraint firstItem="f5i-9Q-Un3" firstAttribute="trailing" secondItem="DFv-hV-ezh" secondAttribute="trailing" id="GlS-cv-MYq"/>
+                <constraint firstItem="QPP-KD-fYE" firstAttribute="trailing" secondItem="cSo-CA-vAT" secondAttribute="trailing" id="GnR-1C-gaa"/>
+                <constraint firstItem="f5i-9Q-Un3" firstAttribute="top" secondItem="pnO-mD-pWM" secondAttribute="bottom" constant="8" symbolic="YES" id="Iok-Xy-AjW"/>
+                <constraint firstItem="CrL-gm-IFy" firstAttribute="top" secondItem="XzG-Fs-Kht" secondAttribute="bottom" constant="8" symbolic="YES" id="JnV-Wg-wrc"/>
+                <constraint firstItem="XzG-Fs-Kht" firstAttribute="trailing" secondItem="64W-3y-cYA" secondAttribute="trailing" id="PCR-EU-LRR"/>
+                <constraint firstItem="64W-3y-cYA" firstAttribute="leading" secondItem="XzG-Fs-Kht" secondAttribute="leading" id="PiS-oZ-FGx"/>
+                <constraint firstItem="f5i-9Q-Un3" firstAttribute="leading" secondItem="QPP-KD-fYE" secondAttribute="leading" id="Ra0-yt-XZC"/>
+                <constraint firstItem="f5i-9Q-Un3" firstAttribute="trailing" secondItem="QPP-KD-fYE" secondAttribute="trailing" id="T6c-fb-8wi"/>
+                <constraint firstItem="pnO-mD-pWM" firstAttribute="leading" secondItem="f5i-9Q-Un3" secondAttribute="leading" id="TWL-W2-vSw"/>
+                <constraint firstItem="64W-3y-cYA" firstAttribute="top" secondItem="jBS-ZY-BMf" secondAttribute="bottom" constant="8" symbolic="YES" id="Y6P-0q-fXs"/>
+                <constraint firstItem="jBS-ZY-BMf" firstAttribute="trailing" secondItem="64W-3y-cYA" secondAttribute="trailing" id="aWy-l6-eLN"/>
+                <constraint firstItem="QPP-KD-fYE" firstAttribute="top" secondItem="f5i-9Q-Un3" secondAttribute="bottom" constant="8" symbolic="YES" id="goq-tZ-vg6"/>
+                <constraint firstItem="XzG-Fs-Kht" firstAttribute="trailing" secondItem="CrL-gm-IFy" secondAttribute="trailing" id="lla-Me-A5a"/>
+                <constraint firstItem="DFv-hV-ezh" firstAttribute="leading" secondItem="qaf-6c-KMi" secondAttribute="leading" constant="20" symbolic="YES" id="uQa-bN-RIw"/>
+                <constraint firstItem="jBS-ZY-BMf" firstAttribute="top" secondItem="cSo-CA-vAT" secondAttribute="bottom" constant="8" symbolic="YES" id="ugA-rZ-qJd"/>
+                <constraint firstItem="DFv-hV-ezh" firstAttribute="top" secondItem="qaf-6c-KMi" secondAttribute="top" constant="20" symbolic="YES" id="y2g-h5-M6j"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <view contentMode="scaleToFill" id="qwg-lR-mfz" userLabel="4.0LandscapeTextView">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="443"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-lY-qHZ">
+                    <rect key="frame" x="20" y="20" width="528" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="8fb-bZ-foM"/>
+                    </constraints>
+                    <string key="text">Welcome to DigiTaps! When you play this game, you will use gestures to enter digits. When you start a level, enter the digits you hear as quickly and as accurately as you can to earn points!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="0Fg-IS-2Na">
+                    <rect key="frame" x="20" y="111" width="528" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="LvI-OD-gVv"/>
+                    </constraints>
+                    <string key="text">Here are the gestures you will use to play DigiTaps! The digits 0-9 can be entered by a combination of 4 different gestures,  a 1-Finger Tap, 2-Finger Tap, 3-Finger Tap, and 1-Finger Swipe. Here is a list of all of the gestures!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="rTK-Ry-KPm">
+                    <rect key="frame" x="20" y="369" width="528" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="cmp-z1-1wM"/>
+                    </constraints>
+                    <string key="text">2-Finger Swipe: Swipe left or right with 2 fingers to repeat the last played digit sequence. Note: you can only do this until you enter the first number in the sequence!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1-Finger Tap: Tap the screen with 1 finger." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="5JA-Id-K7y">
+                    <rect key="frame" x="20" y="173" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="440" id="6HU-Ok-Wfq"/>
+                        <constraint firstAttribute="height" constant="25" id="WaO-EL-I7K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2-Finger Tap: Tap the screen with 2 fingers." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="Fs6-Lg-UkE">
+                    <rect key="frame" x="20" y="206" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="7Gn-Oz-0My"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3-Finger Tap: Tap the screen with 3 fingers." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="jDz-i7-hOk">
+                    <rect key="frame" x="20" y="239" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="utA-qu-I6X"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="H95-jc-fuF">
+                    <rect key="frame" x="20" y="272" width="528" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">Long Press: Hold 1 finger on the screen until you hear either a bell or a buzzer. Perform this gesture after entering a digit sequence to see if you entered it correctly!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1-Finger Swipe: Swipe up or down with 1 finger." lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="364-Pp-hiW">
+                    <rect key="frame" x="20" y="336" width="440" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Sxz-iZ-Kvy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gestures" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-xJ-BzN">
+                    <rect key="frame" x="20" y="83" width="69" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dGf-jc-3rF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+            <constraints>
+                <constraint firstItem="ggX-lY-qHZ" firstAttribute="top" secondItem="qwg-lR-mfz" secondAttribute="top" constant="20" symbolic="YES" id="1LR-lS-2Aa"/>
+                <constraint firstAttribute="bottom" secondItem="rTK-Ry-KPm" secondAttribute="bottom" constant="20" symbolic="YES" id="4As-JH-wPb"/>
+                <constraint firstItem="H95-jc-fuF" firstAttribute="top" secondItem="jDz-i7-hOk" secondAttribute="bottom" constant="8" symbolic="YES" id="5pc-Xj-qR1"/>
+                <constraint firstItem="0Fg-IS-2Na" firstAttribute="trailing" secondItem="ggX-lY-qHZ" secondAttribute="trailing" id="5z6-ua-Kdb"/>
+                <constraint firstItem="364-Pp-hiW" firstAttribute="top" secondItem="H95-jc-fuF" secondAttribute="bottom" constant="8" symbolic="YES" id="7dH-dq-eT2"/>
+                <constraint firstItem="Gk7-xJ-BzN" firstAttribute="leading" secondItem="ggX-lY-qHZ" secondAttribute="leading" id="Iyf-9V-IBH"/>
+                <constraint firstItem="H95-jc-fuF" firstAttribute="leading" secondItem="364-Pp-hiW" secondAttribute="leading" id="J92-U0-om7"/>
+                <constraint firstItem="jDz-i7-hOk" firstAttribute="top" secondItem="Fs6-Lg-UkE" secondAttribute="bottom" constant="8" symbolic="YES" id="Lyc-xh-hmJ"/>
+                <constraint firstItem="rTK-Ry-KPm" firstAttribute="top" secondItem="364-Pp-hiW" secondAttribute="bottom" constant="8" symbolic="YES" id="Ot8-eb-ibb"/>
+                <constraint firstItem="Fs6-Lg-UkE" firstAttribute="leading" secondItem="jDz-i7-hOk" secondAttribute="leading" id="Oxp-We-q4V"/>
+                <constraint firstItem="5JA-Id-K7y" firstAttribute="top" secondItem="0Fg-IS-2Na" secondAttribute="bottom" constant="8" symbolic="YES" id="QB8-uI-GUS"/>
+                <constraint firstItem="0Fg-IS-2Na" firstAttribute="top" secondItem="Gk7-xJ-BzN" secondAttribute="bottom" constant="8" symbolic="YES" id="UAY-oU-5BV"/>
+                <constraint firstAttribute="trailing" secondItem="ggX-lY-qHZ" secondAttribute="trailing" constant="20" symbolic="YES" id="YRf-rv-CyX"/>
+                <constraint firstItem="Gk7-xJ-BzN" firstAttribute="top" secondItem="ggX-lY-qHZ" secondAttribute="bottom" constant="8" symbolic="YES" id="anQ-df-Dqh"/>
+                <constraint firstItem="ggX-lY-qHZ" firstAttribute="leading" secondItem="qwg-lR-mfz" secondAttribute="leading" constant="20" symbolic="YES" id="b7h-l2-vvZ"/>
+                <constraint firstItem="Fs6-Lg-UkE" firstAttribute="top" secondItem="5JA-Id-K7y" secondAttribute="bottom" constant="8" symbolic="YES" id="bM7-Ze-WpR"/>
+                <constraint firstItem="5JA-Id-K7y" firstAttribute="leading" secondItem="Fs6-Lg-UkE" secondAttribute="leading" id="cIk-E8-oQa"/>
+                <constraint firstItem="364-Pp-hiW" firstAttribute="trailing" secondItem="jDz-i7-hOk" secondAttribute="trailing" id="cUY-iS-5ma"/>
+                <constraint firstItem="Fs6-Lg-UkE" firstAttribute="trailing" secondItem="jDz-i7-hOk" secondAttribute="trailing" id="fRZ-TG-hKc"/>
+                <constraint firstItem="5JA-Id-K7y" firstAttribute="trailing" secondItem="Fs6-Lg-UkE" secondAttribute="trailing" id="htG-dR-jda"/>
+                <constraint firstItem="0Fg-IS-2Na" firstAttribute="leading" secondItem="Gk7-xJ-BzN" secondAttribute="leading" id="kUu-sV-2cs"/>
+                <constraint firstItem="H95-jc-fuF" firstAttribute="trailing" secondItem="0Fg-IS-2Na" secondAttribute="trailing" id="mFp-3M-llT"/>
+                <constraint firstItem="0Fg-IS-2Na" firstAttribute="leading" secondItem="5JA-Id-K7y" secondAttribute="leading" id="pyg-es-i3O"/>
+                <constraint firstItem="364-Pp-hiW" firstAttribute="leading" secondItem="rTK-Ry-KPm" secondAttribute="leading" id="s0a-BD-qtv"/>
+                <constraint firstItem="H95-jc-fuF" firstAttribute="trailing" secondItem="rTK-Ry-KPm" secondAttribute="trailing" id="vIO-38-cGu"/>
+                <constraint firstItem="jDz-i7-hOk" firstAttribute="leading" secondItem="H95-jc-fuF" secondAttribute="leading" id="zh3-Xg-UQZ"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

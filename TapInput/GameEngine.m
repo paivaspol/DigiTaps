@@ -57,11 +57,8 @@ static int digitSize = 10;
   tempId = CFNumberCreate(NULL, kCFNumberIntType, &gameId);
   CFPreferencesSetAppValue(gameIdKey, tempId, kCFPreferencesCurrentApplication);
   gameId++;
-  miss = 0;
-  curNumberIndex = 0;
-  digitsMissed = 0;
-  totalDigits = kNumDigits + curLevel - 1;
   state = ACTIVE;
+  [self resetGame];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"gamestarted" object:self];
 }
 
@@ -117,10 +114,6 @@ static int digitSize = 10;
 
 - (void)generateForLevel:(int)level
 {
-  curNumberIndex = 0;
-  miss = 0;
-  digitsMissed = 0;
-  totalDigits = kNumDigits + curLevel - 1;
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
   numberContainer = nil;
@@ -155,7 +148,12 @@ static int digitSize = 10;
 
 - (void)resetGame
 {
-  [self initializeGame];
+  miss = 0;
+  correct = 0;
+  curNumberIndex = 0;
+  digitsMissed = 0;
+  totalDigits = kNumDigits + curLevel - 1;
+  points = [[NSMutableArray alloc] init];
 }
 
 - (int)numWrongTrials
@@ -183,7 +181,7 @@ static int digitSize = 10;
 
 - (void)nextLevel
 {
-  points = [[NSMutableArray alloc] init];
+  [self resetGame];
   curLevel++;
 }
 

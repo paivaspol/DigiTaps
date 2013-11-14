@@ -14,9 +14,11 @@
 @interface NaturalTutorialViewController : UIViewController
 {
   NaturalPracticeViewController *npvc;
+  UIView *_currentView;
 }
-
+@property (strong, nonatomic) IBOutlet UIView *landscape35InfoView;
+@property (strong, nonatomic) IBOutlet UIView *landscape4InfoView;
+@property (strong, nonatomic) IBOutlet UIView *portraitView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIView *infoView;
 
 @end

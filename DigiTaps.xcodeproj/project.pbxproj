@@ -192,11 +192,11 @@
 		39A9D7F716A83D68003A8B7B /* GameEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEngine.m; sourceTree = "<group>"; };
 		39A9D7F916A87AF9003A8B7B /* GameEngineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngineTest.h; sourceTree = "<group>"; };
 		39A9D7FA16A87AF9003A8B7B /* GameEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEngineTest.m; sourceTree = "<group>"; };
-		39C7C1E5169EFBE900A6DABA /* TapInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C7C1E5169EFBE900A6DABA /* DigiTaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiTaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C7C1E9169EFBE900A6DABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39C7C1EB169EFBE900A6DABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39C7C1ED169EFBE900A6DABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		39C7C1F1169EFBE900A6DABA /* TapInput-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TapInput-Info.plist"; sourceTree = "<group>"; };
+		39C7C1F1169EFBE900A6DABA /* DigiTaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DigiTaps-Info.plist"; sourceTree = "<group>"; };
 		39C7C1F3169EFBE900A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		39C7C1F5169EFBE900A6DABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39C7C1F7169EFBE900A6DABA /* TapInput-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TapInput-Prefix.pch"; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		39C7C1FF169EFBEA00A6DABA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		39C7C202169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		39C7C205169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		39C7C20F169EFBEA00A6DABA /* TapInputTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapInputTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C7C20F169EFBEA00A6DABA /* DigiTapsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiTapsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C7C210169EFBEA00A6DABA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		39C7C218169EFBEA00A6DABA /* TapInputTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TapInputTests-Info.plist"; sourceTree = "<group>"; };
 		39C7C21A169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -441,8 +441,8 @@
 		39C7C1E6169EFBE900A6DABA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39C7C1E5169EFBE900A6DABA /* TapInput.app */,
-				39C7C20F169EFBEA00A6DABA /* TapInputTests.octest */,
+				39C7C1E5169EFBE900A6DABA /* DigiTaps.app */,
+				39C7C20F169EFBEA00A6DABA /* DigiTapsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -487,7 +487,7 @@
 		39C7C1F0169EFBE900A6DABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				39C7C1F1169EFBE900A6DABA /* TapInput-Info.plist */,
+				39C7C1F1169EFBE900A6DABA /* DigiTaps-Info.plist */,
 				39C7C1F2169EFBE900A6DABA /* InfoPlist.strings */,
 				39C7C1F5169EFBE900A6DABA /* main.m */,
 				39C7C1F7169EFBE900A6DABA /* TapInput-Prefix.pch */,
@@ -522,9 +522,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		39C7C1E4169EFBE900A6DABA /* TapInput */ = {
+		39C7C1E4169EFBE900A6DABA /* DigiTaps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39C7C221169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "TapInput" */;
+			buildConfigurationList = 39C7C221169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "DigiTaps" */;
 			buildPhases = (
 				39C7C1E1169EFBE900A6DABA /* Sources */,
 				39C7C1E2169EFBE900A6DABA /* Frameworks */,
@@ -535,14 +535,14 @@
 			);
 			dependencies = (
 			);
-			name = TapInput;
+			name = DigiTaps;
 			productName = TapInput;
-			productReference = 39C7C1E5169EFBE900A6DABA /* TapInput.app */;
+			productReference = 39C7C1E5169EFBE900A6DABA /* DigiTaps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		39C7C20E169EFBEA00A6DABA /* TapInputTests */ = {
+		39C7C20E169EFBEA00A6DABA /* DigiTapsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39C7C224169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "TapInputTests" */;
+			buildConfigurationList = 39C7C224169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "DigiTapsTests" */;
 			buildPhases = (
 				39C7C20A169EFBEA00A6DABA /* Sources */,
 				39C7C20B169EFBEA00A6DABA /* Frameworks */,
@@ -554,9 +554,9 @@
 			dependencies = (
 				39C7C215169EFBEA00A6DABA /* PBXTargetDependency */,
 			);
-			name = TapInputTests;
+			name = DigiTapsTests;
 			productName = TapInputTests;
-			productReference = 39C7C20F169EFBEA00A6DABA /* TapInputTests.octest */;
+			productReference = 39C7C20F169EFBEA00A6DABA /* DigiTapsTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -573,7 +573,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 39C7C1DF169EFBE900A6DABA /* Build configuration list for PBXProject "TapInput" */;
+			buildConfigurationList = 39C7C1DF169EFBE900A6DABA /* Build configuration list for PBXProject "DigiTaps" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -585,8 +585,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				39C7C1E4169EFBE900A6DABA /* TapInput */,
-				39C7C20E169EFBEA00A6DABA /* TapInputTests */,
+				39C7C1E4169EFBE900A6DABA /* DigiTaps */,
+				39C7C20E169EFBEA00A6DABA /* DigiTapsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -721,7 +721,7 @@
 /* Begin PBXTargetDependency section */
 		39C7C215169EFBEA00A6DABA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 39C7C1E4169EFBE900A6DABA /* TapInput */;
+			target = 39C7C1E4169EFBE900A6DABA /* DigiTaps */;
 			targetProxy = 39C7C214169EFBEA00A6DABA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -827,10 +827,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
-				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";
+				GCC_PREFIX_HEADER = "TapInput/DigiTaps-Prefix.pch";
+				INFOPLIST_FILE = "TapInput/DigiTaps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigiTaps;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -842,10 +842,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
-				INFOPLIST_FILE = "TapInput/TapInput-Info.plist";
+				GCC_PREFIX_HEADER = "TapInput/DigiTaps-Prefix.pch";
+				INFOPLIST_FILE = "TapInput/DigiTaps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigiTaps;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -862,7 +862,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInputTests/TapInputTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigiTapsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -879,7 +879,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapInput/TapInput-Prefix.pch";
 				INFOPLIST_FILE = "TapInputTests/TapInputTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DigiTapsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -888,7 +888,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		39C7C1DF169EFBE900A6DABA /* Build configuration list for PBXProject "TapInput" */ = {
+		39C7C1DF169EFBE900A6DABA /* Build configuration list for PBXProject "DigiTaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39C7C21F169EFBEA00A6DABA /* Debug */,
@@ -897,7 +897,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39C7C221169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "TapInput" */ = {
+		39C7C221169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "DigiTaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39C7C222169EFBEA00A6DABA /* Debug */,
@@ -906,7 +906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39C7C224169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "TapInputTests" */ = {
+		39C7C224169EFBEA00A6DABA /* Build configuration list for PBXNativeTarget "DigiTapsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39C7C225169EFBEA00A6DABA /* Debug */,

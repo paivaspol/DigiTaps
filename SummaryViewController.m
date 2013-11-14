@@ -29,21 +29,22 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self.nextBut setIsAccessibilityElement:YES];
-  [self.nextBut setAccessibilityTraits:UIAccessibilityTraitButton];
-  [self.nextBut setAccessibilityLabel:@"Next Level"];
-  [self.nextBut setAccessibilityHint:@"Next Level"];
-  
-  UIBarButtonItem *quit = [[UIBarButtonItem alloc]
-                                 initWithTitle:@"Menu"
-                                 style:UIBarButtonItemStyleBordered target:self action:@selector(quitButton:)];
+  if ([gameEngine currentLevel] <= [gameEngine getMaxLevel]) {
+    UIBarButtonItem *quit = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Menu"
+                                   style:UIBarButtonItemStyleBordered target:self action:@selector(quitButton:)];    
+    self.navigationItem.leftBarButtonItem = quit;
+  }
   
   UIBarButtonItem *next = [[UIBarButtonItem alloc]
-                                 initWithTitle:@"Next"
-                                 style:UIBarButtonItemStyleBordered target:self action:@selector(nextLevelButton:)];
-  
-  self.navigationItem.leftBarButtonItem = quit;
+                           initWithTitle:@"Next"
+                           style:UIBarButtonItemStyleBordered target:self action:@selector(nextLevelButton:)];
   self.navigationItem.rightBarButtonItem = next;
+  
+  [next setIsAccessibilityElement:YES];
+  [next setAccessibilityTraits:UIAccessibilityTraitButton];
+  [next setAccessibilityLabel:@"Next Level"];
+  [next setAccessibilityHint:@"Next Level"];
   
   self.title = @"Summary";
   
@@ -52,6 +53,9 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
   }
   // Do any additional setup after loading the view from its nib.
+  _currentView = self.view;
+  UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+  [self setUpViewForOrientation:interfaceOrientation];
 }
 
 - (BOOL)canBecomeFirstResponder
@@ -61,12 +65,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-  [self.nextBut setEnabled:shouldDisplayNextButton];
-  [self.numbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
-  [self.numbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
-  [self.accuracy setText:[gameEngine getAccurancyRate]];
+  [self.landscapeNumbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
+  [self.landscapeNumbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
+  [self.landscapeAccuracy setText:[gameEngine getAccurancyRate]];
   int64_t score = (int64_t) [gameEngine getLevelPoint];
-  [self.point setText:[NSString stringWithFormat:@"%lld", score]];
+  [self.landscapePoint setText:[NSString stringWithFormat:@"%lld", score]];
+  [self.portraitNumbersCorrect setText:[NSString stringWithFormat:@"%d", [gameEngine correct]]];
+  [self.portraitNumbersWrong setText:[NSString stringWithFormat:@"%d", [gameEngine miss]]];
+  [self.portraitAccuracy setText:[gameEngine getAccurancyRate]];
+  [self.portraitPoint setText:[NSString stringWithFormat:@"%lld", score]];
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
 }
 
@@ -116,5 +123,30 @@
 {
   shouldDisplayNextButton = shouldDisplay;
 }
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+  [self setUpViewForOrientation:toInterfaceOrientation];
+}
+
+-(void)setUpViewForOrientation:(UIInterfaceOrientation)orientation
+{
+  [_currentView removeFromSuperview];
+  if (UIInterfaceOrientationIsLandscape(orientation)) {
+    if (![self.view isEqual:_landscapeView]) {
+      [self.view addSubview:_landscapeView];
+      _landscapeView.frame = self.view.bounds;
+      _currentView = _landscapeView;
+      [self.view setNeedsLayout];
+    }
+  } else {
+    if (![self.view isEqual:_portraitView]) {
+      [self.view addSubview:_portraitView];
+      _portraitView.frame = self.view.bounds;
+      _currentView = _portraitView;
+      [self.view setNeedsLayout];
+    }
+  }
+}
+
 
 @end

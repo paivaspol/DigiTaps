@@ -32,6 +32,8 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
   }
   // Do any additional setup after loading the view from its nib.
+  UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+  [self setUpViewForOrientation:interfaceOrientation];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -67,6 +69,31 @@
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+  [self setUpViewForOrientation:toInterfaceOrientation];
+}
+
+-(void)setUpViewForOrientation:(UIInterfaceOrientation)orientation
+{
+  [_currentView removeFromSuperview];
+  if (UIInterfaceOrientationIsLandscape(orientation)) {
+    if (![self.view isEqual:_landscapeView]) {
+      [self.view addSubview:_landscapeView];
+      _landscapeView.frame = self.view.bounds;
+      _currentView = _landscapeView;
+      [self.view setNeedsLayout];
+    }
+  } else {
+    if (![self.view isEqual:_portraitView]) {
+      [self.view addSubview:_portraitView];
+      _portraitView.frame = self.view.bounds;
+      _currentView = _portraitView;
+      [self.view setNeedsLayout];
+    }
+  }
 }
 
 @end

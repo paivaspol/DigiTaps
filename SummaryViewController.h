@@ -25,16 +25,19 @@
   BOOL shouldDisplayNextButton;
   GameEngine *gameEngine;
   Logger *logger;
+  UIView *_currentView;
 }
-
+@property (strong, nonatomic) IBOutlet UIView *portraitView;
+@property (strong, nonatomic) IBOutlet UIView *landscapeView;
 @property (strong, nonatomic) id <SummaryViewControllerProtocol> delegate;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *quitBut;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *nextBut;
-@property (strong, nonatomic) IBOutlet UILabel *numbersCorrect;
-@property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
-@property (strong, nonatomic) IBOutlet UIButton *postData;
-@property (strong, nonatomic) IBOutlet UILabel *point;
-@property (strong, nonatomic) IBOutlet UILabel *accuracy;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeNumbersCorrect;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeNumbersWrong;
+@property (strong, nonatomic) IBOutlet UILabel *landscapePoint;
+@property (strong, nonatomic) IBOutlet UILabel *landscapeAccuracy;
+@property (strong, nonatomic) IBOutlet UILabel *portraitNumbersCorrect;
+@property (strong, nonatomic) IBOutlet UILabel *portraitNumbersWrong;
+@property (strong, nonatomic) IBOutlet UILabel *portraitPoint;
+@property (strong, nonatomic) IBOutlet UILabel *portraitAccuracy;
 
 - (void)setDisplayNextLevel:(BOOL)shouldDisplay;
 

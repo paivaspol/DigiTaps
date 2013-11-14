@@ -11,9 +11,10 @@
 @protocol ModeSelectorProtocol;
 
 @interface ModeSelectorViewController : UIViewController {
-
+  UIView *_currentView;
 }
-
+@property (strong, nonatomic) IBOutlet UIView *portraitView;
+@property (strong, nonatomic) IBOutlet UIView *landscapeView;
 @property (strong, nonatomic) IBOutlet UIButton *natural;
 @property (strong, nonatomic) IBOutlet UIButton *lessNatural;
 @property (assign, nonatomic) id <ModeSelectorProtocol> delegate;
