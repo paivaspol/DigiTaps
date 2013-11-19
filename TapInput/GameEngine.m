@@ -114,6 +114,7 @@ static int digitSize = 10;
 
 - (void)generateForLevel:(int)level
 {
+  [self resetGame];
   state = ACTIVE;
   [[NSNotificationCenter defaultCenter] postNotificationName:@"levelGenerated" object:self];
   numberContainer = nil;
@@ -166,6 +167,7 @@ static int digitSize = 10;
   // compute the error of this number
   curNumberIndex++;
   if (curNumberIndex < NUMBERS_PER_LEVEL) {
+    NSLog(@"Doing this!");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"numberChanged" object:self];
   } else {
     state = IN_BETWEEN;

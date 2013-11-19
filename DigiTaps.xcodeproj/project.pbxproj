@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1BAB7E183AF50A0045CA6C /* GestureDetectorSharedState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BAB7D183AF50A0045CA6C /* GestureDetectorSharedState.m */; };
+		2C1BAB81183AF69A0045CA6C /* GestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BAB80183AF69A0045CA6C /* GestureDetector.m */; };
 		2C2641AB1703E42F00E35977 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2641AA1703E42F00E35977 /* CFNetwork.framework */; };
 		2C2641AD1703E44400E35977 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2641AC1703E44400E35977 /* MobileCoreServices.framework */; };
 		2C2641AF1703E45600E35977 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2641AE1703E45600E35977 /* libz.dylib */; };
@@ -36,6 +38,7 @@
 		2CA62DF317307CC9001B7A97 /* NaturalGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA62DF217307CC9001B7A97 /* NaturalGestureDetector.m */; };
 		2CA62DF617307FC4001B7A97 /* LessNaturalGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA62DF517307FC4001B7A97 /* LessNaturalGestureDetector.m */; };
 		2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC525C16D0369400DB070B /* StartMenuViewController.m */; };
+		2CAD16621837466300BF0898 /* DTGestureDetectionSharedState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD16611837466300BF0898 /* DTGestureDetectionSharedState.m */; };
 		2CB406191773F6EB00F45637 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB406181773F6EB00F45637 /* Utility.m */; };
 		2CB5BACB171B587E0042AF27 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB5BACA171B587E0042AF27 /* GameKit.framework */; };
 		2CB5BACF171B5F520042AF27 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5BACE171B5F520042AF27 /* GameCenterManager.m */; };
@@ -59,10 +62,9 @@
 		2CE3FE7917471D9C00C2632C /* GestureTypeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */; };
 		2CE3FE821747E28A00C2632C /* OverviewTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */; };
 		2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */; };
-		2CF3C31C1736ACDF00D9F4E0 /* GestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C31B1736ACDF00D9F4E0 /* GestureDetector.m */; };
+		2CF3C31C1736ACDF00D9F4E0 /* DTGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */; };
 		2CF3C31F1736B25200D9F4E0 /* BackspaceGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C31E1736B25200D9F4E0 /* BackspaceGestureDetector.m */; };
 		2CF3C32217373E0900D9F4E0 /* GestureDetectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C32117373E0900D9F4E0 /* GestureDetectorManager.m */; };
-		2CF3C3251737680800D9F4E0 /* SubmitGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C3241737680800D9F4E0 /* SubmitGestureDetector.m */; };
 		2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */; };
 		2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */; };
 		39A9D7F816A83D68003A8B7B /* GameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9D7F716A83D68003A8B7B /* GameEngine.m */; };
@@ -98,6 +100,10 @@
 
 /* Begin PBXFileReference section */
 		19913A25C0CA481191CF9B95 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1BAB7C183AF50A0045CA6C /* GestureDetectorSharedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureDetectorSharedState.h; path = GestureDetection/GestureDetectorSharedState.h; sourceTree = "<group>"; };
+		2C1BAB7D183AF50A0045CA6C /* GestureDetectorSharedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureDetectorSharedState.m; path = GestureDetection/GestureDetectorSharedState.m; sourceTree = "<group>"; };
+		2C1BAB7F183AF69A0045CA6C /* GestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureDetector.h; path = GestureDetection/GestureDetector.h; sourceTree = "<group>"; };
+		2C1BAB80183AF69A0045CA6C /* GestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureDetector.m; path = GestureDetection/GestureDetector.m; sourceTree = "<group>"; };
 		2C2641AA1703E42F00E35977 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2C2641AC1703E44400E35977 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2C2641AE1703E45600E35977 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -141,6 +147,8 @@
 		2CA62DF517307FC4001B7A97 /* LessNaturalGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LessNaturalGestureDetector.m; path = GestureDetection/LessNaturalGestureDetector.m; sourceTree = "<group>"; };
 		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenuViewController.h; sourceTree = "<group>"; };
 		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenuViewController.m; sourceTree = "<group>"; };
+		2CAD16601837466300BF0898 /* DTGestureDetectionSharedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGestureDetectionSharedState.h; path = GestureDetection/DTGestureDetectionSharedState.h; sourceTree = "<group>"; };
+		2CAD16611837466300BF0898 /* DTGestureDetectionSharedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGestureDetectionSharedState.m; path = GestureDetection/DTGestureDetectionSharedState.m; sourceTree = "<group>"; };
 		2CB406171773F6EB00F45637 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Utilities/Utility.h; sourceTree = "<group>"; };
 		2CB406181773F6EB00F45637 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = Utilities/Utility.m; sourceTree = "<group>"; };
 		2CB5BACA171B587E0042AF27 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -177,14 +185,12 @@
 		2CE3FE7F1747E28900C2632C /* OverviewTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverviewTutorialViewController.h; path = View/OverviewTutorialViewController.h; sourceTree = "<group>"; };
 		2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverviewTutorialViewController.m; path = View/OverviewTutorialViewController.m; sourceTree = "<group>"; };
 		2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewTutorialViewController.xib; path = View/OverviewTutorialViewController.xib; sourceTree = "<group>"; };
-		2CF3C31A1736ACDF00D9F4E0 /* GestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureDetector.h; path = GestureDetection/GestureDetector.h; sourceTree = "<group>"; };
-		2CF3C31B1736ACDF00D9F4E0 /* GestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureDetector.m; path = GestureDetection/GestureDetector.m; sourceTree = "<group>"; };
+		2CF3C31A1736ACDF00D9F4E0 /* DTGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGestureDetector.h; path = GestureDetection/DTGestureDetector.h; sourceTree = "<group>"; };
+		2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGestureDetector.m; path = GestureDetection/DTGestureDetector.m; sourceTree = "<group>"; };
 		2CF3C31D1736B25200D9F4E0 /* BackspaceGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackspaceGestureDetector.h; path = GestureDetection/BackspaceGestureDetector.h; sourceTree = "<group>"; };
 		2CF3C31E1736B25200D9F4E0 /* BackspaceGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackspaceGestureDetector.m; path = GestureDetection/BackspaceGestureDetector.m; sourceTree = "<group>"; };
 		2CF3C32017373E0900D9F4E0 /* GestureDetectorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureDetectorManager.h; path = GestureDetection/GestureDetectorManager.h; sourceTree = "<group>"; };
 		2CF3C32117373E0900D9F4E0 /* GestureDetectorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureDetectorManager.m; path = GestureDetection/GestureDetectorManager.m; sourceTree = "<group>"; };
-		2CF3C3231737680800D9F4E0 /* SubmitGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubmitGestureDetector.h; path = GestureDetection/SubmitGestureDetector.h; sourceTree = "<group>"; };
-		2CF3C3241737680800D9F4E0 /* SubmitGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubmitGestureDetector.m; path = GestureDetection/SubmitGestureDetector.m; sourceTree = "<group>"; };
 		2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAgreementViewController.h; sourceTree = "<group>"; };
 		2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAgreementViewController.m; sourceTree = "<group>"; };
 		2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAgreementViewController.xib; sourceTree = "<group>"; };
@@ -328,20 +334,24 @@
 		2CB5BAC9171B56D40042AF27 /* GestureDetection */ = {
 			isa = PBXGroup;
 			children = (
+				2C1BAB7F183AF69A0045CA6C /* GestureDetector.h */,
+				2C1BAB80183AF69A0045CA6C /* GestureDetector.m */,
+				2CF3C31A1736ACDF00D9F4E0 /* DTGestureDetector.h */,
+				2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */,
 				2CA62DF117307CC9001B7A97 /* NaturalGestureDetector.h */,
 				2CA62DF217307CC9001B7A97 /* NaturalGestureDetector.m */,
 				2CA62DF417307FC4001B7A97 /* LessNaturalGestureDetector.h */,
 				2CA62DF517307FC4001B7A97 /* LessNaturalGestureDetector.m */,
-				2CF3C31A1736ACDF00D9F4E0 /* GestureDetector.h */,
-				2CF3C31B1736ACDF00D9F4E0 /* GestureDetector.m */,
 				2CF3C31D1736B25200D9F4E0 /* BackspaceGestureDetector.h */,
 				2CF3C31E1736B25200D9F4E0 /* BackspaceGestureDetector.m */,
 				2CF3C32017373E0900D9F4E0 /* GestureDetectorManager.h */,
 				2CF3C32117373E0900D9F4E0 /* GestureDetectorManager.m */,
-				2CF3C3231737680800D9F4E0 /* SubmitGestureDetector.h */,
-				2CF3C3241737680800D9F4E0 /* SubmitGestureDetector.m */,
 				2CE3FE7717471D9C00C2632C /* GestureTypeUtility.h */,
 				2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */,
+				2C1BAB7C183AF50A0045CA6C /* GestureDetectorSharedState.h */,
+				2C1BAB7D183AF50A0045CA6C /* GestureDetectorSharedState.m */,
+				2CAD16601837466300BF0898 /* DTGestureDetectionSharedState.h */,
+				2CAD16611837466300BF0898 /* DTGestureDetectionSharedState.m */,
 			);
 			name = GestureDetection;
 			path = ..;
@@ -430,7 +440,7 @@
 			children = (
 				2C830D10177D512900D3B889 /* DefaultImages */,
 				2C2AF91F16D177CD005E837D /* Sound */,
-				39C7C1EF169EFBE900A6DABA /* TapInput */,
+				39C7C1EF169EFBE900A6DABA /* DigiTaps */,
 				39C7C216169EFBEA00A6DABA /* TapInputTests */,
 				39C7C1E8169EFBE900A6DABA /* Frameworks */,
 				39C7C1E6169EFBE900A6DABA /* Products */,
@@ -466,7 +476,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		39C7C1EF169EFBE900A6DABA /* TapInput */ = {
+		39C7C1EF169EFBE900A6DABA /* DigiTaps */ = {
 			isa = PBXGroup;
 			children = (
 				2CB406161773F6C300F45637 /* Utils */,
@@ -481,6 +491,7 @@
 				2C74AED416E3F9750095143A /* Logging */,
 				39C7C1F0169EFBE900A6DABA /* Supporting Files */,
 			);
+			name = DigiTaps;
 			path = TapInput;
 			sourceTree = "<group>";
 		};
@@ -669,13 +680,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1BAB7E183AF50A0045CA6C /* GestureDetectorSharedState.m in Sources */,
 				39C7C1F6169EFBE900A6DABA /* main.m in Sources */,
 				39C7C1FA169EFBE900A6DABA /* AppDelegate.m in Sources */,
 				39A9D7F816A83D68003A8B7B /* GameEngine.m in Sources */,
 				2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */,
+				2CAD16621837466300BF0898 /* DTGestureDetectionSharedState.m in Sources */,
 				2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */,
 				2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */,
 				2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */,
+				2C1BAB81183AF69A0045CA6C /* GestureDetector.m in Sources */,
 				2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */,
 				2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */,
 				2C97440816D0A686001A2E1B /* GameViewController.m in Sources */,
@@ -691,10 +705,9 @@
 				2C98C54E171C831F00DA8BAF /* LogSenderOperation.m in Sources */,
 				2CA62DF317307CC9001B7A97 /* NaturalGestureDetector.m in Sources */,
 				2CA62DF617307FC4001B7A97 /* LessNaturalGestureDetector.m in Sources */,
-				2CF3C31C1736ACDF00D9F4E0 /* GestureDetector.m in Sources */,
+				2CF3C31C1736ACDF00D9F4E0 /* DTGestureDetector.m in Sources */,
 				2CF3C31F1736B25200D9F4E0 /* BackspaceGestureDetector.m in Sources */,
 				2CF3C32217373E0900D9F4E0 /* GestureDetectorManager.m in Sources */,
-				2CF3C3251737680800D9F4E0 /* SubmitGestureDetector.m in Sources */,
 				2CE3FE7917471D9C00C2632C /* GestureTypeUtility.m in Sources */,
 				2CE3FE821747E28A00C2632C /* OverviewTutorialViewController.m in Sources */,
 				2CB974201749C15E0086D6D9 /* NaturalTutorialViewController.m in Sources */,

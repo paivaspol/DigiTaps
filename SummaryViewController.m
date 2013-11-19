@@ -29,23 +29,22 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  if ([gameEngine currentLevel] <= [gameEngine getMaxLevel]) {
-    UIBarButtonItem *quit = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Menu"
-                                   style:UIBarButtonItemStyleBordered target:self action:@selector(quitButton:)];    
-    self.navigationItem.leftBarButtonItem = quit;
+  UIBarButtonItem *quit = [[UIBarButtonItem alloc]
+                                 initWithTitle:@"Menu"
+                                 style:UIBarButtonItemStyleBordered target:self action:@selector(quitButton:)];    
+  self.navigationItem.leftBarButtonItem = quit;
+
+  if ([gameEngine currentLevel] < [gameEngine getMaxLevel]) {
+    UIBarButtonItem *next = [[UIBarButtonItem alloc]
+                             initWithTitle:@"Next"
+                             style:UIBarButtonItemStyleBordered target:self action:@selector(nextLevelButton:)];
+    self.navigationItem.rightBarButtonItem = next;
+    
+    [next setIsAccessibilityElement:YES];
+    [next setAccessibilityTraits:UIAccessibilityTraitButton];
+    [next setAccessibilityLabel:@"Next Level"];
+    [next setAccessibilityHint:@"Next Level"];
   }
-  
-  UIBarButtonItem *next = [[UIBarButtonItem alloc]
-                           initWithTitle:@"Next"
-                           style:UIBarButtonItemStyleBordered target:self action:@selector(nextLevelButton:)];
-  self.navigationItem.rightBarButtonItem = next;
-  
-  [next setIsAccessibilityElement:YES];
-  [next setAccessibilityTraits:UIAccessibilityTraitButton];
-  [next setAccessibilityLabel:@"Next Level"];
-  [next setAccessibilityHint:@"Next Level"];
-  
   self.title = @"Summary";
   
   // make sure that iOS7 display it properly :)
@@ -75,6 +74,11 @@
   [self.portraitAccuracy setText:[gameEngine getAccurancyRate]];
   [self.portraitPoint setText:[NSString stringWithFormat:@"%lld", score]];
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
+  
+  if ([gameEngine currentLevel] < [gameEngine getMaxLevel]) {
+    // hide the next button
+    self.navigationItem.rightBarButtonItem = nil;
+  }
 }
 
 - (void)viewDidAppear:(BOOL)animated

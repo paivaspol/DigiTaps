@@ -116,9 +116,10 @@ static NSString * const kYes = @"Yes";
   [self.view becomeFirstResponder];
   if (didDisplaySummary) {
     [self.navigationItem setHidesBackButton:NO animated:NO];
+  } else {
+    [gameEngine generateForLevel:[gameEngine currentLevel]];
+    [self setTitle:[NSString stringWithFormat:@"Level %d, %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]]];
   }
-  [gameEngine generateForLevel:[gameEngine currentLevel]];
-  [self setTitle:[NSString stringWithFormat:@"Level %d, %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]]];
   UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
   [self setUpViewForOrientation:interfaceOrientation];
 }
@@ -155,6 +156,7 @@ static NSString * const kYes = @"Yes";
 - (void)resetAllVariables
 {
   tapped = -1;
+  didDisplaySummary = NO;
   [curInput setString:@""];
   [self.portraitInputNumber setText:curInput];
   [self.landscapeInputNumber setText:curInput];
@@ -192,13 +194,7 @@ static NSString * const kYes = @"Yes";
   [gestureDetectorManager setDidDetectGesture:YES];
   NSInteger val = arg;
   if (type == BACKSPACE) {
-    if ([curInput isEqualToString:@""]) {
-      [voiceOverQueue removeAllObjects];
-      [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
-      [self voiceOverReadEachDigit:nil];
-    } else {
-      [self backspace];
-    }
+    [self backspace];
   } else if (type == NATURAL) {
     if (val == -1) {
       // play a click sound, we are still waiting for something
@@ -258,7 +254,6 @@ static NSString * const kYes = @"Yes";
 - (void)quitGame
 {
   [self.navigationController popToRootViewControllerAnimated:YES];
-  didDisplaySummary = NO;
   [self logEvent:GAME_END andParams:@""];
 }
 
@@ -337,14 +332,22 @@ static NSString * const kYes = @"Yes";
 // backspace
 - (void)backspace
 {
-  if ([curInput length] != 0) {
-    if ([curInput length] == 1) {
-      [curInput setString:@""];
-    } else {
-      [curInput setString:[[curInput substringToIndex:[curInput length] - 1] copy]];
+  if ([curInput isEqualToString:@""]) {
+    // The player hasn't put the number in, repeat the number.
+    [voiceOverQueue removeAllObjects];
+    [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
+    [self voiceOverReadEachDigit:nil];
+  } else {
+    // Delete the number/memory accordingly.
+    if ([curInput length] != 0) {
+      if ([curInput length] == 1) {
+        [curInput setString:@""];
+      } else {
+        [curInput setString:[[curInput substringToIndex:[curInput length] - 1] copy]];
+      }
+      [self.portraitInputNumber setText:curInput];
+      [self.landscapeInputNumber setText:curInput];
     }
-    [self.portraitInputNumber setText:curInput];
-    [self.landscapeInputNumber setText:curInput];
   }
 }
 

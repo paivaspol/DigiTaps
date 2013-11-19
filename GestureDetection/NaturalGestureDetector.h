@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GestureDetector.h"
+#import "DTGestureDetector.h"
 
-@interface NaturalGestureDetector : GestureDetector
+@interface NaturalGestureDetector : DTGestureDetector
 
 @end

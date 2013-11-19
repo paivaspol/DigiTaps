@@ -1,14 +1,13 @@
 //
-//  GestureDetector.m
+//  GestureDetectorSharedState.m
 //  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 11/18/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
-#import "GestureDetector.h"
+#import "GestureDetectorSharedState.h"
 
-@implementation GestureDetector
+@implementation GestureDetectorSharedState
 
 @end
-

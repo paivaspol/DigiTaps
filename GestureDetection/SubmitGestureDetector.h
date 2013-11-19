@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
-#import "GestureDetector.h"
+#import "DTGestureDetector.h"
 
 #define MENU_WAIT_TIME 0.35
 
-@interface SubmitGestureDetector : GestureDetector
+@interface SubmitGestureDetector : DTGestureDetector
 {
   NSTimer *timer;
 }

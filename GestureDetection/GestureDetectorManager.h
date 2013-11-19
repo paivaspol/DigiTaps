@@ -11,9 +11,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GestureDetector.h"
+#import "DTGestureDetector.h"
 #import "GestureTypeUtility.h"
-
+#import "DTGestureDetectionSharedState.h"
 
 
 @protocol GestureDetectorManagerProtocol <NSObject>
@@ -29,6 +29,7 @@
 }
 
 @property (assign, nonatomic) id <GestureDetectorManagerProtocol> delegate;
+@property (assign) GestureDetectorSharedState* sharedState;
 
 - (void)addGestureDetector:(GestureDetector *)detector;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view;
@@ -36,6 +37,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view;
 
 - (void)setDidDetectGesture:(BOOL)didDetect;
+/* resets the shared state property. */
 - (void)reset;
 
 @end

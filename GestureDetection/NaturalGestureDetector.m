@@ -12,11 +12,11 @@
 
 @implementation NaturalGestureDetector
 
-- (id)init
+- (id)initWithSharedState:(DTGestureDetectionSharedState *)sharedState
 {
   self = [super init];
   if (self) {
-
+    super.sharedState = sharedState;
   }
   return self;
 }
@@ -24,17 +24,18 @@
 - (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
-  if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] >= VERT_SWIPE_DRAG_MAX
-      && startTouch == 1) {
+  DTGestureDetectionSharedState *sharedState = super.sharedState;
+  if ([Utility computeDistanceFrom:sharedState.currentTouchPosition to:sharedState.startTouchPosition] >= VERT_SWIPE_DRAG_MAX
+      && sharedState.startTouch == 1) {
     // it's a swipe! return 0 + currentSum, and reset all the variables
-    [self gestureDetectedWithValue:currentSum];
-    currentSum = 0;
-    isWaitingForInput = NO;
-  } else if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] < VERT_SWIPE_DRAG_MAX) {  // this is a tap
-    if (startTouch == TAPS && currentSum < 6) {
-      isWaitingForInput = true;
-      currentSum += TAPS;
-      if (currentSum == 3) {
+    [self gestureDetectedWithValue:sharedState.currentSum];
+    sharedState.currentSum = 0;
+    sharedState.isWaitingForInput = NO;
+  } else if ([Utility computeDistanceFrom:sharedState.currentTouchPosition to:sharedState.startTouchPosition] < VERT_SWIPE_DRAG_MAX) {  // this is a tap
+    if (sharedState.startTouch == TAPS && sharedState.currentSum < 6) {
+      sharedState.isWaitingForInput = true;
+      sharedState.currentSum += TAPS;
+      if (sharedState.currentSum == 3) {
         // set arg = -1, so the controller can play a click sound
         [self gestureDetectedWithValue:-1];
       } else {
@@ -42,9 +43,9 @@
         [self gestureDetectedWithValue:-2];
       }
     } else {
-      [self gestureDetectedWithValue:currentSum + startTouch];
-      isWaitingForInput = false;
-      currentSum = 0;
+      [self gestureDetectedWithValue:sharedState.currentSum + sharedState.startTouch];
+      sharedState.isWaitingForInput = false;
+      sharedState.currentSum = 0;
     }
   }
 }

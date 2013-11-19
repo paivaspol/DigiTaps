@@ -16,8 +16,6 @@
 {
   if ((self = [super init]) != nil) {
     gestureDetectors = [[NSMutableArray alloc] init];
-    GestureDetector *backspaceDetector = [[BackspaceGestureDetector alloc] init];
-    [self addGestureDetector:backspaceDetector];
     didDetectGesture = NO;
   }
   return self;
@@ -32,27 +30,27 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   didDetectGesture = NO;
-  for (GestureDetector *gd in gestureDetectors) {
+  for (DTGestureDetector *gd in gestureDetectors) {
     [gd touchBegan:touches withEvent:event inView:view];
   }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  for (GestureDetector *gd in gestureDetectors) {
+  for (DTGestureDetector *gd in gestureDetectors) {
     [gd touchMoved:touches withEvent:event];
   }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
-  for (GestureDetector *gd in gestureDetectors) {
+  for (DTGestureDetector *gd in gestureDetectors) {
     [gd touchEnded:touches withEvent:event inView:view];
     if (didDetectGesture) {
       break;
     }
   }
-  for (GestureDetector *gd in gestureDetectors) {
+  for (DTGestureDetector *gd in gestureDetectors) {
     [gd setValid:NO];
   }
 }
@@ -69,9 +67,10 @@
   didDetectGesture = didDetect;
 }
 
+/* resets the shared state property. */
 - (void)reset
 {
-  for (GestureDetector *gd in gestureDetectors) {
+  for (DTGestureDetector *gd in gestureDetectors) {
     [gd reset];
   }
 }

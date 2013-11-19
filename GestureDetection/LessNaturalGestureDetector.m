@@ -16,36 +16,47 @@
 
 @implementation LessNaturalGestureDetector
 
+- (id)initWithSharedState:(DTGestureDetectionSharedState *)sharedState
+{
+  self = [super init];
+  if (self) {
+    super.sharedState = sharedState;
+  }
+  return self;
+}
+
 - (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
 {
   [super touchEnded:touches withEvent:event inView:view];
-  if ([Utility computeDistanceFrom:currentTouchPosition to:startTouchPosition] >= VERT_SWIPE_DRAG_MAX) {
+  DTGestureDetectionSharedState *sharedState = super.sharedState;
+  if ([Utility computeDistanceFrom:sharedState.currentTouchPosition to:sharedState.startTouchPosition] >= VERT_SWIPE_DRAG_MAX
+      && sharedState.startTouch == 1) {
     // a flick, put it in a waiting state
-    if (isWaitingForInput) {
-      isWaitingForInput = NO;
-      [self gestureDetectedWithValue:currentSum];
+    if (sharedState.isWaitingForInput) {
+      sharedState.isWaitingForInput = NO;
+      [self gestureDetectedWithValue:sharedState.currentSum];
     } else {
-      isWaitingForInput = YES;
+      sharedState.isWaitingForInput = YES;
       [self gestureDetectedWithValue:-2];
     }
-    currentSum = 0;
-  } else if (fabs(currentTouchPosition.x - startTouchPosition.x) <= TAP_THRESHOLD) {
-    if (isWaitingForInput) {
-      if (currentSum == 0) {
-        [self gestureDetectedWithValue:10 - startTouch];
+    sharedState.currentSum = 0;
+  } else if (fabs(sharedState.currentTouchPosition.x - sharedState.startTouchPosition.x) <= TAP_THRESHOLD) {
+    if (sharedState.isWaitingForInput) {
+      if (sharedState.currentSum == 0) {
+        [self gestureDetectedWithValue:10 - sharedState.startTouch];
       } else {
-        [self gestureDetectedWithValue:currentSum + startTouch];
-        currentSum = 0;
+        [self gestureDetectedWithValue:sharedState.currentSum + sharedState.startTouch];
+        sharedState.currentSum = 0;
       }
-      isWaitingForInput = NO;
-    } else if (startTouch == 3) {
-      currentSum += startTouch;
-      isWaitingForInput = YES;
+      sharedState.isWaitingForInput = NO;
+    } else if (sharedState.startTouch == 3) {
+      sharedState.currentSum += sharedState.startTouch;
+      sharedState.isWaitingForInput = YES;
       [self gestureDetectedWithValue:-1];
     } else {
-      isWaitingForInput = NO;
-      [self gestureDetectedWithValue:currentSum + startTouch];
-      currentSum = 0;
+      sharedState.isWaitingForInput = NO;
+      [self gestureDetectedWithValue:sharedState.currentSum + sharedState.startTouch];
+      sharedState.currentSum = 0;
     }
   }
 }

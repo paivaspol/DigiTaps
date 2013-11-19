@@ -17,8 +17,6 @@
 #import "BackspaceGestureDetector.h"
 #import "LessNaturalGestureDetector.h"
 #import "NaturalGestureDetector.h"
-#import "SubmitGestureDetector.h"
-
 
 @interface StartMenuViewController ()
 
@@ -142,11 +140,14 @@
 - (void)startGameWithNaturalMode:(BOOL)isNatural
 {
   GestureDetectorManager *gdm = [[GestureDetectorManager alloc] init];
+  DTGestureDetectionSharedState *sharedState = [[DTGestureDetectionSharedState alloc] init];
+  DTGestureDetector *backspaceDetector = [[BackspaceGestureDetector alloc] initWithSharedState:sharedState];
+  [gdm addGestureDetector:backspaceDetector];
   GestureDetector *tap;
   if (isNatural) {
-    tap = [[NaturalGestureDetector alloc] init];
+    tap = [[NaturalGestureDetector alloc] initWithSharedState:sharedState];
   } else {
-    tap = [[LessNaturalGestureDetector alloc] init];
+    tap = [[LessNaturalGestureDetector alloc] initWithSharedState:sharedState];
   }
   [gdm addGestureDetector:tap];
   [gameViewController setGestureDetectorManager:gdm];
