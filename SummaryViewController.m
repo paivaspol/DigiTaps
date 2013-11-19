@@ -75,7 +75,7 @@
   [self.portraitPoint setText:[NSString stringWithFormat:@"%lld", score]];
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
   
-  if ([gameEngine currentLevel] < [gameEngine getMaxLevel]) {
+  if ([gameEngine currentLevel] >= [gameEngine getMaxLevel]) {
     // hide the next button
     self.navigationItem.rightBarButtonItem = nil;
   }

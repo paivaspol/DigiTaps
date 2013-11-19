@@ -118,7 +118,7 @@ static NSString * const kYes = @"Yes";
     [self.navigationItem setHidesBackButton:NO animated:NO];
   } else {
     [gameEngine generateForLevel:[gameEngine currentLevel]];
-    [self setTitle:[NSString stringWithFormat:@"Level %d, %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]]];
+    [self setTitle:[NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]]];
   }
   UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
   [self setUpViewForOrientation:interfaceOrientation];
@@ -126,7 +126,6 @@ static NSString * const kYes = @"Yes";
 
 - (void)viewDidAppear:(BOOL)animated
 {
-  [voiceOverQueue removeAllObjects];
   UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.view);
   [self updateCurrentNumber];
   [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(voiceOverAnnouceCurrentGameState) userInfo:nil repeats:NO];
@@ -338,13 +337,17 @@ static NSString * const kYes = @"Yes";
     [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
     [self voiceOverReadEachDigit:nil];
   } else {
-    // Delete the number/memory accordingly.
+    // Delete the number accordingly.
     if ([curInput length] != 0) {
+      NSString *message;
       if ([curInput length] == 1) {
+        message = [curInput description];
         [curInput setString:@""];
       } else {
+        message = [NSString stringWithFormat:@"%c", [curInput characterAtIndex:([curInput length] - 1)]];
         [curInput setString:[[curInput substringToIndex:[curInput length] - 1] copy]];
       }
+      UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
       [self.portraitInputNumber setText:curInput];
       [self.landscapeInputNumber setText:curInput];
     }
@@ -398,12 +401,11 @@ static NSString * const kYes = @"Yes";
 }
 
 // adds each digit to the voice over queue
-- (void)addDigitsToVoiceOverQueue:(int)number
+- (void)addDigitsToVoiceOverQueue:(NSString *)number
 {
-  while (number > 0) {
-    int digit = number % 10;
-    number /= 10;
-    [voiceOverQueue addObject:[NSString stringWithFormat:@"%d", digit]];
+  for (int index = [number length] - 1; index >= 0; --index) {
+    char curCharacter = [number characterAtIndex:index];
+    [voiceOverQueue addObject:[NSString stringWithFormat:@"%c", curCharacter]];
   }
 }
 

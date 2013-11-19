@@ -39,7 +39,6 @@
   [self initializeViewControllers];
   [self.navigationController setNavigationBarHidden:YES];
   self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, @"Tap input game");
   
   // make sure that iOS7 display it properly :)
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
