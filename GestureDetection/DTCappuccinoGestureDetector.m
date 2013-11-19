@@ -1,6 +1,6 @@
 //
 //  LessNaturalGestureDetector.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 4/30/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,13 +8,13 @@
 
 #import "Utility.h"
 
-#import "LessNaturalGestureDetector.h"
+#import "DTCappuccinoGestureDetector.h"
 
-@interface LessNaturalGestureDetector()
+@interface DTCappuccinoGestureDetector()
 
 @end
 
-@implementation LessNaturalGestureDetector
+@implementation DTCappuccinoGestureDetector
 
 - (id)initWithSharedState:(DTGestureDetectionSharedState *)sharedState
 {

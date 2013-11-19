@@ -1,6 +1,6 @@
 //
 //  StartMenu.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 1/23/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.

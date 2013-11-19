@@ -1,6 +1,6 @@
 //
 //  NaturalGestureDetector.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 4/30/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import "Utility.h"
 
-#import "NaturalGestureDetector.h"
+#import "DTEspressoGestureDetector.h"
 
-@implementation NaturalGestureDetector
+@implementation DTEspressoGestureDetector
 
 - (id)initWithSharedState:(DTGestureDetectionSharedState *)sharedState
 {

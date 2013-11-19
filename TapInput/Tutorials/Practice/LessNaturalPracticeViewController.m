@@ -1,6 +1,6 @@
 //
 //  LessNaturalPracticeViewController.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 6/22/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "LessNaturalPracticeViewController.h"
 
-#import "LessNaturalGestureDetector.h"
+#import "DTCappuccinoGestureDetector.h"
 
 static NSString * const kThreeFingersTap = @"Three finger tap. Waiting for another gesture";
 static NSString * const kSwipeWaiting = @"Swipe. Waiting for another gesture";

@@ -1,6 +1,6 @@
 //
 //  GameCenterManager.h
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 4/14/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.

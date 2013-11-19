@@ -1,6 +1,6 @@
 //
 //  NaturalTutorialViewController.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 5/19/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NaturalTutorialViewController.h"
 
-#import "NaturalGestureDetector.h"
+#import "DTEspressoGestureDetector.h"
 
 @interface NaturalTutorialViewController ()
 
@@ -34,7 +34,7 @@ static NSString * const kTitle = @"Natural";
   [super viewDidLoad];
   npvc = [[NaturalPracticeViewController alloc] init];
   GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
-  [manager addGestureDetector:[[NaturalGestureDetector alloc] init]];
+  [manager addGestureDetector:[[DTEspressoGestureDetector alloc] init]];
   [npvc setGestureDetectorManager:manager];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr
                                                                  style:UIBarButtonItemStyleBordered

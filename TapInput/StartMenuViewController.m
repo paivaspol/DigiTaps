@@ -1,6 +1,6 @@
 //
 //  StartMenuViewController.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 2/16/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -14,9 +14,9 @@
 
 /* gesture managers */
 #import "GestureDetectorManager.h"
-#import "BackspaceGestureDetector.h"
-#import "LessNaturalGestureDetector.h"
-#import "NaturalGestureDetector.h"
+#import "DTBackspaceGestureDetector.h"
+#import "DTCappuccinoGestureDetector.h"
+#import "DTEspressoGestureDetector.h"
 
 @interface StartMenuViewController ()
 
@@ -141,13 +141,13 @@
 {
   GestureDetectorManager *gdm = [[GestureDetectorManager alloc] init];
   DTGestureDetectionSharedState *sharedState = [[DTGestureDetectionSharedState alloc] init];
-  DTGestureDetector *backspaceDetector = [[BackspaceGestureDetector alloc] initWithSharedState:sharedState];
+  DTGestureDetector *backspaceDetector = [[DTBackspaceGestureDetector alloc] initWithSharedState:sharedState];
   [gdm addGestureDetector:backspaceDetector];
   GestureDetector *tap;
   if (isNatural) {
-    tap = [[NaturalGestureDetector alloc] initWithSharedState:sharedState];
+    tap = [[DTEspressoGestureDetector alloc] initWithSharedState:sharedState];
   } else {
-    tap = [[LessNaturalGestureDetector alloc] initWithSharedState:sharedState];
+    tap = [[DTCappuccinoGestureDetector alloc] initWithSharedState:sharedState];
   }
   [gdm addGestureDetector:tap];
   [gameViewController setGestureDetectorManager:gdm];

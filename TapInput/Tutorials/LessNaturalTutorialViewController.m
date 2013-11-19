@@ -1,6 +1,6 @@
 //
 //  LessNaturalTutorialViewController.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 5/19/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "LessNaturalTutorialViewController.h"
 
-#import "LessNaturalGestureDetector.h"
+#import "DTCappuccinoGestureDetector.h"
 
 @interface LessNaturalTutorialViewController ()
 
@@ -31,7 +31,7 @@ static NSString* const kTitle = @"Less Natural";
 {
   lnpvc = [[LessNaturalPracticeViewController alloc] init];
   GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
-  [manager addGestureDetector:[[LessNaturalGestureDetector alloc] init]];
+  [manager addGestureDetector:[[DTCappuccinoGestureDetector alloc] init]];
   [lnpvc setGestureDetectorManager:manager];
   [super viewDidLoad];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr

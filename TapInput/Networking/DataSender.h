@@ -1,6 +1,6 @@
 //
 //  DataSender.h
-//  TapInput
+//  DigiTaps
 //
 //  Sends data within JSON format to the server
 //

@@ -1,6 +1,6 @@
 //
 //  LogSenderOperation.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 4/15/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.

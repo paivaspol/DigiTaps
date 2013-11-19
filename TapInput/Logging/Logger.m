@@ -1,6 +1,6 @@
 //
 //  Logger.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 3/3/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.

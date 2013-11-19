@@ -1,6 +1,6 @@
 //
 //  OverviewTutorialViewController
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 5/18/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -8,8 +8,8 @@
 
 #import "OverviewTutorialViewController.h"
 
-#import "BackspaceGestureDetector.h"
-#import "NaturalGestureDetector.h"
+#import "DTBackspaceGestureDetector.h"
+#import "DTEspressoGestureDetector.h"
 
 @interface OverviewTutorialViewController ()
 
@@ -33,8 +33,8 @@ static NSString* const kTitle = @"Overview";
 {
   opvc = [[OverviewPracticeViewController alloc] init];
   GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
-  [manager addGestureDetector:[[NaturalGestureDetector alloc] init]];
-  [manager addGestureDetector:[[BackspaceGestureDetector alloc] init]];
+  [manager addGestureDetector:[[DTEspressoGestureDetector alloc] init]];
+  [manager addGestureDetector:[[DTBackspaceGestureDetector alloc] init]];
   [opvc setGestureDetectorManager:manager];
   [super viewDidLoad];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr

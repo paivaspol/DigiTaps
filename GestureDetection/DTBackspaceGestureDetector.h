@@ -1,6 +1,6 @@
 //
 //  BackspaceGestureDetector.h
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 5/5/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
@@ -10,6 +10,6 @@
 
 #import "DTGestureDetector.h"
 
-@interface BackspaceGestureDetector : DTGestureDetector
+@interface DTBackspaceGestureDetector : DTGestureDetector
 
 @end

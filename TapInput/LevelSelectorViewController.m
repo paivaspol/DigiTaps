@@ -1,6 +1,6 @@
 //
 //  LevelSelectorViewController.m
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 2/9/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.

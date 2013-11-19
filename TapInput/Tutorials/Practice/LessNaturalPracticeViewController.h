@@ -1,6 +1,6 @@
 //
 //  LessNaturalPracticeViewController.h
-//  TapInput
+//  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 6/22/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
