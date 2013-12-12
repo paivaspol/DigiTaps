@@ -31,7 +31,7 @@ typedef enum GameState {
   CFNumberRef tempId;
 
   int totalDigits;
-  int digitsMissed;
+  int digitsCorrect;
 
   GameState state;
   NSMutableArray *numberContainer;

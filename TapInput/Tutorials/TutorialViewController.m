@@ -9,8 +9,8 @@
 #import "TutorialViewController.h"
 
 #import "OverviewTutorialViewController.h"
-#import "LessNaturalTutorialViewController.h"
-#import "NaturalTutorialViewController.h"
+#import "DTCappuccinoTutorialViewController.h"
+#import "DTEspressoTutorialViewController.h"
 
 @interface TutorialViewController ()
 
@@ -59,10 +59,10 @@ static NSString * const kTitle = @"Tutorial";
     OverviewTutorialViewController *otvc = [[OverviewTutorialViewController alloc] init];
     [self.navigationController pushViewController:otvc animated:YES];
   } else if ([but tag] == 1) {
-    NaturalTutorialViewController *ntvc = [[NaturalTutorialViewController alloc] init];
+    DTEspressoTutorialViewController *ntvc = [[DTEspressoTutorialViewController alloc] init];
     [self.navigationController pushViewController:ntvc animated:YES];
   } else {
-    LessNaturalTutorialViewController *lntvc = [[LessNaturalTutorialViewController alloc] init];
+    DTCappuccinoTutorialViewController *lntvc = [[DTCappuccinoTutorialViewController alloc] init];
     [self.navigationController pushViewController:lntvc animated:YES];
   }
 }

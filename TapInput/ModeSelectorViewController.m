@@ -60,11 +60,6 @@
   }
 }
 
-- (IBAction)backButPressed:(id)sender
-{
-
-}
-
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];

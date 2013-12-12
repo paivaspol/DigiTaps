@@ -231,6 +231,9 @@ static NSString * const kYes = @"Yes";
       if ([gameEngine state] == ACTIVE && !hasMoved) {
         NSTimeInterval interval = fabs([numberStartTime timeIntervalSinceNow]);
         NSInteger userInput = [curInput intValue];
+        if ([curInput isEqualToString:@""]) {
+          userInput = -1;
+        }
         [self logEvent:NUMBER_ENTERED andParams:curInput];
         [gameEngine inputNumber:userInput withTime:interval];
         [self resetAllVariables];
@@ -247,6 +250,7 @@ static NSString * const kYes = @"Yes";
 #pragma SummaryViewControllerProtocol
 - (void)nextLevel
 {
+  [self resetAllVariables];
   [gameEngine nextLevel];
 }
 
@@ -382,6 +386,7 @@ static NSString * const kYes = @"Yes";
 - (void)levelCompleted:(NSNotification *)notification
 {
   // Display another view that shows the summary of the round
+  [gestureDetectorManager reset];
   [self.view setAccessibilityTraits:UIAccessibilityTraitNone];
   [self.view resignFirstResponder];
   [summaryViewController setDisplayNextLevel:([gameEngine currentLevel] < [gameEngine getMaxLevel])];
@@ -397,7 +402,8 @@ static NSString * const kYes = @"Yes";
   [gestureDetectorManager reset];
   [curInput setString:@""];
   [self updateCurrentNumber];
-  [self voiceOverReadEachDigit:nil];
+  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(voiceOverReadEachDigit:) userInfo:nil repeats:NO];
+//  [self voiceOverReadEachDigit:nil];
 }
 
 // adds each digit to the voice over queue
@@ -412,7 +418,7 @@ static NSString * const kYes = @"Yes";
 // announces the current game state
 - (void)voiceOverAnnouceCurrentGameState
 {
-  NSString *message = [NSString stringWithFormat:@"Level %d, with %d numbers", [gameEngine currentLevel], [gameEngine numbersPerLevel]];
+  NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
   UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
 }
 

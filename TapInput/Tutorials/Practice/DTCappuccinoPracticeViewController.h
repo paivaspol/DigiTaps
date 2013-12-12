@@ -11,7 +11,7 @@
 #import "GestureDetectorManager.h"
 #import "Utility.h"
 
-@interface LessNaturalPracticeViewController : UIViewController <GestureDetectorManagerProtocol>
+@interface DTCappuccinoPracticeViewController : UIViewController <GestureDetectorManagerProtocol>
 {
   GestureDetectorManager *gestureDetectorManager;
 }

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryViewController">
@@ -11,12 +11,12 @@
                 <outlet property="landscapeNumbersCorrect" destination="HPk-LM-23K" id="lL5-YU-XRU"/>
                 <outlet property="landscapeNumbersWrong" destination="8eJ-T6-eXT" id="KJE-MT-G08"/>
                 <outlet property="landscapePoint" destination="4ns-N0-R43" id="TPt-vI-0Y3"/>
-                <outlet property="landscapeView" destination="MBQ-e8-0Gd" id="lZX-67-1ZM"/>
+                <outlet property="landscapeView" destination="MBQ-e8-0Gd" id="SUI-EL-f9X"/>
                 <outlet property="portraitAccuracy" destination="117" id="4dd-8U-Jiy"/>
                 <outlet property="portraitNumbersCorrect" destination="71" id="jGw-6W-3y2"/>
                 <outlet property="portraitNumbersWrong" destination="74" id="4ht-dC-Jc6"/>
                 <outlet property="portraitPoint" destination="6b2-Ma-YZt" id="eAX-D0-ysN"/>
-                <outlet property="portraitView" destination="1" id="Px8-Fu-sLC"/>
+                <outlet property="portraitView" destination="1" id="j70-Fa-kdh"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

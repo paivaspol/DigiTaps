@@ -1,5 +1,5 @@
 //
-//  LessNaturalTutorialViewController.h
+//  NaturalTutorialViewController.h
 //  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 5/19/13.
@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-#import "LessNaturalPracticeViewController.h"
+#import "GestureDetectorManager.h"
+#import "DTEspressoPracticeViewController.h"
 
-@interface LessNaturalTutorialViewController : UIViewController
+@interface DTEspressoTutorialViewController : UIViewController
 {
-  LessNaturalPracticeViewController *lnpvc;
+  DTEspressoPracticeViewController *npvc;
   UIView *_currentView;
 }
 @property (strong, nonatomic) IBOutlet UIView *landscape35InfoView;
 @property (strong, nonatomic) IBOutlet UIView *landscape4InfoView;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *portraitView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

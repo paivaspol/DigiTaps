@@ -65,7 +65,7 @@ static int digitSize = 10;
 - (void)wrongTrial:(NSString *)number
 {
   miss++;
-  digitsMissed += [self numDigitWrong:number];
+  digitsCorrect += [self numDigitWrong:number];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"wrongTrail" object:self];
 }
 
@@ -73,9 +73,9 @@ static int digitSize = 10;
 {
   int index = 0;
   int counter = 0;
-  NSString * curNumber = [self currentNumber];
+  NSString* curNumber = [self currentNumber];
   while (index < [numberStr length] && index < [curNumber length]) {
-    if ([numberStr characterAtIndex:index] != [curNumber characterAtIndex:index]) {
+    if ([numberStr characterAtIndex:index] == [curNumber characterAtIndex:index]) {
       counter++;
     }
     index++;
@@ -86,17 +86,17 @@ static int digitSize = 10;
 - (void)inputNumber:(int)number withTime:(NSTimeInterval)timeUsed
 {
   int curNumber = [[numberContainer objectAtIndex:curNumberIndex] intValue];
-  int numDigit = [self numDigits:curNumber];
+  NSString *numberStr = [NSString stringWithFormat:@"%d", number];
+  int numDigit = [numberStr length];
   NSLog(@"num digit: %d, time used: %.3f", numDigit, timeUsed);
   double rate = numDigit / timeUsed;
   int point = [self computePointFrom:rate withNumDigit:numDigit andIsWrong:(curNumber != number)];
   [points addObject:[NSNumber numberWithInt:point]];
-  NSString *numberStr = [NSString stringWithFormat:@"%d", number];
-  totalDigits += [numberStr length];
   if (curNumber != number) {
     [self wrongTrial:numberStr];
   } else {
     correct++;
+    digitsCorrect += [numberStr length];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"correctTrail" object:self];
   }
   [self nextNumber];
@@ -152,8 +152,9 @@ static int digitSize = 10;
   miss = 0;
   correct = 0;
   curNumberIndex = 0;
-  digitsMissed = 0;
-  totalDigits = kNumDigits + curLevel - 1;
+  digitsCorrect = 0;
+  totalDigits = (kNumDigits + curLevel - 1) * NUMBERS_PER_LEVEL;
+  NSLog(@"%d %d", kNumDigits, curLevel);
   points = [[NSMutableArray alloc] init];
 }
 
@@ -167,7 +168,6 @@ static int digitSize = 10;
   // compute the error of this number
   curNumberIndex++;
   if (curNumberIndex < NUMBERS_PER_LEVEL) {
-    NSLog(@"Doing this!");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"numberChanged" object:self];
   } else {
     state = IN_BETWEEN;
@@ -177,7 +177,8 @@ static int digitSize = 10;
 
 - (NSString *)getAccurancyRate
 {
-  double percentAccuracy = 100.0 * (totalDigits - digitsMissed) / totalDigits;
+  NSLog(@"%d %d", digitsCorrect, totalDigits);
+  double percentAccuracy = 100.0 * digitsCorrect / totalDigits;
   return [NSString stringWithFormat:@"%.3f%%", percentAccuracy];
 }
 

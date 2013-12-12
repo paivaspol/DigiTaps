@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
-#import "NaturalTutorialViewController.h"
+#import "DTEspressoTutorialViewController.h"
 
 #import "DTEspressoGestureDetector.h"
 
-@interface NaturalTutorialViewController ()
+@interface DTEspressoTutorialViewController ()
 
 @end
 
 static NSString * const kTutorialStr = @"Practice";
-static NSString * const kTitle = @"Natural";
+static NSString * const kTitle = @"Espresso";
 
 
-@implementation NaturalTutorialViewController
+@implementation DTEspressoTutorialViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,9 +32,10 @@ static NSString * const kTitle = @"Natural";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  npvc = [[NaturalPracticeViewController alloc] init];
+  npvc = [[DTEspressoPracticeViewController alloc] init];
   GestureDetectorManager *manager = [[GestureDetectorManager alloc] init];
-  [manager addGestureDetector:[[DTEspressoGestureDetector alloc] init]];
+  DTGestureDetectionSharedState *sharedState = [[DTGestureDetectionSharedState alloc] init];
+  [manager addGestureDetector:[[DTEspressoGestureDetector alloc] initWithSharedState:sharedState]];
   [npvc setGestureDetectorManager:manager];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:kTutorialStr
                                                                  style:UIBarButtonItemStyleBordered

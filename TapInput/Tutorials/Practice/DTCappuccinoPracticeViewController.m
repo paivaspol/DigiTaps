@@ -1,25 +1,27 @@
 //
-//  NaturalPracticeViewController.m
+//  LessNaturalPracticeViewController.m
 //  DigiTaps
 //
 //  Created by Vaspol Ruamviboonsuk on 6/22/13.
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
-#import "NaturalPracticeViewController.h"
+#import "DTCappuccinoPracticeViewController.h"
+
+#import "DTCappuccinoGestureDetector.h"
 
 static NSString * const kThreeFingersTap = @"Three finger tap. Waiting for another gesture";
+static NSString * const kSwipeWaiting = @"Swipe. Waiting for another gesture";
 static NSString * const kOneTap = @"One finger tap. %d";
 static NSString * const kTwoTap = @"Two fingers tap. %d";
 static NSString * const kSwipe = @"Swipe. %d";
 static NSString * const kTitle = @"Tutorial";
-static NSString * const kNine = @"Three finger tap. 9";
 
-@interface NaturalPracticeViewController ()
+@interface DTCappuccinoPracticeViewController ()
 
 @end
 
-@implementation NaturalPracticeViewController
+@implementation DTCappuccinoPracticeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,12 +62,16 @@ static NSString * const kNine = @"Three finger tap. 9";
 - (void)handleGesture:(GestureType)type withArgument:(NSInteger)arg
 {
   NSInteger val = arg;
-  if (type == NATURAL) {
+  if (type == LESS_NATURAL) {
     switch (val) {
-      case -1:
-      case -2: {
+      case -1: {
         [self.description setText:kThreeFingersTap];
         [Utility announceVoiceOverWithString:kThreeFingersTap andValue:val];
+        break;
+      }
+      case -2: {
+        [self.description setText:kSwipeWaiting];
+        [Utility announceVoiceOverWithString:kSwipeWaiting andValue:val];
         break;
       }
       default:
@@ -75,9 +81,6 @@ static NSString * const kNine = @"Three finger tap. 9";
         } else if (val == 2 || val == 5 || val == 8) {
           [self.description setText:[NSString stringWithFormat:kTwoTap, val]];
           [Utility announceVoiceOverWithString:kTwoTap andValue:val];
-        } else if (val == 9) {
-          [self.description setText:kNine];
-          [Utility announceVoiceOverWithString:kNine andValue:-1];
         } else {
           [self.description setText:[NSString stringWithFormat:kSwipe, val]];
           [Utility announceVoiceOverWithString:kSwipe andValue:val];
