@@ -11,7 +11,7 @@
 
 @implementation DataSender
 
-static NSString *kHostName = @"digitap.cs.washington.edu";
+static NSString *kHostName = @"digitaps.cs.washington.edu";
 
 - (id)init
 {

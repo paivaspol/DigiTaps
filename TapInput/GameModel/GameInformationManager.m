@@ -10,7 +10,7 @@
 
 static CFStringRef showAgreementKey = CFSTR("didAgree");
 static CFStringRef playerIdKey = CFSTR("playerId");
-static NSString *kUrl = @"http://digitap.cs.washington.edu/register_postgres.php";
+static NSString *kUrl = @"http://digitaps.cs.washington.edu/register_postgres.php";
 
 @implementation GameInformationManager
 
