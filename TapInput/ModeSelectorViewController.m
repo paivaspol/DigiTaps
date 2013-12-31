@@ -36,16 +36,6 @@
   [self setUpViewForOrientation:interfaceOrientation];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-
-}
-
-- (void)loadView
-{
-  self.view = [[[NSBundle mainBundle] loadNibNamed:@"ModeSelectorViewController" owner:self options:nil] lastObject];
-}
-
 - (IBAction)buttonPressed:(id)sender
 {
   UIButton *but = (UIButton *) sender;
@@ -73,22 +63,22 @@
 
 -(void)setUpViewForOrientation:(UIInterfaceOrientation)orientation
 {
-  [_currentView removeFromSuperview];
-  if (UIInterfaceOrientationIsLandscape(orientation)) {
-    if (![self.view isEqual:_landscapeView]) {
-      [self.view addSubview:_landscapeView];
-      _landscapeView.frame = self.view.bounds;
-      _currentView = _landscapeView;
-      [self.view setNeedsLayout];
-    }
-  } else {
-    if (![self.view isEqual:_portraitView]) {
-      [self.view addSubview:_portraitView];
-      _portraitView.frame = self.view.bounds;
-      _currentView = _portraitView;
-      [self.view setNeedsLayout];
-    }
-  }
+//  [_currentView removeFromSuperview];
+//  if (UIInterfaceOrientationIsLandscape(orientation)) {
+//    if (![self.view isEqual:_landscapeView]) {
+//      [self.view addSubview:_landscapeView];
+//      _landscapeView.frame = self.view.bounds;
+//      _currentView = _landscapeView;
+//      [self.view setNeedsLayout];
+//    }
+//  } else {
+//    if (![self.view isEqual:_portraitView]) {
+//      [self.view addSubview:_portraitView];
+//      _portraitView.frame = self.view.bounds;
+//      _currentView = _portraitView;
+//      [self.view setNeedsLayout];
+//    }
+//  }
 }
 
 @end

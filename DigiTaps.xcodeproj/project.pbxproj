@@ -26,7 +26,6 @@
 		2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CD16BF563C00588266 /* SummaryViewController.m */; };
 		2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C52D3CE16BF563C00588266 /* SummaryViewController.xib */; };
 		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
-		2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */; };
 		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
 		2C830D0D177D511C00D3B889 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0C177D511C00D3B889 /* logo.png */; };
 		2C830D0F177D512000D3B889 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0E177D512000D3B889 /* logo@2x.png */; };
@@ -131,7 +130,6 @@
 		2C52D3CE16BF563C00588266 /* SummaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SummaryViewController.xib; path = ../SummaryViewController.xib; sourceTree = "<group>"; };
 		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ModeSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ModeSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeSelectorViewController.xib; sourceTree = "<group>"; };
 		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C830D0C177D511C00D3B889 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -423,7 +421,6 @@
 				39C7C204169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard */,
 				2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */,
 				2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */,
-				2C5CBC9816B0E605006473BB /* ModeSelectorViewController.xib */,
 				2CAC525B16D0369400DB070B /* StartMenuViewController.h */,
 				2CAC525C16D0369400DB070B /* StartMenuViewController.m */,
 				2C97440516D0A686001A2E1B /* GameViewController.h */,
@@ -642,7 +639,6 @@
 				39C7C200169EFBEA00A6DABA /* Default-568h@2x.png in Resources */,
 				39C7C203169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard in Resources */,
 				39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */,
-				2C5CBC9A16B0E605006473BB /* ModeSelectorViewController.xib in Resources */,
 				2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */,
 				2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */,
 				2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */,

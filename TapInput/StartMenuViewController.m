@@ -50,13 +50,15 @@
 {
   gameEngine = [GameEngine getInstance];
   gameInfoManager = [GameInformationManager getInstance];
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
+  
   userAgreementViewController = [[UserAgreementViewController alloc] init];
   [userAgreementViewController setDelegate:self];
-  modeSelectorViewController = [[ModeSelectorViewController alloc] init];
+  modeSelectorViewController = [storyboard instantiateViewControllerWithIdentifier:@"ModeSelectorViewController"];
   [modeSelectorViewController setDelegate:self];
   levelSelectorViewController = [[LevelSelectorViewController alloc] initWithNumLevels:[gameEngine getMaxLevel]];
   [levelSelectorViewController setDelegate:self];
-  gameViewController = [[GameViewController alloc] init];
+  gameViewController = [storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
   demographicsViewController = [[DemographicsViewController alloc] init];
   [demographicsViewController setDelegate:self];
   registrationNavController = [[UINavigationController alloc] initWithRootViewController:userAgreementViewController];
@@ -138,6 +140,7 @@
 #pragma mark ModeSelectorProtocol
 - (void)startGameWithNaturalMode:(BOOL)isNatural
 {
+  NSLog(@"Selected mode");
   GestureDetectorManager *gdm = [[GestureDetectorManager alloc] init];
   DTGestureDetectionSharedState *sharedState = [[DTGestureDetectionSharedState alloc] init];
   DTGestureDetector *backspaceDetector = [[DTBackspaceGestureDetector alloc] initWithSharedState:sharedState];
@@ -155,9 +158,10 @@
 
 #pragma mark DemographicsViewController
 - (void)registerCompletedWithUserId:(int)uid{
-  NSLog(@"registered");
+  NSLog(@"registered with %d", uid);
 }
 
+/*
 - (IBAction)dumpLogs:(id)sender
 {
   NSPersistentStoreCoordinator *coordinator = [CoreDataModelWrapper getPersistentStoreCoordinator];
@@ -180,7 +184,8 @@
 - (IBAction)clearLogs:(id)sender {
   [CoreDataModelWrapper clearAllData];
 }
-
+*/
+ 
 #pragma mark GameCenterManagerProtocol
 - (void)processGameCenterAuth:(NSError *)error
 {

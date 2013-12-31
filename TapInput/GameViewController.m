@@ -20,31 +20,57 @@ static NSString * const kYes = @"Yes";
 
 @implementation GameViewController
 
+- (id)init
+{
+  self = [super init];
+  if (self) {
+    [self setupViewController];
+  }
+  return self;
+}
+
+// For [storyboard initializeViewController] to work.
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [self setupViewController];
+  }
+  return self;
+}
+
+// Using .xib file.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    gameEngine = [GameEngine getInstance];
-    gameInfoManager = [GameInformationManager getInstance];
-    playerId = [gameInfoManager getPlayerId];
-    NSLog(@"playerId: %d", playerId);
-    curInput = [[NSMutableString alloc] init];
-    summaryViewController = [[SummaryViewController alloc] initWithNibName:@"SummaryViewController" bundle:[NSBundle mainBundle]];
-    voiceOverQueue = [[NSMutableArray alloc] init];
-    [summaryViewController setDelegate:self];
-    [gameEngine resetGame];
-    [self setupNotificationReceivers];
-    [self setupSoundPlayers];
-    [self.portraitCurrentNumber setText:@""];
-    [self.landscapeCurrentNumber setText:@""];
-    didDisplaySummary = NO;
-    logger = [Logger getInstance];
-    numberStartTime = nil;
-    UIGestureRecognizer *longPressRec = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    [self.view addGestureRecognizer:longPressRec];
-    hasMoved = NO;
+    [self setupViewController];
   }
   return self;
+}
+
+- (void)setupViewController
+{
+  gameEngine = [GameEngine getInstance];
+  gameInfoManager = [GameInformationManager getInstance];
+  playerId = [gameInfoManager getPlayerId];
+  NSLog(@"playerId: %d", playerId);
+  curInput = [[NSMutableString alloc] init];
+//  summaryViewController = [[SummaryViewController alloc] initWithNibName:@"SummaryViewController" bundle:[NSBundle mainBundle]];
+  summaryViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL] instantiateViewControllerWithIdentifier:@"SummaryViewController"];
+  voiceOverQueue = [[NSMutableArray alloc] init];
+  [summaryViewController setDelegate:self];
+  [gameEngine resetGame];
+  [self setupNotificationReceivers];
+  [self setupSoundPlayers];
+  [self.portraitCurrentNumber setText:@""];
+  [self.landscapeCurrentNumber setText:@""];
+  didDisplaySummary = NO;
+  logger = [Logger getInstance];
+  numberStartTime = nil;
+  UIGestureRecognizer *longPressRec = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+  [self.view addGestureRecognizer:longPressRec];
+  hasMoved = NO;
 }
 
 /**
@@ -186,6 +212,10 @@ static NSString * const kYes = @"Yes";
   [self.navigationItem setHidesBackButton:YES animated:YES];
   [self logTapEvent:event];
   hasMoved = NO;
+  if (![self.portraitCurrentNumber isHidden] || ![self.landscapeCurrentNumber isHidden]) {
+    [self.portraitCurrentNumber setHidden:YES];
+    [self.landscapeCurrentNumber setHidden:YES];
+  }
 }
 
 - (void)handleGesture:(GestureType)type withArgument:(NSInteger)arg
@@ -286,6 +316,10 @@ static NSString * const kYes = @"Yes";
   }
   [self.portraitCurrentNumber setText:[gameEngine currentNumber]];
   [self.landscapeCurrentNumber setText:[gameEngine currentNumber]];
+  if ([self.portraitCurrentNumber isHidden] || [self.landscapeCurrentNumber isHidden]) {
+    [self.portraitCurrentNumber setHidden:NO];
+    [self.portraitCurrentNumber setHidden:NO];
+  }
   [self logEvent:NUMBER_PRESENTED andParams:[gameEngine currentNumber]];
 }
 

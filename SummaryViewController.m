@@ -16,14 +16,28 @@
 
 @implementation SummaryViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [self setupViewController];
+  }
+  return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    gameEngine = [GameEngine getInstance];
-    logger = [Logger getInstance];
+    [self setupViewController];
   }
   return self;
+}
+
+- (void)setupViewController
+{
+  gameEngine = [GameEngine getInstance];
+  logger = [Logger getInstance];
 }
 
 - (void)viewDidLoad
