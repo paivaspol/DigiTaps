@@ -51,7 +51,6 @@
   gameEngine = [GameEngine getInstance];
   gameInfoManager = [GameInformationManager getInstance];
   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
-  
   userAgreementViewController = [[UserAgreementViewController alloc] init];
   [userAgreementViewController setDelegate:self];
   modeSelectorViewController = [storyboard instantiateViewControllerWithIdentifier:@"ModeSelectorViewController"];
@@ -59,7 +58,7 @@
   levelSelectorViewController = [[LevelSelectorViewController alloc] initWithNumLevels:[gameEngine getMaxLevel]];
   [levelSelectorViewController setDelegate:self];
   gameViewController = [storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
-  demographicsViewController = [[DemographicsViewController alloc] init];
+  demographicsViewController = [storyboard instantiateViewControllerWithIdentifier:@"DemographicsViewController"];
   [demographicsViewController setDelegate:self];
   registrationNavController = [[UINavigationController alloc] initWithRootViewController:userAgreementViewController];
   [registrationNavController.navigationItem setHidesBackButton:YES];

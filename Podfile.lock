@@ -10,17 +10,20 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.1):
     - Reachability
+  - BSKeyboardControls (2.0)
   - Reachability (3.1.1)
   - SVProgressHUD (0.9)
 
 DEPENDENCIES:
   - ASIHTTPRequest (~> 1.8.1)
+  - BSKeyboardControls (~> 2.0)
   - Reachability (~> 3.1.0)
   - SVProgressHUD (~> 0.9)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: 162783e0cd71bdd3ff1ceed0cd5fa9505e0116a8
-  Reachability: 2be6bc2fd2bd31d97f5db33e75e4b29c79e95883
+  BSKeyboardControls: b24def9d769f0990d228abb4e525492cb68a2189
+  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
   SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
 
-COCOAPODS: 0.27.1
+COCOAPODS: 0.29.0

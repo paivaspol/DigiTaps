@@ -24,7 +24,7 @@ static NSString * const kYes = @"Yes";
 {
   self = [super init];
   if (self) {
-    [self setupViewController];
+
   }
   return self;
 }
@@ -34,7 +34,6 @@ static NSString * const kYes = @"Yes";
 {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    [self setupViewController];
   }
   return self;
 }
@@ -44,7 +43,6 @@ static NSString * const kYes = @"Yes";
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    [self setupViewController];
   }
   return self;
 }
@@ -56,15 +54,13 @@ static NSString * const kYes = @"Yes";
   playerId = [gameInfoManager getPlayerId];
   NSLog(@"playerId: %d", playerId);
   curInput = [[NSMutableString alloc] init];
-//  summaryViewController = [[SummaryViewController alloc] initWithNibName:@"SummaryViewController" bundle:[NSBundle mainBundle]];
   summaryViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL] instantiateViewControllerWithIdentifier:@"SummaryViewController"];
   voiceOverQueue = [[NSMutableArray alloc] init];
   [summaryViewController setDelegate:self];
   [gameEngine resetGame];
   [self setupNotificationReceivers];
   [self setupSoundPlayers];
-  [self.portraitCurrentNumber setText:@""];
-  [self.landscapeCurrentNumber setText:@""];
+  [self.numberLabel setText:@""];
   didDisplaySummary = NO;
   logger = [Logger getInstance];
   numberStartTime = nil;
@@ -116,14 +112,10 @@ static NSString * const kYes = @"Yes";
 }
 
 #pragma view controller related
-- (void)loadView
-{
-  self.view = [[[NSBundle mainBundle] loadNibNamed:@"GameViewController" owner:self options:nil] lastObject];
-}
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [self setupViewController];
   UIBarButtonItem *quitButton = [[UIBarButtonItem alloc] initWithTitle:@"Quit"
                                                                  style:UIBarButtonItemStyleBordered
                                                                 target:self
@@ -146,8 +138,6 @@ static NSString * const kYes = @"Yes";
     [gameEngine generateForLevel:[gameEngine currentLevel]];
     [self setTitle:[NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]]];
   }
-  UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-  [self setUpViewForOrientation:interfaceOrientation];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -169,7 +159,6 @@ static NSString * const kYes = @"Yes";
   startingLevel = level;
 }
 
-
 - (void)resetGameViewController
 {
   [gameEngine resetGame];
@@ -183,8 +172,6 @@ static NSString * const kYes = @"Yes";
   tapped = -1;
   didDisplaySummary = NO;
   [curInput setString:@""];
-  [self.portraitInputNumber setText:curInput];
-  [self.landscapeInputNumber setText:curInput];
 }
 
 #pragma mark touch handlers
@@ -212,10 +199,7 @@ static NSString * const kYes = @"Yes";
   [self.navigationItem setHidesBackButton:YES animated:YES];
   [self logTapEvent:event];
   hasMoved = NO;
-  if (![self.portraitCurrentNumber isHidden] || ![self.landscapeCurrentNumber isHidden]) {
-    [self.portraitCurrentNumber setHidden:YES];
-    [self.landscapeCurrentNumber setHidden:YES];
-  }
+  [self.descriptionLabel setText:@"Current Input"];
 }
 
 - (void)handleGesture:(GestureType)type withArgument:(NSInteger)arg
@@ -234,8 +218,7 @@ static NSString * const kYes = @"Yes";
       // it's a digit, append it to the current number
       UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [NSString stringWithFormat:@"%d", val]);
       [curInput appendFormat:@"%d", val];
-      [self.portraitInputNumber setText:curInput];
-      [self.landscapeInputNumber setText:curInput];
+      [self.numberLabel setText:curInput];
     }
   } else if (type == LESS_NATURAL) {
     if (val == -1) {
@@ -248,8 +231,7 @@ static NSString * const kYes = @"Yes";
       // it's a digit, append it to the current number
       UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [NSString stringWithFormat:@"%d", val]);
       [curInput appendFormat:@"%d", val];
-      [self.portraitInputNumber setText:curInput];
-      [self.landscapeInputNumber setText:curInput];
+      [self.numberLabel setText:curInput];
     }
   }
 }
@@ -314,20 +296,15 @@ static NSString * const kYes = @"Yes";
     [voiceOverQueue removeAllObjects];
     [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
   }
-  [self.portraitCurrentNumber setText:[gameEngine currentNumber]];
-  [self.landscapeCurrentNumber setText:[gameEngine currentNumber]];
-  if ([self.portraitCurrentNumber isHidden] || [self.landscapeCurrentNumber isHidden]) {
-    [self.portraitCurrentNumber setHidden:NO];
-    [self.portraitCurrentNumber setHidden:NO];
-  }
+  [self.numberLabel setText:[gameEngine currentNumber]];
   [self logEvent:NUMBER_PRESENTED andParams:[gameEngine currentNumber]];
+  [self.descriptionLabel setText:@"Current Number"];
 }
 
 // updates the level display
 - (void)updateLevelDisplay
 {
-  [self.portraitLevelLabel setText:[NSString stringWithFormat:@"%d", [gameEngine currentLevel]]];
-  [self.landscapeLevelLabel setText:[NSString stringWithFormat:@"%d", [gameEngine currentLevel]]];
+  [self.levelLabel setText:[NSString stringWithFormat:@"%d", [gameEngine currentLevel]]];
 }
 
 #pragma notification methods
@@ -374,6 +351,8 @@ static NSString * const kYes = @"Yes";
     [voiceOverQueue removeAllObjects];
     [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
     [self voiceOverReadEachDigit:nil];
+    [self.numberLabel setText:[gameEngine currentNumber]];
+    [self.descriptionLabel setText:@"Current Number"];
   } else {
     // Delete the number accordingly.
     if ([curInput length] != 0) {
@@ -386,8 +365,7 @@ static NSString * const kYes = @"Yes";
         [curInput setString:[[curInput substringToIndex:[curInput length] - 1] copy]];
       }
       UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
-      [self.portraitInputNumber setText:curInput];
-      [self.landscapeInputNumber setText:curInput];
+      [self.numberLabel setText:curInput];
     }
   }
 }
@@ -437,7 +415,6 @@ static NSString * const kYes = @"Yes";
   [curInput setString:@""];
   [self updateCurrentNumber];
   [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(voiceOverReadEachDigit:) userInfo:nil repeats:NO];
-//  [self voiceOverReadEachDigit:nil];
 }
 
 // adds each digit to the voice over queue
@@ -462,31 +439,6 @@ static NSString * const kYes = @"Yes";
   [self logEvent:LEVEL_START andParams:@""];
   [self updateCurrentNumber];
   [self updateLevelDisplay];
-}
-
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-  [self setUpViewForOrientation:toInterfaceOrientation];
-}
-
--(void)setUpViewForOrientation:(UIInterfaceOrientation)orientation
-{
-  [_currentView removeFromSuperview];
-  if (UIInterfaceOrientationIsLandscape(orientation)) {
-    if (![self.view isEqual:_landscapeView]) {
-      [self.view addSubview:_landscapeView];
-      _landscapeView.frame = self.view.bounds;
-      _currentView = _landscapeView;
-      [self.view setNeedsLayout];
-    }
-  } else {
-    if (![self.view isEqual:_portraitView]) {
-      [self.view addSubview:_portraitView];
-      _portraitView.frame = self.view.bounds;
-      _currentView = _portraitView;
-      [self.view setNeedsLayout];
-    }
-  }
 }
 
 @end

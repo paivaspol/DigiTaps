@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self setTitle:@"Mode"];
+  [self setTitle:@"Select Mode"];
   // make sure that iOS7 display it properly :)
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
     self.edgesForExtendedLayout = UIRectEdgeNone;

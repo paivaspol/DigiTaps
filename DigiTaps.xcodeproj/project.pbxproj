@@ -30,7 +30,6 @@
 		2C830D0D177D511C00D3B889 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0C177D511C00D3B889 /* logo.png */; };
 		2C830D0F177D512000D3B889 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0E177D512000D3B889 /* logo@2x.png */; };
 		2C97440816D0A686001A2E1B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C97440616D0A686001A2E1B /* GameViewController.m */; };
-		2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C97440716D0A686001A2E1B /* GameViewController.xib */; };
 		2C9802F11702759500A8D5C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9802F01702759500A8D5C3 /* SystemConfiguration.framework */; };
 		2C98C54E171C831F00DA8BAF /* LogSenderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C98C54D171C831F00DA8BAF /* LogSenderOperation.m */; };
 		2CA3CD52170FB6A300E06E30 /* GameInformationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3CD51170FB6A300E06E30 /* GameInformationManager.m */; };
@@ -58,7 +57,6 @@
 		2CD6A49116FCDDBF0077328E /* CoreDataModelWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A49016FCDDBF0077328E /* CoreDataModelWrapper.m */; };
 		2CD6A49416FD0FE30077328E /* EventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A49316FD0FE30077328E /* EventType.m */; };
 		2CD6A49916FEC6FB0077328E /* DemographicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */; };
-		2CD6A49A16FEC6FB0077328E /* DemographicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD6A49816FEC6FB0077328E /* DemographicsViewController.xib */; };
 		2CD6A4A117001F2A0077328E /* DataSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A4A017001F2A0077328E /* DataSender.m */; };
 		2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */; };
 		2CE3FE7917471D9C00C2632C /* GestureTypeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */; };
@@ -137,7 +135,6 @@
 		2C830D11177D533600D3B889 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C97440716D0A686001A2E1B /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		2C9802F01702759500A8D5C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2C98C54C171C831F00DA8BAF /* LogSenderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LogSenderOperation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C98C54D171C831F00DA8BAF /* LogSenderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LogSenderOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -183,7 +180,6 @@
 		2CD6A49316FD0FE30077328E /* EventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = EventType.m; path = Logging/EventType.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CD6A49616FEC6FB0077328E /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DemographicsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DemographicsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CD6A49816FEC6FB0077328E /* DemographicsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemographicsViewController.xib; sourceTree = "<group>"; };
 		2CD6A49F17001F2A0077328E /* DataSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DataSender.h; path = Networking/DataSender.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CD6A4A017001F2A0077328E /* DataSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DataSender.m; path = Networking/DataSender.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -425,7 +421,6 @@
 				2CAC525C16D0369400DB070B /* StartMenuViewController.m */,
 				2C97440516D0A686001A2E1B /* GameViewController.h */,
 				2C97440616D0A686001A2E1B /* GameViewController.m */,
-				2C97440716D0A686001A2E1B /* GameViewController.xib */,
 				2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */,
 				2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */,
 				2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */,
@@ -435,7 +430,6 @@
 				2C52D3CA16BF17F200588266 /* LevelSelectorView.m */,
 				2CD6A49616FEC6FB0077328E /* DemographicsViewController.h */,
 				2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */,
-				2CD6A49816FEC6FB0077328E /* DemographicsViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -641,14 +635,12 @@
 				39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */,
 				2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */,
 				2C52D3D016BF563C00588266 /* SummaryViewController.xib in Resources */,
-				2C97440916D0A686001A2E1B /* GameViewController.xib in Resources */,
 				2C2AF91E16D177C8005E837D /* Correct.wav in Resources */,
 				2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */,
 				2C2AF92316D185EB005E837D /* Backspace.wav in Resources */,
 				2CD2F86216DB1A4900839C4B /* Click.wav in Resources */,
 				2CBBB335183BF33C00A03AF4 /* README.md in Resources */,
 				2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */,
-				2CD6A49A16FEC6FB0077328E /* DemographicsViewController.xib in Resources */,
 				2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */,
 				2CB974211749C15E0086D6D9 /* DTEspressoTutorialViewController.xib in Resources */,
 				2CB974261749C86E0086D6D9 /* DTCappuccinoTutorialViewController.xib in Resources */,

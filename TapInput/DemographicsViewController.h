@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "SVProgressHUD.h"
+#import "BSKeyboardControls.h"
 
 #import "GameInformationManager.h"
 
@@ -19,16 +20,19 @@
 
 @end
 
-@interface DemographicsViewController : UIViewController
+@interface DemographicsViewController : UITableViewController<BSKeyboardControlsDelegate, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 {
 }
 
 @property (assign, nonatomic) id <DemographicsViewControllerProtocol> delegate;
 
-@property (strong, nonatomic) IBOutlet UIView *demographicsView;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (retain, nonatomic) BSKeyboardControls *keyboardControls;
 
-- (IBAction)donePressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *ageField;
+@property (strong, nonatomic) IBOutlet UITextField *genderField;
+@property (strong, nonatomic) IBOutlet UITextField *experienceField;
+@property (strong, nonatomic) IBOutlet UITextField *useField;
+
+
 
 @end

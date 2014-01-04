@@ -1,0 +1,37 @@
+TapInput
+
+Should it send JSON object instead?
+
+DB Schema
+  User(pid int primary key, firstname text, lastname text, age int, isBlind boolean)
+  Event(pid references User, gameId int, taskId int, time datetime?, params string)
+  
+  
+  Event -> GameStart, GameEnd, GestureTap, GestureSwipe, 
+  
+  many-to-many relationship
+  
+  User play Game -- one-to-many --> Events
+  
+  
+Local cache:
+  - Store in a NSArray locally, in a file
+    [
+      Event1(pid),
+      Event2(pid),
+      Event3(pid),
+      ...
+      EventN(pid)
+    ]
+    NOOOO!
+  - Use core data instead. It's easier to deal with.
+  
+Timeline
+  1) Get the cache done when log, always send it to CoreData
+  2) Build a quick server
+  
+Thread #1: The game -> sends log to Core Data
+Thread #2: Keep sending the logs to the server
+
+
+DemographicsViewController --> fill in the necessary form items, then send a uid request to the server

@@ -8,49 +8,51 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>Pods-BSKeyboardControls.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2D44F3E33BE9481EAD508947</key>
+		<key>0BF77E1B21CD4897B893B038</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45C41FDC46C34F74B6C2E330</key>
+		<key>5F9FD592DB5743509AA71E45</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D6629BCF3374E0FA649046E</key>
+		<key>A5E926E23F1C42F181AF923B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE8AA511495F4D42870E6AD8</key>
+		<key>B061268182094E9D903BC2F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C658B962DFA44E4D9BC31A66</key>
 		<dict>
 			<key>primary</key>
 			<true/>

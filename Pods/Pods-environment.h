@@ -30,6 +30,12 @@
 #define COCOAPODS_VERSION_MINOR_ASIHTTPRequest_S3 8
 #define COCOAPODS_VERSION_PATCH_ASIHTTPRequest_S3 1
 
+// BSKeyboardControls
+#define COCOAPODS_POD_AVAILABLE_BSKeyboardControls
+#define COCOAPODS_VERSION_MAJOR_BSKeyboardControls 2
+#define COCOAPODS_VERSION_MINOR_BSKeyboardControls 0
+#define COCOAPODS_VERSION_PATCH_BSKeyboardControls 0
+
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
 #define COCOAPODS_VERSION_MAJOR_Reachability 3
