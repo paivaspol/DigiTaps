@@ -8,6 +8,7 @@
 
 #import "TutorialViewController.h"
 
+#import "AboutViewController.h"
 #import "OverviewTutorialViewController.h"
 #import "DTCappuccinoTutorialViewController.h"
 #import "DTEspressoTutorialViewController.h"
@@ -52,16 +53,19 @@ static NSString * const kTitle = @"Tutorial";
 
 - (IBAction)handleButton:(id)sender {
   UIButton *but = (UIButton *)sender;
+  UIViewController *viewController = nil;
   if ([but tag] == 0) {
-    OverviewTutorialViewController *otvc = [[OverviewTutorialViewController alloc] init];
-    [self.navigationController pushViewController:otvc animated:YES];
+    viewController = [[OverviewTutorialViewController alloc] init];
   } else if ([but tag] == 1) {
-    DTEspressoTutorialViewController *ntvc = [[DTEspressoTutorialViewController alloc] init];
-    [self.navigationController pushViewController:ntvc animated:YES];
-  } else {
-    DTCappuccinoTutorialViewController *lntvc = [[DTCappuccinoTutorialViewController alloc] init];
-    [self.navigationController pushViewController:lntvc animated:YES];
+    viewController = [[DTEspressoTutorialViewController alloc] init];
+  } else if ([but tag] == 2) {
+    viewController = [[DTCappuccinoTutorialViewController alloc] init];
+  } else if ([but tag] == 3) {
+    // Load the about page
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
+    viewController = [storyboard instantiateViewControllerWithIdentifier:@"AboutViewController"];
   }
+  [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

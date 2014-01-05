@@ -25,6 +25,7 @@
 		2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CA16BF17F200588266 /* LevelSelectorView.m */; };
 		2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CD16BF563C00588266 /* SummaryViewController.m */; };
 		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
+		2C698D6318797911004C99C2 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C698D6218797911004C99C2 /* AboutViewController.m */; };
 		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
 		2C830D0D177D511C00D3B889 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0C177D511C00D3B889 /* logo.png */; };
 		2C830D0F177D512000D3B889 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C830D0E177D512000D3B889 /* logo@2x.png */; };
@@ -126,6 +127,8 @@
 		2C52D3CD16BF563C00588266 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SummaryViewController.m; path = ../SummaryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ModeSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ModeSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C698D6118797911004C99C2 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Tutorials/AboutViewController.h; sourceTree = "<group>"; };
+		2C698D6218797911004C99C2 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Tutorials/AboutViewController.m; sourceTree = "<group>"; };
 		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C830D0C177D511C00D3B889 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -387,6 +390,8 @@
 				2CB974271749C8A70086D6D9 /* TutorialViewController.h */,
 				2CB974281749C8A70086D6D9 /* TutorialViewController.m */,
 				2CB974291749C8A70086D6D9 /* TutorialViewController.xib */,
+				2C698D6118797911004C99C2 /* AboutViewController.h */,
+				2C698D6218797911004C99C2 /* AboutViewController.m */,
 			);
 			name = Tutorials;
 			sourceTree = "<group>";
@@ -726,6 +731,7 @@
 				2CE3FE821747E28A00C2632C /* OverviewTutorialViewController.m in Sources */,
 				2CB974201749C15E0086D6D9 /* DTEspressoTutorialViewController.m in Sources */,
 				2CB974251749C86E0086D6D9 /* DTCappuccinoTutorialViewController.m in Sources */,
+				2C698D6318797911004C99C2 /* AboutViewController.m in Sources */,
 				2CB9742A1749C8A70086D6D9 /* TutorialViewController.m in Sources */,
 				2CB406191773F6EB00F45637 /* Utility.m in Sources */,
 				2C5074881775D29400CC87E9 /* DTEspressoPracticeViewController.m in Sources */,

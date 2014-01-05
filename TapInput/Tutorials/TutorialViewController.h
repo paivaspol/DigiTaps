@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *overview;
 @property (strong, nonatomic) IBOutlet UIButton *natural;
 @property (strong, nonatomic) IBOutlet UIButton *lessNatural;
+@property (strong, nonatomic) IBOutlet UIButton *about;
 
 - (IBAction)handleButton:(id)sender;
 
