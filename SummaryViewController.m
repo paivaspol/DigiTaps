@@ -67,6 +67,7 @@
   [self.numbersWrong setText:[NSString stringWithFormat:@"Wrong: %d", [gameEngine miss]]];
   [self.accuracy setText:[NSString stringWithFormat:@"Accuracy: %@", [gameEngine getAccurancyRate]]];
   [self.point setText:[NSString stringWithFormat:@"%lld", score]];
+  [self.avgTimeLabel setText:[NSString stringWithFormat:@"Time per Number: %.3fs", [gameEngine getAverageTimeUsed]]];
   [GameCenterManager reportScore:score forCategory:[NSString stringWithFormat:@"level%d", [gameEngine currentLevel]]];
   
   if ([gameEngine currentLevel] < [gameEngine getMaxLevel]) {

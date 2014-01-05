@@ -38,7 +38,6 @@
   NSDate                      *numberStartTime;
   NSInteger                   startTouch;
   BOOL                        hasMoved;
-  UIView                      *_currentView;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *numberLabel;

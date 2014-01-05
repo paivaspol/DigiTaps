@@ -32,6 +32,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *numbersWrong;
 @property (strong, nonatomic) IBOutlet UILabel *point;
 @property (strong, nonatomic) IBOutlet UILabel *accuracy;
+@property (strong, nonatomic) IBOutlet UILabel *avgTimeLabel;
+
 
 - (void)setDisplayNextLevel:(BOOL)shouldDisplay;
 

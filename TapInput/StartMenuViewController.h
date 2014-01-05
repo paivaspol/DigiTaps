@@ -49,11 +49,7 @@ enum mode {
 
 @property (strong, nonatomic) IBOutlet UIButton *startGame;
 @property (strong, nonatomic) IBOutlet UIButton *tutorial;
-@property (strong, nonatomic) IBOutlet UIButton *dumpLogBut;
-@property (strong, nonatomic) IBOutlet UIButton *clearLogs;
 
 - (IBAction)buttonPressed:(id)sender;
-- (IBAction)dumpLogs:(id)sender;
-- (IBAction)clearLogs:(id)sender;
 
 @end

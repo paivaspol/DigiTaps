@@ -32,6 +32,7 @@ typedef enum GameState {
 
   int totalDigits;
   int digitsCorrect;
+  NSTimeInterval totalTimeUsed;
 
   GameState state;
   NSMutableArray *numberContainer;
@@ -73,6 +74,10 @@ typedef enum GameState {
 // returns the point of the level, by averaging the point of each
 // number the user input.
 - (double)getLevelPoint;
+// returns the total time used
+- (NSTimeInterval)getTotalTimeUsed;
+// returns the average time used per number
+- (NSTimeInterval)getAverageTimeUsed;
 
 - (int)gameId;
 - (int)taskId;

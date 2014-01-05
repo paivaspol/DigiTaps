@@ -40,6 +40,7 @@ static int digitSize = 10;
   if ((self = [super init]) != nil) {
     state = ENDED;
     tempId = (CFNumberRef)CFPreferencesCopyAppValue(gameIdKey, kCFPreferencesCurrentApplication);
+    totalTimeUsed = 0;
     if (tempId) {
       if (!CFNumberGetValue(tempId, kCFNumberIntType, &gameId)) {
         gameId = 0;
@@ -89,6 +90,7 @@ static int digitSize = 10;
   NSString *numberStr = [NSString stringWithFormat:@"%d", number];
   int numDigit = [numberStr length];
   NSLog(@"num digit: %d, time used: %.3f", numDigit, timeUsed);
+  totalTimeUsed += timeUsed;
   double rate = numDigit / timeUsed;
   int point = [self computePointFrom:rate withNumDigit:numDigit andIsWrong:(curNumber != number)];
   [points addObject:[NSNumber numberWithInt:point]];
@@ -128,7 +130,6 @@ static int digitSize = 10;
     }
     [numberContainer addObject:[NSString stringWithFormat:@"%@", [numberString description]]];
   }
-  NSLog(@"%@", numberContainer);
 }
 
 - (void)setStartingLevel:(int)level
@@ -149,6 +150,7 @@ static int digitSize = 10;
 
 - (void)resetGame
 {
+  totalTimeUsed = 0;
   miss = 0;
   correct = 0;
   curNumberIndex = 0;
@@ -227,6 +229,18 @@ static int digitSize = 10;
 - (NSArray *)getPoints
 {
   return [points copy];
+}
+
+// returns the total time used
+- (NSTimeInterval)getTotalTimeUsed
+{
+  return totalTimeUsed;
+}
+
+// returns the average time used per number
+- (NSTimeInterval)getAverageTimeUsed
+{
+  return totalTimeUsed / NUMBERS_PER_LEVEL;
 }
 
 - (double)getLevelPoint
