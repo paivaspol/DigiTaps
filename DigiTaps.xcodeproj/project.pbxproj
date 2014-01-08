@@ -16,6 +16,13 @@
 		2C2AF91E16D177C8005E837D /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF91D16D177C8005E837D /* Correct.wav */; };
 		2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92016D17B5D005E837D /* Wrong.wav */; };
 		2C2AF92316D185EB005E837D /* Backspace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92216D185EB005E837D /* Backspace.wav */; };
+		2C35BB4C187DAE0F008B2E45 /* benefits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB45187DAE0F008B2E45 /* benefits.txt */; };
+		2C35BB4D187DAE0F008B2E45 /* contact.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB46187DAE0F008B2E45 /* contact.txt */; };
+		2C35BB4E187DAE0F008B2E45 /* other.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB47187DAE0F008B2E45 /* other.txt */; };
+		2C35BB4F187DAE10008B2E45 /* overview.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB48187DAE0F008B2E45 /* overview.txt */; };
+		2C35BB50187DAE10008B2E45 /* procedures.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB49187DAE0F008B2E45 /* procedures.txt */; };
+		2C35BB51187DAE10008B2E45 /* purpose.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB4A187DAE0F008B2E45 /* purpose.txt */; };
+		2C35BB52187DAE10008B2E45 /* risks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB4B187DAE0F008B2E45 /* risks.txt */; };
 		2C5074881775D29400CC87E9 /* DTEspressoPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5074861775D29400CC87E9 /* DTEspressoPracticeViewController.m */; };
 		2C5074891775D29400CC87E9 /* DTEspressoPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5074871775D29400CC87E9 /* DTEspressoPracticeViewController.xib */; };
 		2C50748D1776081800CC87E9 /* DTCappuccinoPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C50748B1776081800CC87E9 /* DTCappuccinoPracticeViewController.m */; };
@@ -62,6 +69,8 @@
 		2CE3FE7917471D9C00C2632C /* GestureTypeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */; };
 		2CE3FE821747E28A00C2632C /* OverviewTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */; };
 		2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */; };
+		2CE63690187DA1560086B713 /* AgreementSectionDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6368E187DA1560086B713 /* AgreementSectionDisplayViewController.m */; };
+		2CE63691187DA1570086B713 /* AgreementSectionDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6368F187DA1560086B713 /* AgreementSectionDisplayViewController.xib */; };
 		2CE911BB183BC31F00451FC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE911BA183BC31F00451FC2 /* Images.xcassets */; };
 		2CF3C31C1736ACDF00D9F4E0 /* DTGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */; };
 		2CF3C31F1736B25200D9F4E0 /* DTBackspaceGestureDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3C31E1736B25200D9F4E0 /* DTBackspaceGestureDetector.m */; };
@@ -112,6 +121,13 @@
 		2C2AF91D16D177C8005E837D /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = ../Sounds/Correct.wav; sourceTree = "<group>"; };
 		2C2AF92016D17B5D005E837D /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
 		2C2AF92216D185EB005E837D /* Backspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backspace.wav; sourceTree = "<group>"; };
+		2C35BB45187DAE0F008B2E45 /* benefits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = benefits.txt; sourceTree = "<group>"; };
+		2C35BB46187DAE0F008B2E45 /* contact.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = contact.txt; sourceTree = "<group>"; };
+		2C35BB47187DAE0F008B2E45 /* other.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = other.txt; sourceTree = "<group>"; };
+		2C35BB48187DAE0F008B2E45 /* overview.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = overview.txt; sourceTree = "<group>"; };
+		2C35BB49187DAE0F008B2E45 /* procedures.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = procedures.txt; sourceTree = "<group>"; };
+		2C35BB4A187DAE0F008B2E45 /* purpose.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = purpose.txt; sourceTree = "<group>"; };
+		2C35BB4B187DAE0F008B2E45 /* risks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = risks.txt; sourceTree = "<group>"; };
 		2C5074851775D29400CC87E9 /* DTEspressoPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTEspressoPracticeViewController.h; path = Tutorials/Practice/DTEspressoPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C5074861775D29400CC87E9 /* DTEspressoPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoPracticeViewController.m; path = Tutorials/Practice/DTEspressoPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C5074871775D29400CC87E9 /* DTEspressoPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTEspressoPracticeViewController.xib; path = Tutorials/Practice/DTEspressoPracticeViewController.xib; sourceTree = "<group>"; };
@@ -190,6 +206,9 @@
 		2CE3FE7F1747E28900C2632C /* OverviewTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = OverviewTutorialViewController.h; path = View/OverviewTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OverviewTutorialViewController.m; path = View/OverviewTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewTutorialViewController.xib; path = View/OverviewTutorialViewController.xib; sourceTree = "<group>"; };
+		2CE6368D187DA1560086B713 /* AgreementSectionDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementSectionDisplayViewController.h; sourceTree = "<group>"; };
+		2CE6368E187DA1560086B713 /* AgreementSectionDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementSectionDisplayViewController.m; sourceTree = "<group>"; };
+		2CE6368F187DA1560086B713 /* AgreementSectionDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreementSectionDisplayViewController.xib; sourceTree = "<group>"; };
 		2CE911BA183BC31F00451FC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DigiTaps/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		2CF3C31A1736ACDF00D9F4E0 /* DTGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTGestureDetector.h; path = GestureDetection/DTGestureDetector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTGestureDetector.m; path = GestureDetection/DTGestureDetector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -272,6 +291,21 @@
 			);
 			name = Sound;
 			path = TapInput;
+			sourceTree = "<group>";
+		};
+		2C35BB44187DAE0F008B2E45 /* AgreementTexts */ = {
+			isa = PBXGroup;
+			children = (
+				2C35BB45187DAE0F008B2E45 /* benefits.txt */,
+				2C35BB46187DAE0F008B2E45 /* contact.txt */,
+				2C35BB47187DAE0F008B2E45 /* other.txt */,
+				2C35BB48187DAE0F008B2E45 /* overview.txt */,
+				2C35BB49187DAE0F008B2E45 /* procedures.txt */,
+				2C35BB4A187DAE0F008B2E45 /* purpose.txt */,
+				2C35BB4B187DAE0F008B2E45 /* risks.txt */,
+			);
+			name = AgreementTexts;
+			path = TapInput/AgreementTexts;
 			sourceTree = "<group>";
 		};
 		2C507494177614E600CC87E9 /* Practice */ = {
@@ -432,6 +466,9 @@
 				2C52D3CA16BF17F200588266 /* LevelSelectorView.m */,
 				2CD6A49616FEC6FB0077328E /* DemographicsViewController.h */,
 				2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */,
+				2CE6368D187DA1560086B713 /* AgreementSectionDisplayViewController.h */,
+				2CE6368E187DA1560086B713 /* AgreementSectionDisplayViewController.m */,
+				2CE6368F187DA1560086B713 /* AgreementSectionDisplayViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -456,6 +493,7 @@
 		39C7C1DA169EFBE900A6DABA = {
 			isa = PBXGroup;
 			children = (
+				2C35BB44187DAE0F008B2E45 /* AgreementTexts */,
 				2CBBB32D183BF33C00A03AF4 /* TestFlightSDK2.0.2 */,
 				2C830D10177D512900D3B889 /* DefaultImages */,
 				2C2AF91F16D177CD005E837D /* Sound */,
@@ -630,8 +668,11 @@
 				39C7C1F4169EFBE900A6DABA /* InfoPlist.strings in Resources */,
 				39C7C1FC169EFBEA00A6DABA /* Default.png in Resources */,
 				39C7C1FE169EFBEA00A6DABA /* Default@2x.png in Resources */,
+				2C35BB52187DAE10008B2E45 /* risks.txt in Resources */,
+				2C35BB4D187DAE0F008B2E45 /* contact.txt in Resources */,
 				2CE911BB183BC31F00451FC2 /* Images.xcassets in Resources */,
 				2CBBB336183BF33C00A03AF4 /* release_notes.md in Resources */,
+				2C35BB51187DAE10008B2E45 /* purpose.txt in Resources */,
 				39C7C200169EFBEA00A6DABA /* Default-568h@2x.png in Resources */,
 				39C7C203169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard in Resources */,
 				39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */,
@@ -641,11 +682,16 @@
 				2C2AF92316D185EB005E837D /* Backspace.wav in Resources */,
 				2CD2F86216DB1A4900839C4B /* Click.wav in Resources */,
 				2CBBB335183BF33C00A03AF4 /* README.md in Resources */,
+				2CE63691187DA1570086B713 /* AgreementSectionDisplayViewController.xib in Resources */,
 				2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */,
+				2C35BB4E187DAE0F008B2E45 /* other.txt in Resources */,
+				2C35BB50187DAE10008B2E45 /* procedures.txt in Resources */,
 				2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */,
 				2CB974211749C15E0086D6D9 /* DTEspressoTutorialViewController.xib in Resources */,
 				2CB974261749C86E0086D6D9 /* DTCappuccinoTutorialViewController.xib in Resources */,
 				2CB9742B1749C8A70086D6D9 /* TutorialViewController.xib in Resources */,
+				2C35BB4F187DAE10008B2E45 /* overview.txt in Resources */,
+				2C35BB4C187DAE0F008B2E45 /* benefits.txt in Resources */,
 				2C5074891775D29400CC87E9 /* DTEspressoPracticeViewController.xib in Resources */,
 				2C50748E1776081800CC87E9 /* DTCappuccinoPracticeViewController.xib in Resources */,
 				2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */,
@@ -708,6 +754,7 @@
 				2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */,
 				2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */,
 				2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */,
+				2CE63690187DA1560086B713 /* AgreementSectionDisplayViewController.m in Sources */,
 				2C1BAB81183AF69A0045CA6C /* GestureDetector.m in Sources */,
 				2CDA13BD16C746CB0084A912 /* LevelSelectorViewController.m in Sources */,
 				2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */,

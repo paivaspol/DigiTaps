@@ -19,9 +19,6 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    [self setTitle:@"User Agreement"];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Agree" style:UIBarButtonItemStyleDone target:self action:@selector(agree:)];
-    [self.navigationItem setRightBarButtonItem:doneButton];
   }
   return self;
 }
@@ -30,6 +27,7 @@
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+  agreementDisplay = [[AgreementSectionDisplayViewController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,9 +36,24 @@
   // Dispose of any resources that can be recreated.
 }
 
-- (void)agree:(id)sender {
-  if ([self.delegate respondsToSelector:@selector(agreed)]) {
-    [self.delegate agreed];
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.tableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (indexPath.row <= 6) {
+    // From overview to contact
+    [agreementDisplay setAgreementSection:indexPath.row];
+    [self.navigationController pushViewController:agreementDisplay animated:YES];
+  } else if (indexPath.row == 8) {
+    // Agree
+    if ([self.delegate respondsToSelector:@selector(agreed)]) {
+      [self.delegate agreed];
+    }
   }
 }
+
 @end

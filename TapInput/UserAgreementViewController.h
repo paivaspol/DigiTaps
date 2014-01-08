@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AgreementSectionDisplayViewController.h"
+
 @protocol UserAgreementViewControllerProtocol;
 
-@interface UserAgreementViewController : UIViewController
+@interface UserAgreementViewController : UITableViewController
+{
+  AgreementSectionDisplayViewController *agreementDisplay;
+}
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *agreeButton;
 @property (assign, nonatomic) id <UserAgreementViewControllerProtocol> delegate;
-
-- (IBAction)agree:(id)sender;
 
 @end
 
