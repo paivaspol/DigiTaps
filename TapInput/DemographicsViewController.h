@@ -30,8 +30,11 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *ageField;
 @property (strong, nonatomic) IBOutlet UITextField *genderField;
-@property (strong, nonatomic) IBOutlet UITextField *experienceField;
+@property (strong, nonatomic) IBOutlet UITextField *possessionTimeField;
+@property (strong, nonatomic) IBOutlet UITextField *identityField;
 @property (strong, nonatomic) IBOutlet UITextField *useField;
+
+
 
 
 

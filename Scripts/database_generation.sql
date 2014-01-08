@@ -1,4 +1,4 @@
-CREATE TABLE user (pid integer primary key);
+CREATE TABLE players (pid integer primary key, age integer, gender integer, possession integer, identity integer, usage integer);
 
 CREATE TABLE event (eventId integer primary key,
                     eventType varchar(200),

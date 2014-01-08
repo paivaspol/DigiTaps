@@ -31,5 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                   $_POST["taskId"], 
                   $_POST["timestamp"]);
   $result = pg_query_params('INSERT INTO event VALUES ($1, $2, $3, $4, $5, $6, $7)', $values);
+  if (!result) {
+    header("HTTP/1.1 500 Internal Server Error");
+    die("Error executing the query!" . pg_last_error($dbconn));
+  }
 }
 ?>
