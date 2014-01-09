@@ -20,7 +20,7 @@
 
 @end
 
-@interface DemographicsViewController : UITableViewController<BSKeyboardControlsDelegate, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface DemographicsViewController : UITableViewController<BSKeyboardControlsDelegate, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate>
 {
 }
 

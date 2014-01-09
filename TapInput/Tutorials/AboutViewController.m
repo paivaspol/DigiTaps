@@ -55,9 +55,6 @@ static NSString *kDigiTapsUrl = @"http://digitaps.cs.washington.edu";
 {
   if (indexPath.section == 0 && indexPath.row == 0) {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kDigiTapsUrl]];
-  } else if (indexPath.section == 0 && indexPath.row == 1) {
-    // Should open the consent / IRB form
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kDigiTapsUrl]];
   }
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

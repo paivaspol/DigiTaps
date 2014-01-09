@@ -44,8 +44,8 @@ static NSString *kUsageField = @"usage";
 - (void)setupViewController
 {
   [self setTitle:@"Demographics"];
-  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Register" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
-  [self.navigationItem setRightBarButtonItem:doneButton];
+//  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Register" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
+  //[self.navigationItem setRightBarButtonItem:doneButton];
   NSArray *fields = @[ self.ageField, self.genderField, self.possessionTimeField, self.identityField, self.useField ];
   
   for (int fieldIndex = 0; fieldIndex < 5; ++fieldIndex) {
@@ -97,6 +97,22 @@ static NSString *kUsageField = @"usage";
     [self.delegate registerCompletedWithUserId:playerId];
   }
   [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (indexPath.row == 10) {
+    NSLog(@"got here!");
+    if ([self.ageField.text isEqualToString:@""] || [self.genderField.text isEqualToString:@""] || [self.possessionTimeField.text isEqualToString:@""] || [self.identityField.text isEqualToString:@""] || [self.useField.text isEqualToString:@""]) {
+      // The user did not compeletely fill out all the fields
+      // Popup an alert and force the user to complete the form
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Incomplete Form" message:@"Please fill up all the fields." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+      [alertView show];
+    } else {
+      [self donePressed:nil];
+    }
+  }
+  [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark -
@@ -272,6 +288,12 @@ static NSString *kUsageField = @"usage";
     default:
       break;
   }
+}
+
+# pragma mark alert view
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  // do nothing force the user to only cancel
 }
 
 @end
