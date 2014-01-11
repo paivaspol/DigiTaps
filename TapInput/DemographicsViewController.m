@@ -90,8 +90,8 @@ static NSString *kUsageField = @"usage";
 - (void)donePressed:(id)sender {
   if ([self.delegate respondsToSelector:@selector(registerCompletedWithUserId:)]) {
     // registers the player with the server
-    GameInformationManager *gameInfoManager = [GameInformationManager getInstance];
     [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeClear];
+    GameInformationManager *gameInfoManager = [GameInformationManager getInstance];
     int playerId = [gameInfoManager registerPlayer:fieldValues];
     [SVProgressHUD dismiss];
     [self.delegate registerCompletedWithUserId:playerId];

@@ -52,7 +52,6 @@
   gameInfoManager = [GameInformationManager getInstance];
   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
   userAgreementViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserAgreementViewController"];
-//  userAgreementViewController = [[UserAgreementViewController alloc] init];
   [userAgreementViewController setDelegate:self];
   modeSelectorViewController = [storyboard instantiateViewControllerWithIdentifier:@"ModeSelectorViewController"];
   [modeSelectorViewController setDelegate:self];

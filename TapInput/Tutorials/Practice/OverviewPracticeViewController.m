@@ -47,6 +47,10 @@ static NSString * const kLongPress = @"Long press";
   [self setTitle:kTitle];
   UIGestureRecognizer *longPressRec = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
   [self.view addGestureRecognizer:longPressRec];
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated

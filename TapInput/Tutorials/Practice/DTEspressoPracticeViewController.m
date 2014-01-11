@@ -10,7 +10,7 @@
 
 static NSString * const kThreeFingersTap = @"Three finger tap. Waiting for another gesture";
 static NSString * const kOneTap = @"One finger tap. %d";
-static NSString * const kTwoTap = @"Two fingers tap. %d";
+static NSString * const kTwoTap = @"Two finger tap. %d";
 static NSString * const kSwipe = @"Swipe. %d";
 static NSString * const kTitle = @"Tutorial";
 static NSString * const kNine = @"Three finger tap. 9";
@@ -41,14 +41,18 @@ static NSString * const kNine = @"Three finger tap. 9";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self setTitle:kTitle];
+  // make sure that iOS7 display it properly :)
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+  [super viewWillAppear:animated];
   [self.view setIsAccessibilityElement:YES];
   [self.view setAccessibilityTraits:UIAccessibilityTraitAllowsDirectInteraction];
-  [self.view becomeFirstResponder];
+  [self setTitle:kTitle];
 }
 
 - (void)didReceiveMemoryWarning

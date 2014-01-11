@@ -38,6 +38,7 @@
   NSDate                      *numberStartTime;
   NSInteger                   startTouch;
   BOOL                        hasMoved;
+  BOOL                        pressedQuit;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *numberLabel;

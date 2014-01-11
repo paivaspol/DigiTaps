@@ -60,11 +60,11 @@
 - (void) callDelegate:(SEL)selector withArg:(id)arg error:(NSError*)err
 {
   assert([NSThread isMainThread]);
-  if([delegate respondsToSelector: selector]) {
+  if([_delegate respondsToSelector: selector]) {
     if(arg != NULL) {
-      [delegate performSelector:selector withObject:arg withObject:err];
+      [_delegate performSelector:selector withObject:arg withObject:err];
     } else {
-      [delegate performSelector:selector withObject:err];
+      [_delegate performSelector:selector withObject:err];
     }
   } else {
   }
@@ -103,6 +103,11 @@
     [GKScore reportScores:scores withCompletionHandler:^(NSError *error) {
     }];
   }
+}
+
+- (void)reloadHighScoresForCategory:(NSString *)category
+{
+  
 }
 
 @end

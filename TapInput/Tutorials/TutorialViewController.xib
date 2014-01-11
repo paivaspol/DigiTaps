@@ -45,7 +45,7 @@
                         <constraint firstAttribute="height" constant="45" id="122"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                    <state key="normal" title="Natural">
+                    <state key="normal" title="Espresso">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -63,7 +63,7 @@
                         <constraint firstAttribute="height" constant="45" id="112"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
-                    <state key="normal" title="Less Natural">
+                    <state key="normal" title="Cappuccino">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -101,7 +101,7 @@
                 <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" priority="900" constant="177" id="HNy-L7-TTV"/>
                 <constraint firstItem="4" firstAttribute="leading" secondItem="9" secondAttribute="leading" id="K7Q-cZ-way"/>
                 <constraint firstItem="4" firstAttribute="trailing" secondItem="18" secondAttribute="trailing" id="KJ3-vG-YLX"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Lv-t2-xZY" secondAttribute="bottom" constant="30" id="KOn-NP-HLg"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Lv-t2-xZY" secondAttribute="bottom" constant="50" id="KOn-NP-HLg"/>
                 <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="20" symbolic="YES" id="PYJ-4X-bTd"/>
                 <constraint firstItem="4Lv-t2-xZY" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="jfi-pe-83a"/>
                 <constraint firstItem="4Lv-t2-xZY" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="qqc-oa-HAR"/>

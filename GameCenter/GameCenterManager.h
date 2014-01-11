@@ -17,7 +17,6 @@
 
 @interface GameCenterManager : NSObject
 {
-  id <GameCenterManagerProtocol> delegate;
 }
 
 @property (nonatomic, assign) id <GameCenterManagerProtocol> delegate;

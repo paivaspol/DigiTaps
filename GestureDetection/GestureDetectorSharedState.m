@@ -10,4 +10,9 @@
 
 @implementation GestureDetectorSharedState
 
+- (void)reset
+{
+  
+}
+
 @end

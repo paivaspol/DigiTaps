@@ -14,7 +14,7 @@
 @end
 
 static NSString* const kTutorialStr = @"Practice";
-static NSString* const kTitle = @"Espresso";
+static NSString* const kTitle = @"Cappucinno";
 
 @implementation DTCappuccinoTutorialViewController
 

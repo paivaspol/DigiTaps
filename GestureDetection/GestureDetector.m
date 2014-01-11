@@ -10,5 +10,21 @@
 
 @implementation GestureDetector
 
+- (void)touchBegan:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
+{
+  
+}
+
+- (void)touchMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  
+}
+
+- (void)touchEnded:(NSSet *)touches withEvent:(UIEvent *)event inView:(UIView *)view
+{
+  
+}
+
+
 @end
 

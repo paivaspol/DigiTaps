@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -35,132 +35,106 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="13" userLabel="Portrait">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="733"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="765"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="14">
-                    <rect key="frame" x="20" y="20" width="280" height="112"/>
+                    <rect key="frame" x="20" y="20" width="280" height="108"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="112" id="229"/>
-                    </constraints>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">This screen will give an overview of the Cappuccino DigiTaps method. Cappuccino is one of the methods for entering digits when playing DigiTaps. This method is based on addition and subtraction. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="230">
-                    <rect key="frame" x="20" y="140" width="280" height="162"/>
+                    <rect key="frame" x="20" y="138" width="280" height="162"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10-3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0-0 = 0. </string>
+                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10 minus 3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0 minus 0 = 0. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="245">
-                    <rect key="frame" x="20" y="310" width="280" height="126"/>
+                    <rect key="frame" x="20" y="308" width="280" height="126"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Less Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Cappuccino DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0: 1-Finger Swipe, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="31">
-                    <rect key="frame" x="20" y="444" width="280" height="20"/>
+                    <rect key="frame" x="20" y="442" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="39"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1: 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="40">
-                    <rect key="frame" x="20" y="472" width="280" height="20"/>
+                    <rect key="frame" x="20" y="470" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="41"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2: 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="49">
-                    <rect key="frame" x="20" y="500" width="280" height="20"/>
+                    <rect key="frame" x="20" y="498" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="50"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3: 3-Finger tap, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="73">
-                    <rect key="frame" x="20" y="528" width="280" height="20"/>
+                    <rect key="frame" x="20" y="526" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="74"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4: 3-Finger Tap, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="82">
-                    <rect key="frame" x="20" y="556" width="280" height="20"/>
+                    <rect key="frame" x="20" y="554" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="83"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5: 3-Finger Tap, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="98">
-                    <rect key="frame" x="20" y="584" width="280" height="20"/>
+                    <rect key="frame" x="20" y="582" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="99"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Swipe, 3-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="111">
-                    <rect key="frame" x="20" y="612" width="280" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Tap, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="111">
+                    <rect key="frame" x="20" y="608" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="112"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7: 1-Finger Swipe, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="120">
-                    <rect key="frame" x="20" y="640" width="280" height="20"/>
+                    <rect key="frame" x="20" y="634" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="121"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8: 1-Finger Swipe, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="129">
-                    <rect key="frame" x="20" y="668" width="280" height="20"/>
+                    <rect key="frame" x="20" y="660" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="130"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9: 1-Finger Swipe, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="168">
-                    <rect key="frame" x="20" y="693" width="280" height="20"/>
+                    <rect key="frame" x="20" y="683" width="280" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="169"/>
-                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the practice button to practice the Cappucinno method." lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ww3-Tk-svi">
+                    <rect key="frame" x="20" y="709" width="280" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -168,83 +142,87 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="20" symbolic="YES" id="18"/>
-                <constraint firstItem="14" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="19"/>
-                <constraint firstItem="14" firstAttribute="top" secondItem="13" secondAttribute="top" constant="20" symbolic="YES" id="21"/>
-                <constraint firstAttribute="trailing" secondItem="31" secondAttribute="trailing" constant="20" symbolic="YES" id="35"/>
-                <constraint firstItem="31" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="37"/>
-                <constraint firstAttribute="trailing" secondItem="40" secondAttribute="trailing" constant="20" symbolic="YES" id="45"/>
-                <constraint firstItem="40" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="46"/>
-                <constraint firstItem="49" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="54"/>
-                <constraint firstAttribute="trailing" secondItem="49" secondAttribute="trailing" constant="20" symbolic="YES" id="55"/>
-                <constraint firstItem="73" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="78"/>
-                <constraint firstAttribute="trailing" secondItem="73" secondAttribute="trailing" constant="20" symbolic="YES" id="80"/>
-                <constraint firstAttribute="trailing" secondItem="82" secondAttribute="trailing" constant="20" symbolic="YES" id="89"/>
-                <constraint firstItem="82" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="90"/>
-                <constraint firstAttribute="trailing" secondItem="98" secondAttribute="trailing" constant="20" symbolic="YES" id="103"/>
-                <constraint firstItem="98" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="105"/>
-                <constraint firstAttribute="trailing" secondItem="111" secondAttribute="trailing" constant="20" symbolic="YES" id="117"/>
-                <constraint firstItem="111" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="119"/>
-                <constraint firstAttribute="trailing" secondItem="120" secondAttribute="trailing" constant="20" symbolic="YES" id="127"/>
-                <constraint firstItem="120" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="128"/>
-                <constraint firstAttribute="trailing" secondItem="129" secondAttribute="trailing" constant="20" symbolic="YES" id="134"/>
-                <constraint firstItem="129" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="136"/>
-                <constraint firstItem="168" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="175"/>
-                <constraint firstAttribute="trailing" secondItem="168" secondAttribute="trailing" constant="20" symbolic="YES" id="176"/>
-                <constraint firstItem="40" firstAttribute="top" secondItem="31" secondAttribute="bottom" constant="8" symbolic="YES" id="218"/>
-                <constraint firstItem="49" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="8" symbolic="YES" id="219"/>
-                <constraint firstItem="73" firstAttribute="top" secondItem="49" secondAttribute="bottom" constant="8" symbolic="YES" id="220"/>
-                <constraint firstItem="82" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="8" symbolic="YES" id="221"/>
-                <constraint firstItem="98" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="8" symbolic="YES" id="222"/>
-                <constraint firstItem="111" firstAttribute="top" secondItem="98" secondAttribute="bottom" constant="8" symbolic="YES" id="223"/>
-                <constraint firstItem="120" firstAttribute="top" secondItem="111" secondAttribute="bottom" constant="8" symbolic="YES" id="224"/>
-                <constraint firstItem="129" firstAttribute="top" secondItem="120" secondAttribute="bottom" constant="8" symbolic="YES" id="225"/>
-                <constraint firstItem="230" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="8" symbolic="YES" id="235"/>
-                <constraint firstAttribute="trailing" secondItem="230" secondAttribute="trailing" constant="20" symbolic="YES" id="236"/>
-                <constraint firstItem="230" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="237"/>
-                <constraint firstItem="245" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" symbolic="YES" id="249"/>
-                <constraint firstItem="245" firstAttribute="top" secondItem="230" secondAttribute="bottom" constant="8" symbolic="YES" id="250"/>
-                <constraint firstItem="31" firstAttribute="top" secondItem="245" secondAttribute="bottom" constant="8" symbolic="YES" id="253"/>
-                <constraint firstAttribute="bottom" secondItem="168" secondAttribute="bottom" constant="20" symbolic="YES" id="254"/>
+                <constraint firstItem="245" firstAttribute="trailing" secondItem="31" secondAttribute="trailing" id="07z-Ny-cpz"/>
+                <constraint firstItem="49" firstAttribute="trailing" secondItem="40" secondAttribute="trailing" id="0qE-Rj-TbY"/>
+                <constraint firstItem="98" firstAttribute="top" secondItem="82" secondAttribute="bottom" constant="10" id="1Mo-hb-scC"/>
+                <constraint firstItem="230" firstAttribute="leading" secondItem="14" secondAttribute="leading" id="3Dy-mx-RI7"/>
+                <constraint firstItem="ww3-Tk-svi" firstAttribute="trailing" secondItem="168" secondAttribute="trailing" id="5xr-KK-Bga"/>
+                <constraint firstItem="82" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="10" id="6rD-f1-jgK"/>
+                <constraint firstItem="49" firstAttribute="leading" secondItem="40" secondAttribute="leading" id="7NY-wy-hFz"/>
+                <constraint firstItem="168" firstAttribute="leading" secondItem="129" secondAttribute="leading" id="7ch-Qa-bbD"/>
+                <constraint firstItem="120" firstAttribute="leading" secondItem="111" secondAttribute="leading" id="8Ib-kf-7ys"/>
+                <constraint firstItem="73" firstAttribute="leading" secondItem="49" secondAttribute="leading" id="9kd-Mq-obv"/>
+                <constraint firstItem="129" firstAttribute="trailing" secondItem="120" secondAttribute="trailing" id="Et7-Lp-6GG"/>
+                <constraint firstItem="129" firstAttribute="top" secondItem="120" secondAttribute="bottom" constant="8" id="FPq-6g-nIs"/>
+                <constraint firstItem="82" firstAttribute="trailing" secondItem="73" secondAttribute="trailing" id="FuV-Tk-NyF"/>
+                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="20" id="G7e-H3-5Vq"/>
+                <constraint firstItem="98" firstAttribute="trailing" secondItem="111" secondAttribute="trailing" id="LFS-NE-T8r"/>
+                <constraint firstItem="ww3-Tk-svi" firstAttribute="top" secondItem="168" secondAttribute="bottom" constant="8" id="NOH-2W-loZ"/>
+                <constraint firstItem="98" firstAttribute="leading" secondItem="82" secondAttribute="leading" id="OLy-5c-2xW"/>
+                <constraint firstItem="230" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="10" id="PGF-hc-Bfc"/>
+                <constraint firstItem="40" firstAttribute="top" secondItem="31" secondAttribute="bottom" constant="10" id="POU-MC-Lyj"/>
+                <constraint firstItem="230" firstAttribute="trailing" secondItem="14" secondAttribute="trailing" id="QSJ-Gb-2zA"/>
+                <constraint firstItem="168" firstAttribute="top" secondItem="129" secondAttribute="bottom" constant="5" id="RAq-DM-eqP"/>
+                <constraint firstItem="82" firstAttribute="leading" secondItem="73" secondAttribute="leading" id="RYH-eu-VL2"/>
+                <constraint firstItem="ww3-Tk-svi" firstAttribute="leading" secondItem="168" secondAttribute="leading" id="RrX-Rk-mbE"/>
+                <constraint firstItem="245" firstAttribute="trailing" secondItem="230" secondAttribute="trailing" id="S7e-mQ-H5X"/>
+                <constraint firstItem="73" firstAttribute="top" secondItem="49" secondAttribute="bottom" constant="10" id="SdF-tr-q33"/>
+                <constraint firstItem="129" firstAttribute="leading" secondItem="120" secondAttribute="leading" id="TfV-vo-7eh"/>
+                <constraint firstItem="14" firstAttribute="top" secondItem="13" secondAttribute="top" constant="20" id="Tk2-Gl-K1e"/>
+                <constraint firstItem="31" firstAttribute="top" secondItem="245" secondAttribute="bottom" constant="8" id="ZlG-fX-YfM"/>
+                <constraint firstItem="98" firstAttribute="trailing" secondItem="82" secondAttribute="trailing" id="bKJ-OX-veb"/>
+                <constraint firstItem="73" firstAttribute="trailing" secondItem="49" secondAttribute="trailing" id="d3K-cU-daB"/>
+                <constraint firstItem="98" firstAttribute="leading" secondItem="111" secondAttribute="leading" id="dBo-Kw-Hoi"/>
+                <constraint firstItem="168" firstAttribute="trailing" secondItem="129" secondAttribute="trailing" id="dIn-iF-rvZ"/>
+                <constraint firstItem="120" firstAttribute="trailing" secondItem="111" secondAttribute="trailing" id="dSS-3d-pb4"/>
+                <constraint firstItem="120" firstAttribute="top" secondItem="111" secondAttribute="bottom" constant="8" id="fDl-iI-Yif"/>
+                <constraint firstItem="245" firstAttribute="leading" secondItem="31" secondAttribute="leading" id="fbV-us-EOl"/>
+                <constraint firstItem="245" firstAttribute="leading" secondItem="230" secondAttribute="leading" id="hk8-dL-Wiw"/>
+                <constraint firstItem="111" firstAttribute="top" secondItem="98" secondAttribute="bottom" constant="8" id="hwH-Pf-y4y"/>
+                <constraint firstItem="14" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="20" id="nJ3-GQ-qen"/>
+                <constraint firstItem="40" firstAttribute="trailing" secondItem="31" secondAttribute="trailing" id="o6Y-AE-0gx"/>
+                <constraint firstItem="40" firstAttribute="leading" secondItem="31" secondAttribute="leading" id="rpg-b0-Cyn"/>
+                <constraint firstItem="49" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="10" id="uqE-ic-nDp"/>
+                <constraint firstItem="245" firstAttribute="top" secondItem="230" secondAttribute="bottom" constant="8" id="zsw-QU-oQh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="Lfs-Z5-QU7" userLabel="3.5Landscape">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="602"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="624"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="pLu-HF-Haj">
-                    <rect key="frame" x="20" y="20" width="440" height="73"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="pLu-HF-Haj">
+                    <rect key="frame" x="20" y="20" width="436" height="73"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="73" id="1WN-2d-Z5N"/>
                     </constraints>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">This screen will give an overview of the Cappuccino DigiTaps method. Cappuccino is one of the methods for entering digits when playing DigiTaps. This method is based on addition and subtraction. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-Dn-gcg">
-                    <rect key="frame" x="20" y="101" width="440" height="110"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-Dn-gcg">
+                    <rect key="frame" x="20" y="101" width="436" height="108"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10-3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0-0 = 0. </string>
+                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10 minus 3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0 minus 0 = 0. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-jf-TA7">
-                    <rect key="frame" x="20" y="219" width="440" height="82"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-jf-TA7">
+                    <rect key="frame" x="20" y="217" width="436" height="82"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="82" id="FJa-Gc-ZbU"/>
                     </constraints>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Less Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Cappucinno DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0: 1-Finger Swipe, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="OIQ-4q-Ett">
-                    <rect key="frame" x="20" y="309" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0: 1-Finger Swipe, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="OIQ-4q-Ett">
+                    <rect key="frame" x="20" y="307" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="ZWE-l0-zJM"/>
@@ -253,8 +231,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1: 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="Kiw-8d-oBP">
-                    <rect key="frame" x="20" y="337" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1: 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="Kiw-8d-oBP">
+                    <rect key="frame" x="20" y="335" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="5m2-ua-FOz"/>
@@ -263,8 +241,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2: 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="pjw-oU-GeN">
-                    <rect key="frame" x="20" y="365" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2: 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="pjw-oU-GeN">
+                    <rect key="frame" x="20" y="363" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="8un-O5-yt9"/>
@@ -273,8 +251,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3: 3-Finger tap, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-U0-U4C">
-                    <rect key="frame" x="20" y="393" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3: 3-Finger tap, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-U0-U4C">
+                    <rect key="frame" x="20" y="391" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="yqg-g8-u2f"/>
@@ -283,8 +261,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4: 3-Finger Tap, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="HRr-Oz-klG">
-                    <rect key="frame" x="20" y="421" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4: 3-Finger Tap, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="HRr-Oz-klG">
+                    <rect key="frame" x="20" y="419" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="cQw-QR-s7k"/>
@@ -293,8 +271,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5: 3-Finger Tap, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="kjn-SN-GaU">
-                    <rect key="frame" x="20" y="449" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5: 3-Finger Tap, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="kjn-SN-GaU">
+                    <rect key="frame" x="20" y="447" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Gbm-Ts-XPz"/>
@@ -303,8 +281,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Swipe, 3-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="biw-J8-4OB">
-                    <rect key="frame" x="20" y="477" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Tap, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="biw-J8-4OB">
+                    <rect key="frame" x="20" y="475" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Wnr-fO-vVw"/>
@@ -313,8 +291,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7: 1-Finger Swipe, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="gEp-YC-bmN">
-                    <rect key="frame" x="20" y="505" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7: 1-Finger Swipe, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="gEp-YC-bmN">
+                    <rect key="frame" x="20" y="503" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Vkp-3t-zLy"/>
@@ -323,8 +301,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8: 1-Finger Swipe, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="WVL-BB-U7y">
-                    <rect key="frame" x="20" y="533" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8: 1-Finger Swipe, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="WVL-BB-U7y">
+                    <rect key="frame" x="20" y="531" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="2vJ-Qy-iWe"/>
@@ -333,11 +311,21 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9: 1-Finger Swipe, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="SsA-XU-gxT">
-                    <rect key="frame" x="20" y="561" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9: 1-Finger Swipe, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="SsA-XU-gxT">
+                    <rect key="frame" x="20" y="559" width="436" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="l70-XT-u7b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the practice button to practice the Cappuccino method." lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="436" translatesAutoresizingMaskIntoConstraints="NO" id="v42-pM-B7o">
+                    <rect key="frame" x="20" y="584" width="436" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="6wP-yl-aJk"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -362,9 +350,10 @@
                 <constraint firstItem="WVL-BB-U7y" firstAttribute="trailing" secondItem="gEp-YC-bmN" secondAttribute="trailing" id="N7O-ym-A0Y"/>
                 <constraint firstItem="sUG-U0-U4C" firstAttribute="top" secondItem="pjw-oU-GeN" secondAttribute="bottom" constant="8" symbolic="YES" id="NpR-x6-8lb"/>
                 <constraint firstItem="pjw-oU-GeN" firstAttribute="top" secondItem="Kiw-8d-oBP" secondAttribute="bottom" constant="8" symbolic="YES" id="Qrw-df-5pI"/>
+                <constraint firstItem="v42-pM-B7o" firstAttribute="leading" secondItem="SsA-XU-gxT" secondAttribute="leading" id="ThJ-LX-nNS"/>
                 <constraint firstItem="gEp-YC-bmN" firstAttribute="top" secondItem="biw-J8-4OB" secondAttribute="bottom" constant="8" symbolic="YES" id="VPm-ow-FXj"/>
                 <constraint firstItem="biw-J8-4OB" firstAttribute="leading" secondItem="gEp-YC-bmN" secondAttribute="leading" id="aXo-z1-Sav"/>
-                <constraint firstAttribute="bottom" secondItem="SsA-XU-gxT" secondAttribute="bottom" constant="21" id="c9j-3S-uAP"/>
+                <constraint firstItem="v42-pM-B7o" firstAttribute="top" secondItem="SsA-XU-gxT" secondAttribute="bottom" constant="5" id="cBt-h9-kIJ"/>
                 <constraint firstItem="pLu-HF-Haj" firstAttribute="top" secondItem="Lfs-Z5-QU7" secondAttribute="top" constant="20" symbolic="YES" id="fAP-7N-k3Z"/>
                 <constraint firstItem="1KZ-Dn-gcg" firstAttribute="top" secondItem="pLu-HF-Haj" secondAttribute="bottom" constant="8" symbolic="YES" id="fe7-pd-IZK"/>
                 <constraint firstItem="SsA-XU-gxT" firstAttribute="top" secondItem="WVL-BB-U7y" secondAttribute="bottom" constant="8" symbolic="YES" id="fvn-Pl-MjK"/>
@@ -377,6 +366,7 @@
                 <constraint firstItem="WVL-BB-U7y" firstAttribute="leading" secondItem="SsA-XU-gxT" secondAttribute="leading" id="mZV-l1-Smr"/>
                 <constraint firstItem="biw-J8-4OB" firstAttribute="top" secondItem="kjn-SN-GaU" secondAttribute="bottom" constant="8" symbolic="YES" id="n9e-6n-PKQ"/>
                 <constraint firstItem="biw-J8-4OB" firstAttribute="trailing" secondItem="gEp-YC-bmN" secondAttribute="trailing" id="o1x-bI-Ov4"/>
+                <constraint firstItem="v42-pM-B7o" firstAttribute="trailing" secondItem="SsA-XU-gxT" secondAttribute="trailing" id="p9n-be-Qr4"/>
                 <constraint firstItem="1KZ-Dn-gcg" firstAttribute="leading" secondItem="Zdz-jf-TA7" secondAttribute="leading" id="qYG-pN-O5z"/>
                 <constraint firstItem="HRr-Oz-klG" firstAttribute="leading" secondItem="sUG-U0-U4C" secondAttribute="leading" id="r8Q-cY-xgP"/>
                 <constraint firstItem="WVL-BB-U7y" firstAttribute="top" secondItem="gEp-YC-bmN" secondAttribute="bottom" constant="8" symbolic="YES" id="rVm-3p-lDi"/>
@@ -390,41 +380,41 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
         <view contentMode="scaleToFill" id="YVv-x3-fcP" userLabel="4.0Landscape">
-            <rect key="frame" x="0.0" y="0.0" width="568" height="574"/>
+            <rect key="frame" x="0.0" y="0.0" width="568" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-Jq-2LP">
-                    <rect key="frame" x="20" y="20" width="528" height="73"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="527" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-Jq-2LP">
+                    <rect key="frame" x="20" y="20" width="527" height="73"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="73" id="vEK-mc-60S"/>
                     </constraints>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">This screen will give an overview of the Cappuccino DigiTaps method. Cappuccino is one of the methods for entering digits when playing DigiTaps. This method is based on addition and subtraction. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="g24-zi-uOh">
-                    <rect key="frame" x="20" y="101" width="528" height="92"/>
+                    <rect key="frame" x="20" y="101" width="528" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10-3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0-0 = 0. </string>
+                    <string key="text">The 1-Finger Swipe can be viewed as a 0 or an end. The subtraction piece of this method refers to entering the digits 7, 8, 9, and 0. For example, to enter a 7, you would perform a 1-Finger Swipe followed by a 3-Finger Tap. This is like saying 10 minus 3 = 7. Similarly, to enter a 0, you would enter 2 1-Finger Swipes. This is like saying 0 minus 0 = 0. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="528" translatesAutoresizingMaskIntoConstraints="NO" id="2uq-Dz-fBH">
-                    <rect key="frame" x="20" y="201" width="528" height="73"/>
+                    <rect key="frame" x="20" y="199" width="528" height="73"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="73" id="84y-17-UVj"/>
                     </constraints>
-                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Less Natural DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
+                    <string key="text">Here is a table explaining which gestures are required to enter each digit when playing with the Cappuccino DigiTaps method. If there is more than one gesture listed for a digit, perform the gestures consecutively in the order they are listed. </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0: 1-Finger Swipe, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="QUi-LZ-dpc">
-                    <rect key="frame" x="20" y="282" width="440" height="20"/>
+                    <rect key="frame" x="20" y="280" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="440" id="ljv-dx-71b"/>
@@ -435,7 +425,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1: 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="19W-ox-eU5">
-                    <rect key="frame" x="20" y="310" width="440" height="20"/>
+                    <rect key="frame" x="20" y="308" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="hI8-BM-9ah"/>
@@ -445,7 +435,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2: 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="RBO-6H-EOG">
-                    <rect key="frame" x="20" y="338" width="440" height="20"/>
+                    <rect key="frame" x="20" y="336" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="yeH-nk-5ah"/>
@@ -455,7 +445,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3: 3-Finger tap, 1-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="6s3-R5-wwn">
-                    <rect key="frame" x="20" y="366" width="440" height="20"/>
+                    <rect key="frame" x="20" y="364" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="7dq-24-LsB"/>
@@ -465,7 +455,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4: 3-Finger Tap, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-3z-rSq">
-                    <rect key="frame" x="20" y="394" width="440" height="20"/>
+                    <rect key="frame" x="20" y="392" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="N5b-Y7-6y7"/>
@@ -475,7 +465,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5: 3-Finger Tap, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-94-Sai">
-                    <rect key="frame" x="20" y="422" width="440" height="20"/>
+                    <rect key="frame" x="20" y="420" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="JPf-Hb-xJ0"/>
@@ -484,8 +474,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Swipe, 3-Finger Swipe" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-3v-uGk">
-                    <rect key="frame" x="20" y="450" width="440" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6: 3-Finger Tap, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-3v-uGk">
+                    <rect key="frame" x="20" y="448" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="9Hh-NE-8bu"/>
@@ -495,7 +485,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7: 1-Finger Swipe, 3-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="Nck-IP-rAS">
-                    <rect key="frame" x="20" y="478" width="440" height="20"/>
+                    <rect key="frame" x="20" y="476" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="4dX-9S-XDm"/>
@@ -505,7 +495,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8: 1-Finger Swipe, 2-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-4S-XSh">
-                    <rect key="frame" x="20" y="506" width="440" height="20"/>
+                    <rect key="frame" x="20" y="504" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="1Wg-cw-i1v"/>
@@ -515,10 +505,20 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="9: 1-Finger Swipe, 1-Finger Tap" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-yy-J77">
-                    <rect key="frame" x="20" y="534" width="440" height="20"/>
+                    <rect key="frame" x="20" y="532" width="440" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="SfT-tr-krH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the practice button to practice the Cappuccino method." lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="440" translatesAutoresizingMaskIntoConstraints="NO" id="q8w-sZ-Luh">
+                    <rect key="frame" x="20" y="560" width="440" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="TwB-3V-1HQ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -528,7 +528,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="g24-zi-uOh" firstAttribute="leading" secondItem="wsY-Jq-2LP" secondAttribute="leading" id="0EJ-Hl-pf0"/>
-                <constraint firstAttribute="bottom" secondItem="TlF-yy-J77" secondAttribute="bottom" constant="20" symbolic="YES" id="2qm-aB-tcW"/>
                 <constraint firstItem="B1w-3z-rSq" firstAttribute="top" secondItem="6s3-R5-wwn" secondAttribute="bottom" constant="8" symbolic="YES" id="49w-Vk-8SW"/>
                 <constraint firstItem="w9b-3v-uGk" firstAttribute="top" secondItem="c3s-94-Sai" secondAttribute="bottom" constant="8" symbolic="YES" id="74t-vi-XUE"/>
                 <constraint firstItem="2uq-Dz-fBH" firstAttribute="top" secondItem="g24-zi-uOh" secondAttribute="bottom" constant="8" symbolic="YES" id="8YM-HA-v5e"/>
@@ -537,6 +536,7 @@
                 <constraint firstItem="NVm-4S-XSh" firstAttribute="top" secondItem="Nck-IP-rAS" secondAttribute="bottom" constant="8" symbolic="YES" id="BUh-lc-GaI"/>
                 <constraint firstItem="w9b-3v-uGk" firstAttribute="leading" secondItem="c3s-94-Sai" secondAttribute="leading" id="BcZ-n6-Lhz"/>
                 <constraint firstItem="QUi-LZ-dpc" firstAttribute="leading" secondItem="2uq-Dz-fBH" secondAttribute="leading" id="DcQ-1k-zTd"/>
+                <constraint firstItem="q8w-sZ-Luh" firstAttribute="top" secondItem="TlF-yy-J77" secondAttribute="bottom" constant="8" id="DiF-Sk-aZr"/>
                 <constraint firstItem="B1w-3z-rSq" firstAttribute="leading" secondItem="6s3-R5-wwn" secondAttribute="leading" id="HOG-fz-Ghe"/>
                 <constraint firstItem="NVm-4S-XSh" firstAttribute="trailing" secondItem="TlF-yy-J77" secondAttribute="trailing" id="KR6-1W-CDs"/>
                 <constraint firstItem="NVm-4S-XSh" firstAttribute="trailing" secondItem="Nck-IP-rAS" secondAttribute="trailing" id="L1P-3L-1Ej"/>
@@ -556,6 +556,8 @@
                 <constraint firstItem="g24-zi-uOh" firstAttribute="top" secondItem="wsY-Jq-2LP" secondAttribute="bottom" constant="8" symbolic="YES" id="gou-gu-zda"/>
                 <constraint firstItem="TlF-yy-J77" firstAttribute="top" secondItem="NVm-4S-XSh" secondAttribute="bottom" constant="8" symbolic="YES" id="j9c-kx-kYs"/>
                 <constraint firstItem="QUi-LZ-dpc" firstAttribute="trailing" secondItem="19W-ox-eU5" secondAttribute="trailing" id="jKL-Nw-I6q"/>
+                <constraint firstItem="TlF-yy-J77" firstAttribute="leading" secondItem="q8w-sZ-Luh" secondAttribute="leading" id="kUX-CR-AEg"/>
+                <constraint firstItem="TlF-yy-J77" firstAttribute="trailing" secondItem="q8w-sZ-Luh" secondAttribute="trailing" id="lfo-AR-0OK"/>
                 <constraint firstItem="Nck-IP-rAS" firstAttribute="top" secondItem="w9b-3v-uGk" secondAttribute="bottom" constant="8" symbolic="YES" id="mAM-v3-e8y"/>
                 <constraint firstItem="19W-ox-eU5" firstAttribute="top" secondItem="QUi-LZ-dpc" secondAttribute="bottom" constant="8" symbolic="YES" id="p7T-Ua-oWq"/>
                 <constraint firstItem="2uq-Dz-fBH" firstAttribute="leading" secondItem="g24-zi-uOh" secondAttribute="leading" id="rQZ-xz-Ucz"/>

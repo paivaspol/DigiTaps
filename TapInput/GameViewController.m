@@ -165,6 +165,7 @@ static NSString * const kYes = @"Yes";
   [self resetAllVariables];
   [self updateCurrentNumber];
   [self updateLevelDisplay];
+  pressedQuit = NO;
 }
 
 - (void)resetAllVariables
@@ -270,6 +271,7 @@ static NSString * const kYes = @"Yes";
 {
   [self.navigationController popToRootViewControllerAnimated:YES];
   [self logEvent:GAME_END andParams:@""];
+  pressedQuit = YES;
 }
 
 #pragma AlertView
@@ -292,7 +294,7 @@ static NSString * const kYes = @"Yes";
 // updates the current number display
 - (void)updateCurrentNumber
 {
-  if (UIAccessibilityIsVoiceOverRunning()) {
+  if (UIAccessibilityIsVoiceOverRunning() && [[self.navigationController visibleViewController] isEqual:self]) {
     [voiceOverQueue removeAllObjects];
     [self addDigitsToVoiceOverQueue:[gameEngine currentNumber]];
   }
@@ -358,7 +360,7 @@ static NSString * const kYes = @"Yes";
     if ([curInput length] != 0) {
       NSString *message;
       if ([curInput length] == 1) {
-        message = [curInput description];
+        message = [NSString stringWithFormat:@"%c", [curInput characterAtIndex:0]];
         [curInput setString:@""];
       } else {
         message = [NSString stringWithFormat:@"%c", [curInput characterAtIndex:([curInput length] - 1)]];
@@ -429,8 +431,10 @@ static NSString * const kYes = @"Yes";
 // announces the current game state
 - (void)voiceOverAnnouceCurrentGameState
 {
-  NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
-  UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+  if ([[self.navigationController visibleViewController] isEqual:self]) {
+    NSString *message = [NSString stringWithFormat:@"Level %d", [gameEngine currentLevel]];
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message);
+  }
 }
 
 // responder when the level changes
