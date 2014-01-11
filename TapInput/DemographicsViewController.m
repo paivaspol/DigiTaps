@@ -90,11 +90,19 @@ static NSString *kUsageField = @"usage";
 - (void)donePressed:(id)sender {
   if ([self.delegate respondsToSelector:@selector(registerCompletedWithUserId:)]) {
     // registers the player with the server
-    [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeClear];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [SVProgressHUD showWithStatus:@"Registering..." maskType:SVProgressHUDMaskTypeClear];
+    });
     GameInformationManager *gameInfoManager = [GameInformationManager getInstance];
-    int playerId = [gameInfoManager registerPlayer:fieldValues];
-    [SVProgressHUD dismiss];
+    static int playerId;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+      playerId = [gameInfoManager registerPlayer:fieldValues];
+    });
     [self.delegate registerCompletedWithUserId:playerId];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [SVProgressHUD dismiss];
+    });
   }
   [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -102,7 +110,6 @@ static NSString *kUsageField = @"usage";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   if (indexPath.row == 10) {
-    NSLog(@"got here!");
     if ([self.ageField.text isEqualToString:@""] || [self.genderField.text isEqualToString:@""] || [self.possessionTimeField.text isEqualToString:@""] || [self.identityField.text isEqualToString:@""] || [self.useField.text isEqualToString:@""]) {
       // The user did not compeletely fill out all the fields
       // Popup an alert and force the user to complete the form
