@@ -12,7 +12,7 @@
 
 - (void)reset
 {
-  
+  // Shouldn't implement anything.
 }
 
 @end

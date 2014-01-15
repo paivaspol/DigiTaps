@@ -203,6 +203,9 @@ static NSString * const kYes = @"Yes";
   [self.descriptionLabel setText:@"Current Input"];
 }
 
+/**
+ * This is where the screen update and gesture parsing takes place.
+ */
 - (void)handleGesture:(GestureType)type withArgument:(NSInteger)arg
 {
   [gestureDetectorManager setDidDetectGesture:YES];
@@ -237,6 +240,9 @@ static NSString * const kYes = @"Yes";
   }
 }
 
+/**
+ *  For handling the submit gesture. This is a special case that is hard to be handled.
+ */
 - (void)handleLongPress:(UILongPressGestureRecognizer *)recognizer
 {
   switch (recognizer.state) {
@@ -324,6 +330,9 @@ static NSString * const kYes = @"Yes";
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayerId:) name:@"UserRegistered" object:gameInfoManager];
 }
 
+/**
+ * Play the sounds for different states
+ */
 - (void)correctNumber:(NSNotification *)notification
 {
   AudioServicesPlaySystemSound(correctSound);
@@ -331,7 +340,6 @@ static NSString * const kYes = @"Yes";
 
 - (void)wrongNumber:(NSNotification *)notification
 {
-  // PLAY WRONG SOUND
   AudioServicesPlaySystemSound(wrongSound);
 }
 
