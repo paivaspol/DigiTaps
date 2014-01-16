@@ -16,13 +16,6 @@
 		2C2AF91E16D177C8005E837D /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF91D16D177C8005E837D /* Correct.wav */; };
 		2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92016D17B5D005E837D /* Wrong.wav */; };
 		2C2AF92316D185EB005E837D /* Backspace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF92216D185EB005E837D /* Backspace.wav */; };
-		2C35BB4C187DAE0F008B2E45 /* benefits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB45187DAE0F008B2E45 /* benefits.txt */; };
-		2C35BB4D187DAE0F008B2E45 /* contact.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB46187DAE0F008B2E45 /* contact.txt */; };
-		2C35BB4E187DAE0F008B2E45 /* other.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB47187DAE0F008B2E45 /* other.txt */; };
-		2C35BB4F187DAE10008B2E45 /* overview.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB48187DAE0F008B2E45 /* overview.txt */; };
-		2C35BB50187DAE10008B2E45 /* procedures.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB49187DAE0F008B2E45 /* procedures.txt */; };
-		2C35BB51187DAE10008B2E45 /* purpose.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB4A187DAE0F008B2E45 /* purpose.txt */; };
-		2C35BB52187DAE10008B2E45 /* risks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C35BB4B187DAE0F008B2E45 /* risks.txt */; };
 		2C5074881775D29400CC87E9 /* DTEspressoPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5074861775D29400CC87E9 /* DTEspressoPracticeViewController.m */; };
 		2C5074891775D29400CC87E9 /* DTEspressoPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5074871775D29400CC87E9 /* DTEspressoPracticeViewController.xib */; };
 		2C50748D1776081800CC87E9 /* DTCappuccinoPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C50748B1776081800CC87E9 /* DTCappuccinoPracticeViewController.m */; };
@@ -31,6 +24,14 @@
 		2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */; };
 		2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CA16BF17F200588266 /* LevelSelectorView.m */; };
 		2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52D3CD16BF563C00588266 /* SummaryViewController.m */; };
+		2C551E9B1887520E00BB3D82 /* LogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C551E991887520E00BB3D82 /* LogModel.xcdatamodeld */; };
+		2C551EA31887677800BB3D82 /* benefits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551E9C1887677800BB3D82 /* benefits.txt */; };
+		2C551EA41887677800BB3D82 /* contact.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551E9D1887677800BB3D82 /* contact.txt */; };
+		2C551EA51887677800BB3D82 /* other.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551E9E1887677800BB3D82 /* other.txt */; };
+		2C551EA61887677800BB3D82 /* overview.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551E9F1887677800BB3D82 /* overview.txt */; };
+		2C551EA71887677800BB3D82 /* procedures.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551EA01887677800BB3D82 /* procedures.txt */; };
+		2C551EA81887677800BB3D82 /* purpose.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551EA11887677800BB3D82 /* purpose.txt */; };
+		2C551EA91887677800BB3D82 /* risks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C551EA21887677800BB3D82 /* risks.txt */; };
 		2C5CBC9916B0E605006473BB /* ModeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */; };
 		2C698D6318797911004C99C2 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C698D6218797911004C99C2 /* AboutViewController.m */; };
 		2C74AED716E3F9E20095143A /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74AED616E3F9E20095143A /* Logger.m */; };
@@ -59,7 +60,6 @@
 		2CCC5F0316FBF82800165373 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCC5F0216FBF82800165373 /* CoreData.framework */; };
 		2CD2F86216DB1A4900839C4B /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86116DB1A4900839C4B /* Click.wav */; };
 		2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */; };
-		2CD6A48B16FBFB740077328E /* LogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A48916FBFB740077328E /* LogModel.xcdatamodeld */; };
 		2CD6A48E16FC07B00077328E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A48D16FC07B00077328E /* Event.m */; };
 		2CD6A49116FCDDBF0077328E /* CoreDataModelWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A49016FCDDBF0077328E /* CoreDataModelWrapper.m */; };
 		2CD6A49416FD0FE30077328E /* EventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6A49316FD0FE30077328E /* EventType.m */; };
@@ -82,7 +82,6 @@
 		39C7C1EA169EFBE900A6DABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1E9169EFBE900A6DABA /* UIKit.framework */; };
 		39C7C1EC169EFBE900A6DABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1EB169EFBE900A6DABA /* Foundation.framework */; };
 		39C7C1EE169EFBE900A6DABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C7C1ED169EFBE900A6DABA /* CoreGraphics.framework */; };
-		39C7C1F4169EFBE900A6DABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39C7C1F2169EFBE900A6DABA /* InfoPlist.strings */; };
 		39C7C1F6169EFBE900A6DABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C7C1F5169EFBE900A6DABA /* main.m */; };
 		39C7C1FA169EFBE900A6DABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C7C1F9169EFBE900A6DABA /* AppDelegate.m */; };
 		39C7C1FC169EFBEA00A6DABA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 39C7C1FB169EFBEA00A6DABA /* Default.png */; };
@@ -119,66 +118,67 @@
 		2C2641AE1703E45600E35977 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2C2AF91B16D17511005E837D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2C2AF91D16D177C8005E837D /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Correct.wav; path = ../Sounds/Correct.wav; sourceTree = "<group>"; };
-		2C2AF92016D17B5D005E837D /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
-		2C2AF92216D185EB005E837D /* Backspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backspace.wav; sourceTree = "<group>"; };
-		2C35BB45187DAE0F008B2E45 /* benefits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = benefits.txt; sourceTree = "<group>"; };
-		2C35BB46187DAE0F008B2E45 /* contact.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = contact.txt; sourceTree = "<group>"; };
-		2C35BB47187DAE0F008B2E45 /* other.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = other.txt; sourceTree = "<group>"; };
-		2C35BB48187DAE0F008B2E45 /* overview.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = overview.txt; sourceTree = "<group>"; };
-		2C35BB49187DAE0F008B2E45 /* procedures.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = procedures.txt; sourceTree = "<group>"; };
-		2C35BB4A187DAE0F008B2E45 /* purpose.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = purpose.txt; sourceTree = "<group>"; };
-		2C35BB4B187DAE0F008B2E45 /* risks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = risks.txt; sourceTree = "<group>"; };
-		2C5074851775D29400CC87E9 /* DTEspressoPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTEspressoPracticeViewController.h; path = Tutorials/Practice/DTEspressoPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C5074861775D29400CC87E9 /* DTEspressoPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoPracticeViewController.m; path = Tutorials/Practice/DTEspressoPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C5074871775D29400CC87E9 /* DTEspressoPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTEspressoPracticeViewController.xib; path = Tutorials/Practice/DTEspressoPracticeViewController.xib; sourceTree = "<group>"; };
-		2C50748A1776081800CC87E9 /* DTCappuccinoPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTCappuccinoPracticeViewController.h; path = Tutorials/Practice/DTCappuccinoPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C50748B1776081800CC87E9 /* DTCappuccinoPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTCappuccinoPracticeViewController.m; path = Tutorials/Practice/DTCappuccinoPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C50748C1776081800CC87E9 /* DTCappuccinoPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTCappuccinoPracticeViewController.xib; path = Tutorials/Practice/DTCappuccinoPracticeViewController.xib; sourceTree = "<group>"; };
-		2C50748F177614D800CC87E9 /* OverviewPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = OverviewPracticeViewController.h; path = Tutorials/Practice/OverviewPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C507490177614D900CC87E9 /* OverviewPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OverviewPracticeViewController.m; path = Tutorials/Practice/OverviewPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewPracticeViewController.xib; path = Tutorials/Practice/OverviewPracticeViewController.xib; sourceTree = "<group>"; };
-		2C52D3C916BF17F200588266 /* LevelSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectorView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C52D3CA16BF17F200588266 /* LevelSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LevelSelectorView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C2AF92016D17B5D005E837D /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Wrong.wav; path = ../DigiTaps/Wrong.wav; sourceTree = "<group>"; };
+		2C2AF92216D185EB005E837D /* Backspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Backspace.wav; path = ../DigiTaps/Backspace.wav; sourceTree = "<group>"; };
+		2C5074851775D29400CC87E9 /* DTEspressoPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTEspressoPracticeViewController.h; path = ../DigiTaps/Tutorials/Practice/DTEspressoPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C5074861775D29400CC87E9 /* DTEspressoPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoPracticeViewController.m; path = ../DigiTaps/Tutorials/Practice/DTEspressoPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C5074871775D29400CC87E9 /* DTEspressoPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTEspressoPracticeViewController.xib; path = ../DigiTaps/Tutorials/Practice/DTEspressoPracticeViewController.xib; sourceTree = "<group>"; };
+		2C50748A1776081800CC87E9 /* DTCappuccinoPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTCappuccinoPracticeViewController.h; path = ../DigiTaps/Tutorials/Practice/DTCappuccinoPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C50748B1776081800CC87E9 /* DTCappuccinoPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTCappuccinoPracticeViewController.m; path = ../DigiTaps/Tutorials/Practice/DTCappuccinoPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C50748C1776081800CC87E9 /* DTCappuccinoPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTCappuccinoPracticeViewController.xib; path = ../DigiTaps/Tutorials/Practice/DTCappuccinoPracticeViewController.xib; sourceTree = "<group>"; };
+		2C50748F177614D800CC87E9 /* OverviewPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = OverviewPracticeViewController.h; path = ../DigiTaps/Tutorials/Practice/OverviewPracticeViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C507490177614D900CC87E9 /* OverviewPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OverviewPracticeViewController.m; path = ../DigiTaps/Tutorials/Practice/OverviewPracticeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C507491177614D900CC87E9 /* OverviewPracticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewPracticeViewController.xib; path = ../DigiTaps/Tutorials/Practice/OverviewPracticeViewController.xib; sourceTree = "<group>"; };
+		2C52D3C916BF17F200588266 /* LevelSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LevelSelectorView.h; path = ../DigiTaps/LevelSelectorView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C52D3CA16BF17F200588266 /* LevelSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LevelSelectorView.m; path = ../DigiTaps/LevelSelectorView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C52D3CC16BF563C00588266 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SummaryViewController.h; path = ../SummaryViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2C52D3CD16BF563C00588266 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = SummaryViewController.m; path = ../SummaryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ModeSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ModeSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2C698D6118797911004C99C2 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Tutorials/AboutViewController.h; sourceTree = "<group>"; };
-		2C698D6218797911004C99C2 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Tutorials/AboutViewController.m; sourceTree = "<group>"; };
-		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Logger.h; path = Logging/Logger.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Logger.m; path = Logging/Logger.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C551E9A1887520E00BB3D82 /* LogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LogModel.xcdatamodel; sourceTree = "<group>"; };
+		2C551E9C1887677800BB3D82 /* benefits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = benefits.txt; path = DigiTaps/AgreementTexts/benefits.txt; sourceTree = SOURCE_ROOT; };
+		2C551E9D1887677800BB3D82 /* contact.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = contact.txt; path = DigiTaps/AgreementTexts/contact.txt; sourceTree = SOURCE_ROOT; };
+		2C551E9E1887677800BB3D82 /* other.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = other.txt; path = DigiTaps/AgreementTexts/other.txt; sourceTree = SOURCE_ROOT; };
+		2C551E9F1887677800BB3D82 /* overview.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = overview.txt; path = DigiTaps/AgreementTexts/overview.txt; sourceTree = SOURCE_ROOT; };
+		2C551EA01887677800BB3D82 /* procedures.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = procedures.txt; path = DigiTaps/AgreementTexts/procedures.txt; sourceTree = SOURCE_ROOT; };
+		2C551EA11887677800BB3D82 /* purpose.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = purpose.txt; path = DigiTaps/AgreementTexts/purpose.txt; sourceTree = SOURCE_ROOT; };
+		2C551EA21887677800BB3D82 /* risks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = risks.txt; path = DigiTaps/AgreementTexts/risks.txt; sourceTree = SOURCE_ROOT; };
+		2C5CBC9616B0E605006473BB /* ModeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ModeSelectorViewController.h; path = ../DigiTaps/ModeSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C5CBC9716B0E605006473BB /* ModeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ModeSelectorViewController.m; path = ../DigiTaps/ModeSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C698D6118797911004C99C2 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ../DigiTaps/Tutorials/AboutViewController.h; sourceTree = "<group>"; };
+		2C698D6218797911004C99C2 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ../DigiTaps/Tutorials/AboutViewController.m; sourceTree = "<group>"; };
+		2C74AED516E3F9E20095143A /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Logger.h; path = ../DigiTaps/Logging/Logger.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C74AED616E3F9E20095143A /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Logger.m; path = ../DigiTaps/Logging/Logger.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C830D0C177D511C00D3B889 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2C830D0E177D512000D3B889 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		2C830D11177D533600D3B889 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C97440516D0A686001A2E1B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GameViewController.h; path = ../DigiTaps/GameViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C97440616D0A686001A2E1B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GameViewController.m; path = ../DigiTaps/GameViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C9802F01702759500A8D5C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2C98C54C171C831F00DA8BAF /* LogSenderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LogSenderOperation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2C98C54D171C831F00DA8BAF /* LogSenderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LogSenderOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CA3CD50170FB6A300E06E30 /* GameInformationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GameInformationManager.h; path = GameModel/GameInformationManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CA3CD51170FB6A300E06E30 /* GameInformationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GameInformationManager.m; path = GameModel/GameInformationManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2C98C54C171C831F00DA8BAF /* LogSenderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LogSenderOperation.h; path = ../DigiTaps/Logging/LogSenderOperation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2C98C54D171C831F00DA8BAF /* LogSenderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LogSenderOperation.m; path = ../DigiTaps/Logging/LogSenderOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CA3CD50170FB6A300E06E30 /* GameInformationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GameInformationManager.h; path = ../DigiTaps/GameModel/GameInformationManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CA3CD51170FB6A300E06E30 /* GameInformationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GameInformationManager.m; path = ../DigiTaps/GameModel/GameInformationManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CA62DF117307CC9001B7A97 /* DTEspressoGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTEspressoGestureDetector.h; path = GestureDetection/DTEspressoGestureDetector.h; sourceTree = "<group>"; };
 		2CA62DF217307CC9001B7A97 /* DTEspressoGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoGestureDetector.m; path = GestureDetection/DTEspressoGestureDetector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CA62DF417307FC4001B7A97 /* DTCappuccinoGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTCappuccinoGestureDetector.h; path = GestureDetection/DTCappuccinoGestureDetector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CA62DF517307FC4001B7A97 /* DTCappuccinoGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTCappuccinoGestureDetector.m; path = GestureDetection/DTCappuccinoGestureDetector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = StartMenuViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = StartMenuViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CAC525B16D0369400DB070B /* StartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = StartMenuViewController.h; path = ../DigiTaps/StartMenuViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CAC525C16D0369400DB070B /* StartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = StartMenuViewController.m; path = ../DigiTaps/StartMenuViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CAD16601837466300BF0898 /* DTGestureDetectionSharedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGestureDetectionSharedState.h; path = GestureDetection/DTGestureDetectionSharedState.h; sourceTree = "<group>"; };
 		2CAD16611837466300BF0898 /* DTGestureDetectionSharedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGestureDetectionSharedState.m; path = GestureDetection/DTGestureDetectionSharedState.m; sourceTree = "<group>"; };
-		2CB406171773F6EB00F45637 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Utility.h; path = Utilities/Utility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CB406181773F6EB00F45637 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Utility.m; path = Utilities/Utility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CB406171773F6EB00F45637 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Utility.h; path = ../DigiTaps/Utilities/Utility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CB406181773F6EB00F45637 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Utility.m; path = ../DigiTaps/Utilities/Utility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CB5BACA171B587E0042AF27 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		2CB5BACD171B5F520042AF27 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GameCenterManager.h; path = GameCenter/GameCenterManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CB5BACE171B5F520042AF27 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GameCenterManager.m; path = GameCenter/GameCenterManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CB9741D1749C15E0086D6D9 /* DTEspressoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTEspressoTutorialViewController.h; path = Tutorials/DTEspressoTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CB9741E1749C15E0086D6D9 /* DTEspressoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoTutorialViewController.m; path = Tutorials/DTEspressoTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CB9741F1749C15E0086D6D9 /* DTEspressoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTEspressoTutorialViewController.xib; path = Tutorials/DTEspressoTutorialViewController.xib; sourceTree = "<group>"; };
-		2CB974221749C86E0086D6D9 /* DTCappuccinoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTCappuccinoTutorialViewController.h; path = Tutorials/DTCappuccinoTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CB974231749C86E0086D6D9 /* DTCappuccinoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTCappuccinoTutorialViewController.m; path = Tutorials/DTCappuccinoTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CB974241749C86E0086D6D9 /* DTCappuccinoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTCappuccinoTutorialViewController.xib; path = Tutorials/DTCappuccinoTutorialViewController.xib; sourceTree = "<group>"; };
-		2CB974271749C8A70086D6D9 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TutorialViewController.h; path = Tutorials/TutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CB974281749C8A70086D6D9 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TutorialViewController.m; path = Tutorials/TutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CB974291749C8A70086D6D9 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TutorialViewController.xib; path = Tutorials/TutorialViewController.xib; sourceTree = "<group>"; };
+		2CB9741D1749C15E0086D6D9 /* DTEspressoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTEspressoTutorialViewController.h; path = ../DigiTaps/Tutorials/DTEspressoTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CB9741E1749C15E0086D6D9 /* DTEspressoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTEspressoTutorialViewController.m; path = ../DigiTaps/Tutorials/DTEspressoTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CB9741F1749C15E0086D6D9 /* DTEspressoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTEspressoTutorialViewController.xib; path = ../DigiTaps/Tutorials/DTEspressoTutorialViewController.xib; sourceTree = "<group>"; };
+		2CB974221749C86E0086D6D9 /* DTCappuccinoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTCappuccinoTutorialViewController.h; path = ../DigiTaps/Tutorials/DTCappuccinoTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CB974231749C86E0086D6D9 /* DTCappuccinoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTCappuccinoTutorialViewController.m; path = ../DigiTaps/Tutorials/DTCappuccinoTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CB974241749C86E0086D6D9 /* DTCappuccinoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTCappuccinoTutorialViewController.xib; path = ../DigiTaps/Tutorials/DTCappuccinoTutorialViewController.xib; sourceTree = "<group>"; };
+		2CB974271749C8A70086D6D9 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TutorialViewController.h; path = ../DigiTaps/Tutorials/TutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CB974281749C8A70086D6D9 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TutorialViewController.m; path = ../DigiTaps/Tutorials/TutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CB974291749C8A70086D6D9 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TutorialViewController.xib; path = ../DigiTaps/Tutorials/TutorialViewController.xib; sourceTree = "<group>"; };
 		2CBBB32E183BF33C00A03AF4 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		2CBBB32F183BF33C00A03AF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		2CBBB330183BF33C00A03AF4 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -186,29 +186,28 @@
 		2CBBB332183BF33C00A03AF4 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		2CBBB333183BF33C00A03AF4 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		2CCC5F0216FBF82800165373 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2CD2F86116DB1A4900839C4B /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
-		2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DoubleClick.wav; sourceTree = "<group>"; };
-		2CD6A48A16FBFB740077328E /* LogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LogModel.xcdatamodel; sourceTree = "<group>"; };
-		2CD6A48C16FC07B00077328E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Event.h; path = Logging/Event.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CD6A48D16FC07B00077328E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Event.m; path = Logging/Event.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CD6A48F16FCDDBF0077328E /* CoreDataModelWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CoreDataModelWrapper.h; path = Logging/CoreDataModelWrapper.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CD6A49016FCDDBF0077328E /* CoreDataModelWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CoreDataModelWrapper.m; path = Logging/CoreDataModelWrapper.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CD6A49216FD0FE30077328E /* EventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EventType.h; path = Logging/EventType.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CD6A49316FD0FE30077328E /* EventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = EventType.m; path = Logging/EventType.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CD6A49616FEC6FB0077328E /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DemographicsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DemographicsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CD6A49F17001F2A0077328E /* DataSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DataSender.h; path = Networking/DataSender.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CD6A4A017001F2A0077328E /* DataSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DataSender.m; path = Networking/DataSender.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LevelSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CD2F86116DB1A4900839C4B /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Click.wav; path = ../DigiTaps/Click.wav; sourceTree = "<group>"; };
+		2CD2F86316DB1A7C00839C4B /* DoubleClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = DoubleClick.wav; path = ../DigiTaps/DoubleClick.wav; sourceTree = "<group>"; };
+		2CD6A48C16FC07B00077328E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Event.h; path = ../DigiTaps/Logging/Event.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CD6A48D16FC07B00077328E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Event.m; path = ../DigiTaps/Logging/Event.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CD6A48F16FCDDBF0077328E /* CoreDataModelWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CoreDataModelWrapper.h; path = ../DigiTaps/Logging/CoreDataModelWrapper.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CD6A49016FCDDBF0077328E /* CoreDataModelWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CoreDataModelWrapper.m; path = ../DigiTaps/Logging/CoreDataModelWrapper.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CD6A49216FD0FE30077328E /* EventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = EventType.h; path = ../DigiTaps/Logging/EventType.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CD6A49316FD0FE30077328E /* EventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = EventType.m; path = ../DigiTaps/Logging/EventType.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CD6A49616FEC6FB0077328E /* DemographicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DemographicsViewController.h; path = ../DigiTaps/DemographicsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CD6A49716FEC6FB0077328E /* DemographicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DemographicsViewController.m; path = ../DigiTaps/DemographicsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CD6A49F17001F2A0077328E /* DataSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DataSender.h; path = ../DigiTaps/Networking/DataSender.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CD6A4A017001F2A0077328E /* DataSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DataSender.m; path = ../DigiTaps/Networking/DataSender.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CDA13BB16C746CB0084A912 /* LevelSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LevelSelectorViewController.h; path = ../DigiTaps/LevelSelectorViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CDA13BC16C746CB0084A912 /* LevelSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LevelSelectorViewController.m; path = ../DigiTaps/LevelSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CE3FE7717471D9C00C2632C /* GestureTypeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GestureTypeUtility.h; path = GestureDetection/GestureTypeUtility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CE3FE7817471D9C00C2632C /* GestureTypeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GestureTypeUtility.m; path = GestureDetection/GestureTypeUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CE3FE7F1747E28900C2632C /* OverviewTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = OverviewTutorialViewController.h; path = View/OverviewTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OverviewTutorialViewController.m; path = View/OverviewTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewTutorialViewController.xib; path = View/OverviewTutorialViewController.xib; sourceTree = "<group>"; };
-		2CE6368D187DA1560086B713 /* AgreementSectionDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementSectionDisplayViewController.h; sourceTree = "<group>"; };
-		2CE6368E187DA1560086B713 /* AgreementSectionDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementSectionDisplayViewController.m; sourceTree = "<group>"; };
-		2CE6368F187DA1560086B713 /* AgreementSectionDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AgreementSectionDisplayViewController.xib; sourceTree = "<group>"; };
+		2CE3FE7F1747E28900C2632C /* OverviewTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = OverviewTutorialViewController.h; path = ../DigiTaps/Tutorials/OverviewTutorialViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CE3FE801747E28900C2632C /* OverviewTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = OverviewTutorialViewController.m; path = ../DigiTaps/Tutorials/OverviewTutorialViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CE3FE811747E28900C2632C /* OverviewTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewTutorialViewController.xib; path = ../DigiTaps/Tutorials/OverviewTutorialViewController.xib; sourceTree = "<group>"; };
+		2CE6368D187DA1560086B713 /* AgreementSectionDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgreementSectionDisplayViewController.h; path = ../DigiTaps/AgreementSectionDisplayViewController.h; sourceTree = "<group>"; };
+		2CE6368E187DA1560086B713 /* AgreementSectionDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgreementSectionDisplayViewController.m; path = ../DigiTaps/AgreementSectionDisplayViewController.m; sourceTree = "<group>"; };
+		2CE6368F187DA1560086B713 /* AgreementSectionDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AgreementSectionDisplayViewController.xib; path = ../DigiTaps/AgreementSectionDisplayViewController.xib; sourceTree = "<group>"; };
 		2CE911BA183BC31F00451FC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DigiTaps/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		2CF3C31A1736ACDF00D9F4E0 /* DTGestureDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DTGestureDetector.h; path = GestureDetection/DTGestureDetector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CF3C31B1736ACDF00D9F4E0 /* DTGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTGestureDetector.m; path = GestureDetection/DTGestureDetector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -216,26 +215,25 @@
 		2CF3C31E1736B25200D9F4E0 /* DTBackspaceGestureDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DTBackspaceGestureDetector.m; path = GestureDetection/DTBackspaceGestureDetector.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CF3C32017373E0900D9F4E0 /* GestureDetectorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GestureDetectorManager.h; path = GestureDetection/GestureDetectorManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2CF3C32117373E0900D9F4E0 /* GestureDetectorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GestureDetectorManager.m; path = GestureDetection/GestureDetectorManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = UserAgreementViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UserAgreementViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAgreementViewController.xib; sourceTree = "<group>"; };
-		39A9D7F616A83D68003A8B7B /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameEngine.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		39A9D7F716A83D68003A8B7B /* GameEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameEngine.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CF5DB9E16B1A834001DB23A /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = UserAgreementViewController.h; path = ../DigiTaps/UserAgreementViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2CF5DB9F16B1A834001DB23A /* UserAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = UserAgreementViewController.m; path = ../DigiTaps/UserAgreementViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2CF5DBA016B1A834001DB23A /* UserAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserAgreementViewController.xib; path = ../DigiTaps/UserAgreementViewController.xib; sourceTree = "<group>"; };
+		39A9D7F616A83D68003A8B7B /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GameEngine.h; path = ../DigiTaps/GameEngine.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		39A9D7F716A83D68003A8B7B /* GameEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GameEngine.m; path = ../DigiTaps/GameEngine.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		39A9D7F916A87AF9003A8B7B /* GameEngineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GameEngineTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		39A9D7FA16A87AF9003A8B7B /* GameEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameEngineTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		39C7C1E5169EFBE900A6DABA /* DigiTaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiTaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C7C1E9169EFBE900A6DABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39C7C1EB169EFBE900A6DABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		39C7C1ED169EFBE900A6DABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		39C7C1F1169EFBE900A6DABA /* DigiTaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DigiTaps-Info.plist"; sourceTree = "<group>"; };
-		39C7C1F3169EFBE900A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		39C7C1F5169EFBE900A6DABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		39C7C1F7169EFBE900A6DABA /* TapInput-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TapInput-Prefix.pch"; sourceTree = "<group>"; };
-		39C7C1F8169EFBE900A6DABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		39C7C1F9169EFBE900A6DABA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		39C7C1FB169EFBEA00A6DABA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		39C7C1FD169EFBEA00A6DABA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		39C7C1FF169EFBEA00A6DABA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		39C7C1F1169EFBE900A6DABA /* DigiTaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DigiTaps-Info.plist"; path = "../DigiTaps/DigiTaps-Info.plist"; sourceTree = "<group>"; };
+		39C7C1F5169EFBE900A6DABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = ../DigiTaps/main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		39C7C1F7169EFBE900A6DABA /* TapInput-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TapInput-Prefix.pch"; path = "../DigiTaps/TapInput-Prefix.pch"; sourceTree = "<group>"; };
+		39C7C1F8169EFBE900A6DABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../DigiTaps/AppDelegate.h; sourceTree = "<group>"; };
+		39C7C1F9169EFBE900A6DABA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AppDelegate.m; path = ../DigiTaps/AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		39C7C1FB169EFBEA00A6DABA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../DigiTaps/Default.png; sourceTree = "<group>"; };
+		39C7C1FD169EFBEA00A6DABA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../DigiTaps/Default@2x.png"; sourceTree = "<group>"; };
+		39C7C1FF169EFBEA00A6DABA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../DigiTaps/Default-568h@2x.png"; sourceTree = "<group>"; };
 		39C7C202169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		39C7C205169EFBEA00A6DABA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		39C7C20F169EFBEA00A6DABA /* DigiTapsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiTapsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,13 +294,13 @@
 		2C35BB44187DAE0F008B2E45 /* AgreementTexts */ = {
 			isa = PBXGroup;
 			children = (
-				2C35BB45187DAE0F008B2E45 /* benefits.txt */,
-				2C35BB46187DAE0F008B2E45 /* contact.txt */,
-				2C35BB47187DAE0F008B2E45 /* other.txt */,
-				2C35BB48187DAE0F008B2E45 /* overview.txt */,
-				2C35BB49187DAE0F008B2E45 /* procedures.txt */,
-				2C35BB4A187DAE0F008B2E45 /* purpose.txt */,
-				2C35BB4B187DAE0F008B2E45 /* risks.txt */,
+				2C551E9C1887677800BB3D82 /* benefits.txt */,
+				2C551E9D1887677800BB3D82 /* contact.txt */,
+				2C551E9E1887677800BB3D82 /* other.txt */,
+				2C551E9F1887677800BB3D82 /* overview.txt */,
+				2C551EA01887677800BB3D82 /* procedures.txt */,
+				2C551EA11887677800BB3D82 /* purpose.txt */,
+				2C551EA21887677800BB3D82 /* risks.txt */,
 			);
 			name = AgreementTexts;
 			path = TapInput/AgreementTexts;
@@ -327,13 +325,13 @@
 		2C74AED416E3F9750095143A /* Logging */ = {
 			isa = PBXGroup;
 			children = (
+				2C551E991887520E00BB3D82 /* LogModel.xcdatamodeld */,
 				2CD6A48C16FC07B00077328E /* Event.h */,
 				2CD6A48D16FC07B00077328E /* Event.m */,
 				2C74AED516E3F9E20095143A /* Logger.h */,
 				2C74AED616E3F9E20095143A /* Logger.m */,
 				2CD6A49216FD0FE30077328E /* EventType.h */,
 				2CD6A49316FD0FE30077328E /* EventType.m */,
-				2CD6A48916FBFB740077328E /* LogModel.xcdatamodeld */,
 				2CD6A48F16FCDDBF0077328E /* CoreDataModelWrapper.h */,
 				2CD6A49016FCDDBF0077328E /* CoreDataModelWrapper.m */,
 				2C98C54C171C831F00DA8BAF /* LogSenderOperation.h */,
@@ -557,7 +555,6 @@
 			isa = PBXGroup;
 			children = (
 				39C7C1F1169EFBE900A6DABA /* DigiTaps-Info.plist */,
-				39C7C1F2169EFBE900A6DABA /* InfoPlist.strings */,
 				39C7C1F5169EFBE900A6DABA /* main.m */,
 				39C7C1F7169EFBE900A6DABA /* TapInput-Prefix.pch */,
 				39C7C1FB169EFBEA00A6DABA /* Default.png */,
@@ -665,38 +662,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39C7C1F4169EFBE900A6DABA /* InfoPlist.strings in Resources */,
 				39C7C1FC169EFBEA00A6DABA /* Default.png in Resources */,
 				39C7C1FE169EFBEA00A6DABA /* Default@2x.png in Resources */,
-				2C35BB52187DAE10008B2E45 /* risks.txt in Resources */,
-				2C35BB4D187DAE0F008B2E45 /* contact.txt in Resources */,
 				2CE911BB183BC31F00451FC2 /* Images.xcassets in Resources */,
 				2CBBB336183BF33C00A03AF4 /* release_notes.md in Resources */,
-				2C35BB51187DAE10008B2E45 /* purpose.txt in Resources */,
 				39C7C200169EFBEA00A6DABA /* Default-568h@2x.png in Resources */,
 				39C7C203169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard in Resources */,
 				39C7C206169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard in Resources */,
+				2C551EA51887677800BB3D82 /* other.txt in Resources */,
 				2CF5DBA216B1A834001DB23A /* UserAgreementViewController.xib in Resources */,
 				2C2AF91E16D177C8005E837D /* Correct.wav in Resources */,
+				2C551EA31887677800BB3D82 /* benefits.txt in Resources */,
 				2C2AF92116D17B5D005E837D /* Wrong.wav in Resources */,
 				2C2AF92316D185EB005E837D /* Backspace.wav in Resources */,
+				2C551EA61887677800BB3D82 /* overview.txt in Resources */,
+				2C551EA71887677800BB3D82 /* procedures.txt in Resources */,
 				2CD2F86216DB1A4900839C4B /* Click.wav in Resources */,
 				2CBBB335183BF33C00A03AF4 /* README.md in Resources */,
+				2C551EA81887677800BB3D82 /* purpose.txt in Resources */,
 				2CE63691187DA1570086B713 /* AgreementSectionDisplayViewController.xib in Resources */,
 				2CD2F86416DB1A7C00839C4B /* DoubleClick.wav in Resources */,
-				2C35BB4E187DAE0F008B2E45 /* other.txt in Resources */,
-				2C35BB50187DAE10008B2E45 /* procedures.txt in Resources */,
 				2CE3FE831747E28A00C2632C /* OverviewTutorialViewController.xib in Resources */,
 				2CB974211749C15E0086D6D9 /* DTEspressoTutorialViewController.xib in Resources */,
 				2CB974261749C86E0086D6D9 /* DTCappuccinoTutorialViewController.xib in Resources */,
 				2CB9742B1749C8A70086D6D9 /* TutorialViewController.xib in Resources */,
-				2C35BB4F187DAE10008B2E45 /* overview.txt in Resources */,
-				2C35BB4C187DAE0F008B2E45 /* benefits.txt in Resources */,
 				2C5074891775D29400CC87E9 /* DTEspressoPracticeViewController.xib in Resources */,
 				2C50748E1776081800CC87E9 /* DTCappuccinoPracticeViewController.xib in Resources */,
 				2C507493177614DA00CC87E9 /* OverviewPracticeViewController.xib in Resources */,
 				2C830D0D177D511C00D3B889 /* logo.png in Resources */,
+				2C551EA91887677800BB3D82 /* risks.txt in Resources */,
 				2C830D0F177D512000D3B889 /* logo@2x.png in Resources */,
+				2C551EA41887677800BB3D82 /* contact.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +749,7 @@
 				2CAD16621837466300BF0898 /* DTGestureDetectionSharedState.m in Sources */,
 				2CF5DBA116B1A834001DB23A /* UserAgreementViewController.m in Sources */,
 				2C52D3CB16BF17F200588266 /* LevelSelectorView.m in Sources */,
+				2C551E9B1887520E00BB3D82 /* LogModel.xcdatamodeld in Sources */,
 				2C52D3CF16BF563C00588266 /* SummaryViewController.m in Sources */,
 				2CE63690187DA1560086B713 /* AgreementSectionDisplayViewController.m in Sources */,
 				2C1BAB81183AF69A0045CA6C /* GestureDetector.m in Sources */,
@@ -760,7 +757,6 @@
 				2CAC525E16D0369400DB070B /* StartMenuViewController.m in Sources */,
 				2C97440816D0A686001A2E1B /* GameViewController.m in Sources */,
 				2C74AED716E3F9E20095143A /* Logger.m in Sources */,
-				2CD6A48B16FBFB740077328E /* LogModel.xcdatamodeld in Sources */,
 				2CD6A48E16FC07B00077328E /* Event.m in Sources */,
 				2CD6A49116FCDDBF0077328E /* CoreDataModelWrapper.m in Sources */,
 				2CD6A49416FD0FE30077328E /* EventType.m in Sources */,
@@ -807,20 +803,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		39C7C1F2169EFBE900A6DABA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39C7C1F3169EFBE900A6DABA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		39C7C201169EFBEA00A6DABA /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				39C7C202169EFBEA00A6DABA /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
+			path = ../DigiTaps;
 			sourceTree = "<group>";
 		};
 		39C7C204169EFBEA00A6DABA /* MainStoryboard_iPad.storyboard */ = {
@@ -829,6 +818,7 @@
 				39C7C205169EFBEA00A6DABA /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			path = ../DigiTaps;
 			sourceTree = "<group>";
 		};
 		39C7C219169EFBEA00A6DABA /* InfoPlist.strings */ = {
@@ -910,8 +900,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TapInput/DigiTaps-Prefix.pch";
-				INFOPLIST_FILE = "TapInput/DigiTaps-Info.plist";
+				GCC_PREFIX_HEADER = "DigiTaps/DigiTaps-Prefix.pch";
+				INFOPLIST_FILE = "DigiTaps/DigiTaps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -933,8 +923,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TapInput/DigiTaps-Prefix.pch";
-				INFOPLIST_FILE = "TapInput/DigiTaps-Info.plist";
+				GCC_PREFIX_HEADER = "DigiTaps/DigiTaps-Prefix.pch";
+				INFOPLIST_FILE = "DigiTaps/DigiTaps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1014,14 +1004,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2CD6A48916FBFB740077328E /* LogModel.xcdatamodeld */ = {
+		2C551E991887520E00BB3D82 /* LogModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2CD6A48A16FBFB740077328E /* LogModel.xcdatamodel */,
+				2C551E9A1887520E00BB3D82 /* LogModel.xcdatamodel */,
 			);
-			currentVersion = 2CD6A48A16FBFB740077328E /* LogModel.xcdatamodel */;
+			currentVersion = 2C551E9A1887520E00BB3D82 /* LogModel.xcdatamodel */;
 			name = LogModel.xcdatamodeld;
-			path = Logging/LogModel.xcdatamodeld;
+			path = ../DigiTaps/Logging/LogModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
