@@ -44,8 +44,6 @@ static NSString *kUsageField = @"usage";
 - (void)setupViewController
 {
   [self setTitle:@"Demographics"];
-//  UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Register" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
-  //[self.navigationItem setRightBarButtonItem:doneButton];
   NSArray *fields = @[ self.ageField, self.genderField, self.possessionTimeField, self.identityField, self.useField ];
   
   for (int fieldIndex = 0; fieldIndex < 5; ++fieldIndex) {

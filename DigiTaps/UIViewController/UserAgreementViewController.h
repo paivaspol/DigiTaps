@@ -19,6 +19,8 @@
 
 @property (assign, nonatomic) id <UserAgreementViewControllerProtocol> delegate;
 
+@property (assign) BOOL showedModally;
+
 @end
 
 @protocol UserAgreementViewControllerProtocol <NSObject>

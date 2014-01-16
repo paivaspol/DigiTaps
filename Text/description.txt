@@ -1,0 +1,13 @@
+DigiTaps introduces two eyes-free number entry methods. The MobileAccessibility group at the University of Washington is conducting a user study on these two number input methods. The game is a part of the user study which we would like to evaluate the two input gestures.
+
+As DigiTaps is a part of a user study we are collecting some information from the players for research purposes. The information we are gathering includes the following:
+   - Demographics
+     NO personal information is collected except the player's gender, age, familiarity with smartphones, and whether the player is sighted or not. We cannot determine the true identity of the player from the information we gathered.
+   - Game play information
+       We only collect each gesture that the player performed such as a tap, a swipe on the screen.
+       
+The player can view our user study consent form in the app and have to agree to the consent in order to play the game.
+
+DigiTaps is a number entry game that present numbers and ask the players to enter the numbers as fast and as accurately as possible. There are two gestures that you will learn in the app called Espresso and Cappuccino. DigiTaps is also accessible to blind players. In addition, players can compete with friends all over the world using the Game Center. 
+
+Enter the numbers as fast as you can and beat your friends!

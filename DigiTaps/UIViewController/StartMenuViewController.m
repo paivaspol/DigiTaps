@@ -39,6 +39,7 @@
   [self initializeViewControllers];
   [self.navigationController setNavigationBarHidden:YES];
   self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+  didShowGamecenter = NO;
   
   // make sure that iOS7 display it properly :)
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
@@ -53,6 +54,7 @@
   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
   userAgreementViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserAgreementViewController"];
   [userAgreementViewController setDelegate:self];
+  [userAgreementViewController setShowedModally:YES];
   modeSelectorViewController = [storyboard instantiateViewControllerWithIdentifier:@"ModeSelectorViewController"];
   [modeSelectorViewController setDelegate:self];
   levelSelectorViewController = [[LevelSelectorViewController alloc] initWithNumLevels:[gameEngine getMaxLevel]];
@@ -77,8 +79,10 @@
   if (![gameInfoManager didAgreeToAgreement]) {
     [self presentViewController:registrationNavController animated:YES completion:nil];
   }
-  if ([GameCenterManager isGameCenterAvailable]) {
+  BOOL modalPresented = (BOOL) self.presentedViewController;
+  if (!modalPresented && [GameCenterManager isGameCenterAvailable]) {
     [gameCenterManager authenticateLocalUser];
+    didShowGamecenter = YES;
   }
 }
 
@@ -158,6 +162,12 @@
 #pragma mark DemographicsViewController
 - (void)registerCompletedWithUserId:(int)uid{
   NSLog(@"registered with %d", uid);
+  if (!didShowGamecenter) {
+    if ([GameCenterManager isGameCenterAvailable]) {
+      [gameCenterManager authenticateLocalUser];
+      didShowGamecenter = YES;
+    }
+  }
 }
 
 /*

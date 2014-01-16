@@ -41,11 +41,8 @@
   [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeClear];
   NSString *path = [[NSBundle mainBundle] pathForResource:[sectionName objectAtIndex:self.agreementSection] ofType:@"txt"];
   NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-//  CGRect screenRect = [[UIScreen mainScreen] bounds];
-//  CGFloat screenWidth = screenRect.size.width;
   [self.contentView setText:content];
   [self.contentView setNumberOfLines:0];
-//  [self.contentView sizeToFit];
   NSString *title = [sectionName objectAtIndex:self.agreementSection];
   [self setTitle:[title capitalizedString]];
   [SVProgressHUD dismiss];

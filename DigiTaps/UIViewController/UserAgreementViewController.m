@@ -49,9 +49,13 @@
     [agreementDisplay setAgreementSection:indexPath.row];
     [self.navigationController pushViewController:agreementDisplay animated:YES];
   } else if (indexPath.row == 8) {
-    // Agree
-    if ([self.delegate respondsToSelector:@selector(agreed)]) {
-      [self.delegate agreed];
+    if (self.showedModally) {
+      // Agree
+      if ([self.delegate respondsToSelector:@selector(agreed)]) {
+        [self.delegate agreed];
+      }
+    } else {
+      [self.navigationController popViewControllerAnimated:YES];
     }
   }
 }

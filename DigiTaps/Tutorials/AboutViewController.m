@@ -8,6 +8,8 @@
 
 #import "AboutViewController.h"
 
+#import "../UIViewController/UserAgreementViewController.h"
+
 @interface AboutViewController ()
 
 @end
@@ -55,6 +57,11 @@ static NSString *kDigiTapsUrl = @"http://digitaps.cs.washington.edu";
 {
   if (indexPath.section == 0 && indexPath.row == 0) {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kDigiTapsUrl]];
+  } else if (indexPath.section == 0 && indexPath.row == 1) {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:NULL];
+    UserAgreementViewController *userAgreementViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserAgreementViewController"];
+    [userAgreementViewController setShowedModally:NO];
+    [self.navigationController pushViewController:userAgreementViewController animated:YES];
   }
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

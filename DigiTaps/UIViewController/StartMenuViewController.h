@@ -46,6 +46,7 @@ enum mode {
   UINavigationController        *registrationNavController;
   // game center manager
   GameCenterManager             *gameCenterManager;
+  BOOL                          didShowGamecenter;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *startGame;
