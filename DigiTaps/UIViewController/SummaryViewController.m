@@ -8,7 +8,7 @@
 
 #import "SummaryViewController.h"
 
-#import "GameCenterManager.h"
+#import "../GameCenter/GameCenterManager.h"
 
 @interface SummaryViewController ()
 

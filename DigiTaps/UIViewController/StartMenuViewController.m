@@ -9,14 +9,14 @@
 
 #import "StartMenuViewController.h"
 
-#import "CoreDataModelWrapper.h"
-#import "Event.h"
+#import "../Logging/CoreDataModelWrapper.h"
+#import "../Logging/Event.h"
 
 /* gesture managers */
-#import "GestureDetectorManager.h"
-#import "DTBackspaceGestureDetector.h"
-#import "DTCappuccinoGestureDetector.h"
-#import "DTEspressoGestureDetector.h"
+#import "../GestureDetection/GestureDetectorManager.h"
+#import "../GestureDetection/DTBackspaceGestureDetector.h"
+#import "../GestureDetection/DTCappuccinoGestureDetector.h"
+#import "../GestureDetection/DTEspressoGestureDetector.h"
 
 @interface StartMenuViewController ()
 

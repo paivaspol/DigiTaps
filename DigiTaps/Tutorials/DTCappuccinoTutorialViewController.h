@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DTCappuccinoPracticeViewController.h"
+#import "Practice/DTCappuccinoPracticeViewController.h"
 
 @interface DTCappuccinoTutorialViewController : UIViewController
 {

@@ -8,7 +8,7 @@
 
 #import "GameViewController.h"
 
-#import "GameInformationManager.h"
+#import "../GameModel/GameInformationManager.h"
 
 static NSString * const kQuitGame = @"Are you sure you want to quit?";
 static NSString * const kCancel = @"Cancel";

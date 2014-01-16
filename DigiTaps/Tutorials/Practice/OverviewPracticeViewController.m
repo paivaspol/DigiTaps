@@ -8,7 +8,7 @@
 
 #import "OverviewPracticeViewController.h"
 
-#import "Utility.h"
+#import "../../Utilities/Utility.h"
 
 static NSString * const kThreeFingersTap = @"Three finger tap";
 static NSString * const kOneTap = @"One finger tap";

@@ -7,7 +7,7 @@
 //
 
 #import "DTCappuccinoTutorialViewController.h"
-#import "DTCappuccinoGestureDetector.h"
+#import "../GestureDetection/DTCappuccinoGestureDetector.h"
 
 @interface DTCappuccinoTutorialViewController ()
 

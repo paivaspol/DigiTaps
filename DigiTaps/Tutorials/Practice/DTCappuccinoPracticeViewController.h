@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GestureDetectorManager.h"
-#import "Utility.h"
+#import "../../GestureDetection/GestureDetectorManager.h"
+#import "../../Utilities/Utility.h"
 
 @interface DTCappuccinoPracticeViewController : UIViewController <GestureDetectorManagerProtocol>
 {

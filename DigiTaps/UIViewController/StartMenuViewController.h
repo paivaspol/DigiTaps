@@ -12,11 +12,12 @@
 #import "UserAgreementViewController.h" // user agreement modal vc
 #import "ModeSelectorViewController.h"  // vc for selecting the mode
 #import "LevelSelectorViewController.h" // level selector
-#import "GameEngine.h"  // Game engine
-#import "GameInformationManager.h"  // Game information manager
 #import "GameViewController.h"  // Game view controller
-#import "GameCenterManager.h"  // Game Center Manager
-#import "TutorialViewController.h"
+#import "../Tutorials/TutorialViewController.h"
+
+#import "../GameCenter/GameCenterManager.h"  // Game Center Manager
+#import "../GameModel/GameEngine.h"  // Game engine
+#import "../GameModel/GameInformationManager.h"  // Game information manager
 
 enum mode {
   TUTORIAL,

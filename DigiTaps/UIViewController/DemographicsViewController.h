@@ -11,7 +11,7 @@
 #import "SVProgressHUD.h"
 #import "BSKeyboardControls.h"
 
-#import "GameInformationManager.h"
+#import "../GameModel/GameInformationManager.h"
 
 @protocol DemographicsViewControllerProtocol <NSObject>
 

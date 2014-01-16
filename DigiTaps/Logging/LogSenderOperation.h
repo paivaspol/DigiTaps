@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DataSender.h"  // for sending data over across the network
-#import "Logger.h"  // for logger to send over
+#import "../Logging/Logger.h"  // for logger to send over
+#import "../Networking/DataSender.h"  // for sending data over across the network
 
 @interface LogSenderOperation : NSOperation
 {

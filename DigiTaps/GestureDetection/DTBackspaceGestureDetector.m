@@ -8,7 +8,7 @@
 
 #import "DTBackspaceGestureDetector.h"
 
-#import "Utility.h"
+#import "../Utilities/Utility.h"
 
 @implementation DTBackspaceGestureDetector
 

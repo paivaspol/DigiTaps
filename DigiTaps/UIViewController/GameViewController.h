@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-#import "GameEngine.h"
-#import "GameInformationManager.h"
-#import "GestureDetectorManager.h"
-#import "Logger.h"
+#import "../GameModel/GameEngine.h"
+#import "../GameModel/GameInformationManager.h"
+#import "../GestureDetection/GestureDetectorManager.h"
+#import "../Logging/Logger.h"
+
 #import "SummaryViewController.h"
 
 @interface GameViewController : UIViewController<GestureDetectorManagerProtocol, SummaryViewControllerProtocol, UIAlertViewDelegate>

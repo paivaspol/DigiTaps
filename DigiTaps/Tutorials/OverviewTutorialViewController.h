@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OverviewPracticeViewController.h"
+#import "Practice/OverviewPracticeViewController.h"
 
 @interface OverviewTutorialViewController : UIViewController
 {

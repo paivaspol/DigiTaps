@@ -8,7 +8,7 @@
 
 #import "DTCappuccinoPracticeViewController.h"
 
-#import "DTCappuccinoGestureDetector.h"
+#import "../../GestureDetection/DTCappuccinoGestureDetector.h"
 
 static NSString * const kThreeFingersTap = @"Three finger tap. Waiting for another gesture";
 static NSString * const kSwipeWaiting = @"Swipe. Waiting for another gesture";

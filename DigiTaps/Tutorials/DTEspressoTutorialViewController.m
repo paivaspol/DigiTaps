@@ -8,7 +8,7 @@
 
 #import "DTEspressoTutorialViewController.h"
 
-#import "DTEspressoGestureDetector.h"
+#import "../GestureDetection/DTEspressoGestureDetector.h"
 
 @interface DTEspressoTutorialViewController ()
 

@@ -9,7 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSender.h"
+#import "../Networking/DataSender.h"
 
 @interface GameInformationManager : NSObject
 {

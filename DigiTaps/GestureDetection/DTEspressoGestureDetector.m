@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 MobileAccessibility. All rights reserved.
 //
 
-#import "Utility.h"
+#import "../Utilities/Utility.h"
 
 #import "DTEspressoGestureDetector.h"
 

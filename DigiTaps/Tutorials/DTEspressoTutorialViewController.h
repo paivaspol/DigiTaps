@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GestureDetectorManager.h"
-#import "DTEspressoPracticeViewController.h"
+#import "../GestureDetection/GestureDetectorManager.h"
+#import "Practice/DTEspressoPracticeViewController.h"
 
 @interface DTEspressoTutorialViewController : UIViewController
 {

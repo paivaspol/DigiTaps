@@ -8,8 +8,8 @@
 
 #import "OverviewTutorialViewController.h"
 
-#import "DTBackspaceGestureDetector.h"
-#import "DTEspressoGestureDetector.h"
+#import "../GestureDetection/DTBackspaceGestureDetector.h"
+#import "../GestureDetection/DTEspressoGestureDetector.h"
 
 @interface OverviewTutorialViewController ()
 

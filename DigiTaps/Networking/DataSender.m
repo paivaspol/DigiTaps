@@ -7,7 +7,7 @@
 //
 
 #import "DataSender.h"
-#import "CoreDataModelWrapper.h"
+#import "../Logging/CoreDataModelWrapper.h"
 
 @implementation DataSender
 

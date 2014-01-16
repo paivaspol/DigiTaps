@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GestureDetectorManager.h"
+#import "../../GestureDetection/GestureDetectorManager.h"
 
 @interface OverviewPracticeViewController : UIViewController <GestureDetectorManagerProtocol>
 {

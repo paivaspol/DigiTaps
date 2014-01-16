@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Logger.h"
+#import "../Logging/Logger.h"
+#import "../GameModel/GameEngine.h"
 #import "SVProgressHUD.h"
-#import "GameEngine.h"
+
 
 @protocol SummaryViewControllerProtocol <NSObject>
 
